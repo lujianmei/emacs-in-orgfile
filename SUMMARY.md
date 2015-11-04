@@ -2,8 +2,11 @@
 
 目录
 
-* [Emacs功能导览](Function_overview.md)
+* [一个好的开始](For_beginers.md)
+* [Emacs可以做什么](What_emacs_can_do.md)
+* [Emacs编辑修改](Function_overview.md)
 * [Emacs功能详解](Function_list.md)
-* [Emacs高级配置](Advance_config.md)
+* [初使配置](Starter-config.md)
+* [按我的意思来](Advance_config.md)
 * [Elisp学以致用](Elisp_using.md)
 * [Elisp学习资源](Resources.md)

@@ -17,8 +17,6 @@
 #+ATTR_HTML: :border 2 :rules all :frame all
 
 
-
-
 * org-mode基本配置
 ** 文档结构信息配置
     Status详细配置解决说明参见：http://orgmode.org/manual/In_002dbuffer-settings.html#In_002dbuffer-settings
