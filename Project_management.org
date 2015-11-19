@@ -1,0 +1,24 @@
+#+TITLE: 项目管理
+#+LANGUAGE:  zh
+#+AUTHOR: Lu Jianmei
+#+EMAIL: lu.jianmei@trs.com.cn
+#+OPTIONS:   H:3 num:t   toc:3 \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t p:t pri:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+OPTIONS:   author:t creator:t timestamp:t email:t
+#+DESCRIPTION: A notes that include all works and study things in 2015
+#+KEYWORDS:  org-mode Emacs jquery jquery.mobile jquery.ui wcm
+#+INFOJS_OPT: view:nil toc:t ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LATEX_HEADER: \usepackage{xeCJK}
+#+LATEX_HEADER: \setCJKmainfont{SimSun}
+#+LATEX_CLASS: cn-article
+#+STARTUP: logredeadline, logreschedule
+#+ATTR_HTML: :border 2 :rules all :frame all
+
+* 前面的话
+  最开始我使用orgmode来做自己的任务和一些子项目工作内容的管理，方便我对于任务工作的资源的分配，但orgmode无法对资源的前置任务、资源分配合理必、项目风险等内容的管理和掌握，直到我最后看到TaskJuggler这个开源工具，才发现可以用orgmode结合这个高级项目管理的工具来进行项目工程的管理，它基本可以满足所有项目管理所遇到的问题，并且很好的解决了一些能通过计算和自动化分析而得到的结果；从而让整个项目的管理过程变的容易和简单；
+* TaskJuggler介绍
+
+* 使用org-mode写项目管理
+* TaskJuggler深入

@@ -222,13 +222,43 @@
    ,#+end_src
 #+END_SRC
 ** TernJs
+*** 功能说明
+    Tern是一个按javascript语法标准实现的一个语法分析器，并可以结合auto-complete或者company插件，支持在js-mode中，使用代码补全功能；
+*** 安装
+    Tern需要通过npm进行安装，安装完成后它包含一个可执行的tern-server端，和需要与emacs整合的tern.el文件，以支持在emacs中自动启动和使用tern提供的服务；
+#+begin_src sh
+    npm install tern acorn glob minimatch
+#+end_src
+    以上安装，其实是安装tern的相应的依赖包，而最终启动还需要使用另一个下载的版本，为方便tern.el方便被引用，因此这里将tern直接下载在 *.emacs.d/site-lisp/* 目录下：
+#+begin_src sh
+    git clone git@github.com:ternjs/tern.git
+#+end_src
+    这时，在init.el文件中，可以加入如下代码：
+#+begin_src lisp
+;;----------------------------------------------------------------------------
+;; load tern
+;;----------------------------------------------------------------------------
+;; load tern, a tools for javascript, need to download tern manually from: https://github.com/ternjs/tern
+(add-to-list 'load-path "~/.emacs.d/site-lisp/tern/emacs/")
+(autoload 'tern-mode "tern.el" nil t)
+
+;; auto load tern-mode on js-mode
+(add-hook 'js-mode-hook (lambda () (tern-mode t)))
+
+(require-package 'tern-auto-complete)
+#+end_src
+     以上的配置，在重启后，会自动下载 *tern-auto-complete* 包，以支持配合 *auto-complete* 包进行代码自动提示，如果你使用的不是 *auto-complete* , 而使用的是 *company* 插件，则可以将 *(require-package 'tern-auto-complete)* 换为 *(require-package 'company-tern)*;
+
+*** 使用
+    参照： http://ternjs.net
+
 ** Sunrise Commander
    * 说明
      Sunrise是一款类似于dired的命令行的文件管理器，具有大量命令行操作工具；
    * 使用方法：显示当前及其子文件夹下所有文件
      press C-c C-f and type:  -not -type d
 
-** GNUS with Offlineimap and mu4e and msmtp
+** GNUS with Offlineimap and  and msmtp
 *** Offlineimap
 **** 安装
 #+begin_src sh
@@ -427,6 +457,7 @@ brew install msmtp
 
 ** TaskJuggler
    taskjuggler是一个出色的项目管理工具，可以支持通过org的todo任务清单，直接导出taskjuggler格式的文件tjp文件，然后可以在安装taskjuggler后，直接通过命令 *tj3 file.tjp* 将生成html项目清单文件；
+
 *** 用orgmode写支持tjp的项目任务属性
     + Task_id: 在todo任务条上，执行 *C-c C-x p* 并输入 *task_id* 来定义一个任务唯一的id；
     + Depends: 执行 *C-c C-x p* 输入depends定义一个任务的前置任务；
@@ -434,24 +465,37 @@ brew install msmtp
     + Allocate: 执行 *C-c C-x p* 输入allocate定义任务的执行人；
     + Start: 在任务开始的地方，需要输入项目开始时间，执行 *C-c C-x p* 输入start定义任务的执行人；注意，时间格式需要是：2012-4-2-0:00-+0800
     + 其它资源：
-    #+begin_src html
-    task_id
-    任务标识
-    start
-    开始日期
-    duration
-    持续时间
-    Effort
-    工作量
-    allocate
-    资源分配
-    depends
-    前置任务
-    ORDERED
-    任务关联
-    rate
-    费率
-    #+end_src
+
+
+    如下属性也可以在orgmode中，对于任务上配置properties属性，并支持导出为最终的tjp格式的内容；
+    |-----------+--------------+----------|
+    | Tasks     | task_id      | 任务标识 |
+    |           | start        | 开始日期 |
+    |           | end          | 结束日期 |
+    |           | duration     | 持续时间 |
+    |           | scheduling   |          |
+    |           | account      |          |
+    |           | note         |          |
+    |           | journalentry |          |
+    |           | responsible  |          |
+    |           | reference    |          |
+    |           | milestone    | 里程碑   |
+    |           | Effort       | 工作量   |
+    |           | allocate     | 资源分配 |
+    |           | depends      | 前置任务 |
+    |           | ORDERED      | 任务关联 |
+    |           | rate         | 费率     |
+    |-----------+--------------+----------|
+    | Resources | limits       | 限制     |
+    |           | vacation     |          |
+    |           | shift        |          |
+    |           | booking      |          |
+    |           | efficiency   |          |
+    |           | journalentry |          |
+    |           | rate         |          |
+    |           |              |          |
+    |-----------+--------------+----------|
+
 *** 项目及资源标记
     为了方便生成项目及资源列表，需要在要生成的项目顶级任务上，标记上 *project* 标签，则此任务会被认为一个项目；而相应的资源， 需要在org文件中，另起一个一级子列表，标明资源列表，打上 *resources*标识，具体可参照如下例子：
 #+begin_src html
@@ -478,6 +522,11 @@ brew install msmtp
 
 *** 修改导出的文件格式或模板
 
+** Rectangle
+
+** keyboard macro
+
+** ielm
 * org-mode基本配置
 ** 文档结构信息配置
     Status详细配置解决说明参见：http://orgmode.org/manual/In_002dbuffer-settings.html#In_002dbuffer-settings
@@ -659,6 +708,7 @@ brew install msmtp
 |               | C-c -                      | 更换列表标记(循环)                                                                        |
 |               | M-S-RET                    | 新增一个子项                                                                              |
 |               | M-up/M-down                | 调整此任务节点的顺序                                                                      |
+|               | C-c b                      | 只编辑当前级别列表                                                                                 |
 |---------------+----------------------------+-------------------------------------------------------------------------------------------|
 | outline       | C-c C-p                    | 上一个标题                                                                                |
 |               | C-c C-n                    | 下一下                                                                                    |
@@ -729,7 +779,8 @@ brew install msmtp
 | Export        | C-<f12>                    | 一次性生成所有目录的org文件为html文件，发布配置见.emacs.d中的配置目录                     |
 |               | C-c C-e                    | 导出                                                                                      |
 |---------------+----------------------------+-------------------------------------------------------------------------------------------|
-| Tables        | C-c -                      | 在下面添加水平线                                                                          |
+| Tables        | C-c 竖线                   | 插入表格                                                                                  |
+|               | C-c -                      | 在下面添加水平线                                                                          |
 |               | C-c RET                    | 添加水平线并跳转到下一行                                                                  |
 |               | C-m                        | 在本列下面添加一行                                                                        |
 |               | M-S-Right                  | 在本列后面添加一列                                                                        |
@@ -763,7 +814,7 @@ brew install msmtp
 |               |                            |                                                                                           |
 |---------------+----------------------------+-------------------------------------------------------------------------------------------|
 
-** 宏
+** Macros
 |--------------------+-------------------------+-----------------------------------------------------------------------------------------------|
 | 宏                 | C-x (                   | 开始录制宏                                                                                    |
 |                    | C-x )                   | 结束录制宏                                                                                    |
@@ -1055,7 +1106,13 @@ find . -name "*.[chCHS]" | etags -
 | 分类 | 快捷键 | 描述                   |
 |------+--------+------------------------|
 | 打开 | C-c D  | Search当前文字在dash中 |
-
+** Elisp
+#+CAPTION: Elisp代码操作
+     #+ATTR_LATEX: :environment longtable :align l|l|l
+| 分类     | 快捷键  | 描述                               |
+|----------+---------+------------------------------------|
+| 执行代码 | C-x C-e | 光标放在函数后面，然后执行当前函数 |
+| ielm     |         |                                    |
 * 包管理器
 *** Package List
 | Package name         | Markdown                                  |
