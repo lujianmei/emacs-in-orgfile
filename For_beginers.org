@@ -64,6 +64,8 @@
 
 ** 切换已经打开的文件
 
+
+
 * 多文件同时操作
 
 ** 打开多个文件
@@ -79,6 +81,18 @@
 ** 按页移动
 
 * 编辑
+** 选择文本
+   默认选择文本分两步：使用快捷键 *Ctrl+Space* 来做标记，然后移动光标即可实现选中文本块；
+   而中文操作系统中，默认 *Ctrl+Space* 被输入法占用了，因此我们需要在 *init.el* 对快捷键进行修改一下；这里我们新建一个新的专门用于记录快捷键操作的文件，文件名为 *init-keybinding.el* ，并将文件放于前面创建的 *lisp* 文件夹中；
+   文件内容添加：
+#+begin_src lisp
+;; 配置Shift+Space为标记快捷键
+(global-set-key (kbd "S-SPC") 'set-mark-command)
+
+(provide 'key-bindings)
+#+end_src
+   可以看到，我们修改了默认快捷键为 *Shift+Space* 为标记；这时，可以在文件中执行 *C-c C-k* 即可将当前的配置生效；
+   然后就可以使用 *Shift+Space* 来进行选择文本操作了；
 
 ** 输入/修改/删除
 
