@@ -10,7 +10,7 @@
     * [编辑提升](02-For-base-using/init-editting-upgrading.md)
     * [搜索提升](02-For-base-using/init-ace-isearch.md)
 * [日常工作使用Emacs](03-For-an-editor/init-daily-using.md)
-    * [Orgmode写文档](03-For-an-editor/init-org-mode.md)
+
     * [Markdown写文档](03-For-an-editor/init-markdown-mode.md)
     * [Orgmode个人时间管理](03-For-an-editor/init-gtd_management.md)
     * [Projectile工程管理](03-For-an-editor/init-projectile_management.md)
