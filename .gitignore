@@ -82,5 +82,6 @@ core.*
 /recentf
 /viper
 
-/*.el
-/lisp/*.el
+/starter-kit.el
+/0*/*.el
+/1*/*.el
