@@ -41,7 +41,7 @@
 ;;(load-library "init-org-agenda-view")
 
 ;; load my own org-mode configuration from init-org-table-shift.el
-  (starter-kit-load "03-For-an-editor/init-org-table-shift.org")
+   (starter-kit-load "03-For-an-editor/init-org-table-shift.org")
 ;;(require 'init-org-table-shift)
 ;;(load-library "init-org-table-shift")
 
@@ -79,8 +79,9 @@
 
 
 
-;; load my own markdown mode configuration from lisp/init-markdown-mode.el
-(require 'init-markdown-mode)
+;; load my own markdown mode configuration from init-markdown-mode.el
+;;(require 'init-markdown-mode)
+  (starter-kit-load "03-For-an-editor/init-markdown-mode.org")
 
 ;; setting for tramp
 (setq tramp-default-method "ssh")
@@ -509,8 +510,11 @@ and the point, not include the isearch word."
   (global-set-key (kbd "C-x 5") 'swap-buffers)
 )
 
-;; load my mu4e configuration from lisp/init-mu4e.el
-(require 'init-mu4e)
+;; load my mu4e configuration from init-mu4e.el
+;;(require 'init-mu4e)
+  (starter-kit-load "03-For-an-editor/init-mu4e.org")
+
+
 ;;(load-library "init-mu4e")
 
 (use-package multiple-cursors

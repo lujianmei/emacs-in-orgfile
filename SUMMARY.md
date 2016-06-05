@@ -3,7 +3,8 @@
 目录
 
 * [关于此书](00-About-this-book/about-this-book.md)
-* [Emacs入门学习](01-For-beginers/For_beginers.md)
+* [关于Starter-kit](starter-kit.md)
+* [Emacs入门学习](01-For-beginners/for_beginners.md)
 * [Emacs基础编辑](02-For-base-using/starter-kit-for-base-using.md)
 * [写作编辑使用Emacs](03-For-an-editor/for-base-using.md)
     * [写文档](03-For-an-editor/starter-kit-write_documents.md)

@@ -10,12 +10,10 @@
 <li><a href="#sec-2-3">2.3. <span class="done DONE">DONE</span> Changing key-mapping for osx</a></li>
 <li><a href="#sec-2-4">2.4. Emacs initialization</a>
 <ul>
-<li><a href="#sec-2-4-1">2.4.1. <span class="done DONE">DONE</span> Add package source and package management tools</a></li>
-<li><a href="#sec-2-4-2">2.4.2. <span class="todo TODO">TODO</span> Add my customized configurations</a></li>
-<li><a href="#sec-2-4-3">2.4.3. <span class="done DONE">DONE</span> Look and feel configuration</a></li>
-<li><a href="#sec-2-4-4">2.4.4. Using third-package for color theme</a></li>
-<li><a href="#sec-2-4-5">2.4.5. Configurations for better using experiences</a></li>
-<li><a href="#sec-2-4-6">2.4.6. Utilities function here</a></li>
+<li><a href="#sec-2-4-1">2.4.1. <span class="todo TODO">TODO</span> Add my customized configurations</a></li>
+<li><a href="#sec-2-4-2">2.4.2. <span class="done DONE">DONE</span> Look and feel configuration</a></li>
+<li><a href="#sec-2-4-3">2.4.3. Using third-package for color theme</a></li>
+<li><a href="#sec-2-4-4">2.4.4. Configurations for better using experiences</a></li>
 </ul>
 </li>
 </ul>
@@ -73,77 +71,7 @@ Also change the mouse wheel direction to suit macbook pro.
 
 ## Emacs initialization<a id="sec-2-4" name="sec-2-4"></a>
 
-### DONE Add package source and package management tools<a id="sec-2-4-1" name="sec-2-4-1"></a>
-
-Firstly, we have to configure the package repositories, which allow us to download and install third-packages by `(package-install)`, it will be easy and clean.
-Also based on Purcell's configuration, emacs will automatically check and download the package, if we use `( (require-package 'fullframe) )`, emacs will automatically find and download package (`fullframe`), and install it.
-
-在Emacs第一次初使化打开时，需要初使化reporitories和自动包安装工具，这里引用了Steve Purcell的 `(require-package)` 来进行包的自动检查和安装，这里用它来自动安装 `(use-package)` ，从而后面再就只使用 `(use-package)` 来进行包的安装和配置相关，以规范加载代码和提升包的加载速度。
-
-    ;; This is the set up for load path
-    (package-initialize)
-    
-    
-      (require 'package)
-    
-      ;;; Standard package repositories
-    
-      (when (< emacs-major-version 24)
-        ;; Mainly for ruby-mode
-        (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/")))
-    
-      ;; We include the org repository for completeness, but don't normally
-      ;; use it.
-      (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
-    
-      (when (< emacs-major-version 24)
-        (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
-    
-      ;;; Also use Melpa for most packages
-      (add-to-list 'package-archives `("melpa" . ,(if (< emacs-major-version 24)
-                                                      "http://melpa.org/packages/"
-                                                    "https://melpa.org/packages/")))
-    
-      ;;; Define the functions for installation of packages
-    
-      (defun require-package (package &optional min-version no-refresh)
-        "Install given PACKAGE, optionally requreing MIN-VERSION. If NO-REFRESH is non-nil, the avaliable package lists will not be re-downlaoded in order to locate PACKAGE."
-        (if (package-installed-p package min-version)
-            t
-          (if (or (assoc package package-archive-contents) no-refresh)
-              (if (boundp 'package-selected-package)
-                  (package-install package nil)
-                (package-install package)
-                )
-            (progn
-              (package-refresh-contents)
-              (require-package package min-version t))
-            )
-          )
-        )
-    
-      (defun maybe-require-package (package &optional min-version no-refresh)
-        "Try to install PACKAGE, and return non-nil if successful.
-      In the event of failure, return nil and print a warning message.
-      Optionally require MIN-VERSION.  If NO-REFRESH is non-nil, the
-      available package lists will not be re-downloaded in order to
-      locate PACKAGE."
-        (condition-case err
-            (require-package package min-version no-refresh)
-          (error
-           (message "Couldn't install package '%s': %S" package err) nil)
-          )
-        )
-
-Secondly, install `(use-package)`, which can be using for package loading, check detail at: <https://github.com/jwiegley/use-package>
-
-    ;; 初使安装use-package
-    
-    (defvar use-package-verbose t)
-    
-    (require-package 'use-package)
-
-### TODO Add my customized configurations<a id="sec-2-4-2" name="sec-2-4-2"></a>
+### TODO Add my customized configurations<a id="sec-2-4-1" name="sec-2-4-1"></a>
 
     (setq package-enable-at-startup nil)
     
@@ -179,7 +107,7 @@ Secondly, install `(use-package)`, which can be using for package loading, check
       :config (auto-compile-on-load-mode))
     (setq load-prefer-newer t)
 
-### DONE Look and feel configuration<a id="sec-2-4-3" name="sec-2-4-3"></a>
+### DONE Look and feel configuration<a id="sec-2-4-2" name="sec-2-4-2"></a>
 
 Base configurations for window and frame
 
@@ -201,7 +129,7 @@ Base configurations for window and frame
     (defvar running-alternate-emacs nil)
     (defvar running-development-emacs nil)
 
-### Using third-package for color theme<a id="sec-2-4-4" name="sec-2-4-4"></a>
+### Using third-package for color theme<a id="sec-2-4-3" name="sec-2-4-3"></a>
 
       ;; Got following from Purcell's emacs configuration
       ;; From https://github.com/purcell/emacs.d
@@ -281,7 +209,7 @@ Base configurations for window and frame
         (interactive)
         (color-theme-sanityinc-solarized-dark))
 
-### Configurations for better using experiences<a id="sec-2-4-5" name="sec-2-4-5"></a>
+### Configurations for better using experiences<a id="sec-2-4-4" name="sec-2-4-4"></a>
 
 1.  Moving back to previous places
 
@@ -313,182 +241,3 @@ Base configurations for window and frame
 3.  Auto Truncate lines
 
     自动拆行，当一个行过长时，自动折行。
-
-### Utilities function here<a id="sec-2-4-6" name="sec-2-4-6"></a>
-
-工具中需要配置一些常用的函数，集中放在这里。
-
-      ;; shorthand for interactive lambdas
-      (defmacro λ (&rest body)
-        `(lambda ()
-           (interactive)
-           ,@body))
-    
-      ;; kill region if active, otherwise kill backward word
-    
-      (defun kill-region-or-backward-word ()
-        (interactive)
-        (if (region-active-p)
-            (kill-region (region-beginning) (region-end))
-          (backward-kill-word 1)))
-    
-      (defun kill-to-beginning-of-line ()
-        (interactive)
-        (kill-region (save-excursion (beginning-of-line) (point))
-                     (point)))
-    
-      (defun duplicate-current-line-or-region (arg)
-        "Duplicates the current line or region ARG times.
-      If there's no region, the current line will be duplicated."
-        (interactive "p")
-        (if (region-active-p)
-            (let ((beg (region-beginning))
-                  (end (region-end)))
-              (duplicate-region arg beg end)
-              (one-shot-keybinding "d" (λ (duplicate-region 1 beg end))))
-          (duplicate-current-line arg)
-          (one-shot-keybinding "d" 'duplicate-current-line)))
-    
-      (defun duplicate-region (&optional num start end)
-        "Duplicates the region bounded by START and END NUM times.
-      If no START and END is provided, the current region-beginning and
-      region-end is used."
-        (interactive "p")
-        (save-excursion
-         (let* ((start (or start (region-beginning)))
-                (end (or end (region-end)))
-                (region (buffer-substring start end)))
-           (goto-char end)
-           (dotimes (i num)
-             (insert region)))))
-    
-      (defun duplicate-current-line (&optional num)
-        "Duplicate the current line NUM times."
-        (interactive "p")
-        (save-excursion
-         (when (eq (point-at-eol) (point-max))
-           (goto-char (point-max))
-           (newline)
-           (forward-char -1))
-         (duplicate-region num (point-at-bol) (1+ (point-at-eol)))))
-    
-      (defun my-find-file-as-root ()
-        "Like `find-file, but automatically edit the file with
-      root-privileges (using tramp/sudo), if the file is not writable by
-      user."
-        (interactive)
-        (let ((file (read-file-name "Edit as root: ")))
-          (unless (file-writable-p file)
-            (setq file (concat "/sudo:root@localhost:" file)))
-          (find-file file)))
-    
-    
-    
-    (defun create-scratch-buffer nil
-      "create a new scratch buffer to work in. (could be *scratch* - *scratchX*)"
-      (interactive)
-      (let ((n 0)
-            bufname)
-        (while (progn
-                 (setq bufname (concat "*scratch"
-                                       (if (= n 0) "" (int-to-string n))
-                                       "*"))
-                 (setq n (1+ n))
-                 (get-buffer bufname)))
-        (switch-to-buffer (get-buffer-create bufname))
-        (emacs-lisp-mode)
-        ))
-    
-    (defun split-window-right-and-move-there-dammit ()
-      (interactive)
-      (split-window-right)
-      (windmove-right))
-    
-    (defun toggle-window-split ()
-      (interactive)
-      (if (= (count-windows) 2)
-          (let* ((this-win-buffer (window-buffer))
-                 (next-win-buffer (window-buffer (next-window)))
-                 (this-win-edges (window-edges (selected-window)))
-                 (next-win-edges (window-edges (next-window)))
-                 (this-win-2nd (not (and (<= (car this-win-edges)
-                                             (car next-win-edges))
-                                         (<= (cadr this-win-edges)
-                                             (cadr next-win-edges)))))
-                 (splitter
-                  (if (= (car this-win-edges)
-                         (car (window-edges (next-window))))
-                      'split-window-horizontally
-                    'split-window-vertically)))
-            (delete-other-windows)
-            (let ((first-win (selected-window)))
-              (funcall splitter)
-              (if this-win-2nd (other-window 1))
-              (set-window-buffer (selected-window) this-win-buffer)
-              (set-window-buffer (next-window) next-win-buffer)
-              (select-window first-win)
-              (if this-win-2nd (other-window 1))))))
-    
-    (defun rotate-windows ()
-      "Rotate your windows"
-      (interactive)
-      (cond ((not (> (count-windows)1))
-             (message "You can't rotate a single window!"))
-            (t
-             (setq i 1)
-             (setq numWindows (count-windows))
-             (while  (< i numWindows)
-               (let* (
-                      (w1 (elt (window-list) i))
-                      (w2 (elt (window-list) (+ (% i numWindows) 1)))
-    
-                      (b1 (window-buffer w1))
-                      (b2 (window-buffer w2))
-    
-                      (s1 (window-start w1))
-                      (s2 (window-start w2))
-                      )
-                 (set-window-buffer w1  b2)
-                 (set-window-buffer w2 b1)
-                 (set-window-start w1 s2)
-                 (set-window-start w2 s1)
-                 (setq i (1+ i)))))))
-    
-    
-    (defun untabify-buffer ()
-      (interactive)
-      (untabify (point-min) (point-max)))
-    
-    (defun indent-buffer ()
-      (interactive)
-      (indent-region (point-min) (point-max)))
-    
-    (defun cleanup-buffer ()
-      "Perform a bunch of operations on the whitespace content of a buffer.
-    Including indent-buffer, which should not be called automatically on save."
-      (interactive)
-      (untabify-buffer)
-      (delete-trailing-whitespace)
-      (indent-buffer))
-    
-    (defun file-name-with-one-directory (file-name)
-      (concat (cadr (reverse (split-string file-name "/"))) "/"
-              (file-name-nondirectory file-name)))
-    
-    (require 's)
-    
-    (defvar user-home-directory (concat (expand-file-name "~") "/"))
-    
-    (defun shorter-file-name (file-name)
-      (s-chop-prefix user-home-directory file-name))
-    
-    (defun recentf--file-cons (file-name)
-      (cons (shorter-file-name file-name) file-name))
-    
-    (defun recentf-ido-find-file ()
-      "Find a recent file using ido."
-      (interactive)
-      (let* ((recent-files (mapcar 'recentf--file-cons recentf-list))
-             (files (mapcar 'car recent-files))
-             (file (completing-read "Choose recent file: " files)))
-        (find-file (cdr (assoc file recent-files)))))

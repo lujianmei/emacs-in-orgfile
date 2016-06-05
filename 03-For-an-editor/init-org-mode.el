@@ -32,6 +32,10 @@
 (custom-set-variables
  '(org-export-table-data-tags '("<tr class=\"CUSTOM_ID>" . "</t>")))
 
+;; auto load markdown-mode when load org-mode
+(eval-after-load "org"
+  '(require 'ox-md nil t))
+
 ;;================================================================
 ;; Config for Org Capture
 ;;================================================================

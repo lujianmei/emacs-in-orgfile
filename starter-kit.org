@@ -71,10 +71,10 @@ Start kit的使用需要一些工程初使配置，而初使配置即在此文�
     configuration from within that subtree will be loaded.  If it is
     not an id then it will be interpreted as a tag, and only subtrees
     marked with the given tag will be loaded.
-    
+
     For example, to load all of starter-kit-lisp.org simply
     add (starter-kit-load \"lisp\") to your configuration.
-    
+
     To load only the 'window-system' config from
     starter-kit-misc-recommended.org add
      (starter-kit-load \"misc-recommended\" \"window-system\")

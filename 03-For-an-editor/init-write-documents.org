@@ -96,7 +96,7 @@ For org mode agenda view configuration, please find  [[file:../03-For-an-editor/
 For org mode agenda view configuration, please find  [[file:../03-For-an-editor/init-org-table-shift.org][Init-Org-table-shift]].
 #+begin_src emacs-lisp :tangle yes
 ;; load my own org-mode configuration from init-org-table-shift.el
-  (starter-kit-load "03-For-an-editor/init-org-table-shift.org")
+   (starter-kit-load "03-For-an-editor/init-org-table-shift.org")
 ;;(require 'init-org-table-shift)
 ;;(load-library "init-org-table-shift")
 #+end_src
@@ -280,11 +280,13 @@ For org mode agenda view configuration, please find  [[file:../03-For-an-editor/
 *** Markdown mode
 
 **** Configuration
-For markdown mode base configuration, please find [[file:../lisp/init-markdown-mode.el][Init-markdown-mode]].
+For markdown mode base configuration, please find [[file:../03-For-an-editor/init-markdown-mode.el][Init-markdown-mode]].
 #+begin_src emacs-lisp :tangle yes
 
-;; load my own markdown mode configuration from lisp/init-markdown-mode.el
-(require 'init-markdown-mode)
+;; load my own markdown mode configuration from init-markdown-mode.el
+;;(require 'init-markdown-mode)
+  (starter-kit-load "03-For-an-editor/init-markdown-mode.org")
+
 
 #+end_src
 *** Tramp
@@ -845,8 +847,11 @@ and the point, not include the isearch word."
 Please find [[file:../lisp/init-mu4e.org][Init-Mu4e]].
 
 #+begin_src emacs-lisp :tangle yes
-;; load my mu4e configuration from lisp/init-mu4e.el
-(require 'init-mu4e)
+;; load my mu4e configuration from init-mu4e.el
+;;(require 'init-mu4e)
+  (starter-kit-load "03-For-an-editor/init-mu4e.org")
+
+
 ;;(load-library "init-mu4e")
 #+end_src
 *** Multiple cursors mode
