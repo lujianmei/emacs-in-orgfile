@@ -152,14 +152,13 @@ Start kit的使用需要一些工程初使配置，而初使配置即在此文�
 
 - 日常工作使用Emacs
   #+begin_src emacs-lisp :tangle yes
-  (starter-kit-load "02-For-base-using/init-daily-using.org")
-  (starter-kit-load "02-For-base-using/init-for-base-using.org")
-  (starter-kit-load "02-For-base-using/init-org-mode.org")
-  (starter-kit-load "02-For-base-using/init-markdown-mode.org")
-  (starter-kit-load "02-For-base-using/init-gtd-management.org")
-  (starter-kit-load "02-For-base-using/init-projectile-management.org")
-  (starter-kit-load "02-For-base-using/init-mu4e.org")
-  (starter-kit-load "02-For-base-using/init-magit.org")
+  (starter-kit-load "03-For-an-editor/init-daily-using.org") 
+  (starter-kit-load "03-For-an-editor/init-org-mode.org")
+  (starter-kit-load "03-For-an-editor/init-markdown-mode.org")
+  (starter-kit-load "03-For-an-editor/init-gtd-management.org")
+  (starter-kit-load "03-For-an-editor/init-projectile-management.org")
+  (starter-kit-load "03-For-an-editor/init-mu4e.org")
+  (starter-kit-load "03-For-an-editor/init-magit.org")
   #+end_src
 
 

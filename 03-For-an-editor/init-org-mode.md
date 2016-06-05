@@ -2,7 +2,7 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1. Configuration</a>
+<li><a href="#sec-1">1. Orgmode Configuration</a>
 <ul>
 <li><a href="#sec-1-1">1.1. Base configuration</a>
 <ul>
@@ -70,12 +70,19 @@
 <li><a href="#sec-1-12">1.12. End of file</a></li>
 </ul>
 </li>
+<li><a href="#sec-2">2. Orgmode table Configuration</a></li>
+<li><a href="#sec-3">3. Key bindings for Orgmode</a>
+<ul>
+<li><a href="#sec-3-1">3.1. Key bindings configurations</a></li>
+<li><a href="#sec-3-2">3.2. Key binding for org-mode</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 
 
-# Configuration<a id="sec-1" name="sec-1"></a>
+# Orgmode Configuration<a id="sec-1" name="sec-1"></a>
 
 Org-mode是Emacs中最常用的一个模式，在此模式下，可以支持文档编辑、任务管理、项目管理、GTD相关的任务管理等，另外在此模式下，可以借助一些工具在org-mdoe下进行画图，并可以将文档导出html, markdown, pdf等格式。 
 
@@ -1127,3 +1134,817 @@ Column view是建立于org-mode任务管理之上的快速以表格查看各个�
 
     (provide 'init-org-mode)
     ;; init-org-mode.el end here
+
+# Orgmode table Configuration<a id="sec-2" name="sec-2"></a>
+
+    ;;================================================================
+    ;; Config for Org Table, customized some function for operate on cells
+    ;;================================================================
+    (defun org-table-swap-cells (i1 j1 i2 j2)
+      "Swap two cells"
+      (let ((c1 (org-table-get i1 j1))
+            (c2 (org-table-get i2 j2)))
+        (org-table-put i1 j1 c2)
+        (org-table-put i2 j2 c1)
+        (org-table-align)))
+    
+    (defun org-table-move-single-cell (direction)
+      "Move the current cell in a cardinal direction according to the
+      parameter symbol: 'up 'down 'left 'right. Swaps contents of
+      adjacent cell with current one."
+      (unless (org-at-table-p)
+        (error "No table at point"))
+      (let ((di 0) (dj 0))
+        (cond ((equal direction 'up) (setq di -1))
+              ((equal direction 'down) (setq di +1))
+              ((equal direction 'left) (setq dj -1))
+              ((equal direction 'right) (setq dj +1))
+              (t (error "Not a valid direction, must be up down left right")))
+        (let* ((i1 (org-table-current-line))
+               (j1 (org-table-current-column))
+               (i2 (+ i1 di))
+               (j2 (+ j1 dj)))
+          (org-table-swap-cells i1 j1 i2 j2)
+          (org-table-goto-line i2)
+          (org-table-goto-column j2))))
+    
+    (defun org-table-move-single-cell-up ()
+      "Move a single cell up in a table; swap with anything in target cell"
+      (interactive)
+      (org-table-move-single-cell 'up))
+    
+    (defun org-table-move-single-cell-down ()
+      "Move a single cell down in a table; swap with anything in target cell"
+      (interactive)
+      (org-table-move-single-cell 'down))
+    
+    (defun org-table-move-single-cell-left ()
+      "Move a single cell left in a table; swap with anything in target cell"
+      (interactive)
+      (org-table-move-single-cell 'left))
+    
+    (defun org-table-move-single-cell-right ()
+      "Move a single cell right in a table; swap with anything in target cell"
+      (interactive)
+      (org-table-move-single-cell 'right))
+    
+    (provide 'init-org-table-shift)
+    ;; init-org-table-shift.el end here
+
+# Key bindings for Orgmode<a id="sec-3" name="sec-3"></a>
+
+## Key bindings configurations<a id="sec-3-1" name="sec-3-1"></a>
+
+    ;; -----------------------------------------
+    ;;key bindings for org mode
+    ;; -----------------------------------------
+    
+    (global-unset-key (kbd "C-'")) ;; this setting has no use, and conflict with smart
+    
+    
+    ;;(global-set-key (kbd "<f12>") 'org-agenda) ;; configured blew
+    (global-set-key (kbd "<f9> c") 'calendar)
+    (global-set-key (kbd "<f9> v") 'visible-mode)
+    (global-set-key (kbd "C-c c") 'org-capture)
+    
+    ;; add ~/notes/front-end-dev-plan.org into agenda
+    ;; (setq org-agenda-files (list "~/notes/front-end-dev-plan.org"))
+    (global-set-key "\C-c a" 'org-agenda)
+    ;; I use C-c c to start capture mode
+    (global-set-key (kbd "C-c c") 'org-capture)
+    
+    
+    ;; config for export-mutilpul files
+    (global-set-key (kbd "C-<f12>") 'bh/save-then-publish)
+    
+    ;; config for clocking
+    (global-set-key (kbd "<f9> I") 'bh/punch-in)
+    (global-set-key (kbd "<f9> O") 'bh/punch-out)
+    
+    (global-set-key (kbd "<f9> l") 'org-toggle-link-display)
+    (global-set-key (kbd "<f9> SPC") 'bh/clock-in-last-task)
+    
+    (global-set-key (kbd "<f11>") 'org-clock-goto)
+    (global-set-key (kbd "C-<f11>") 'org-clock-in)
+
+## Key binding for org-mode<a id="sec-3-2" name="sec-3-2"></a>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 1:</span> Org-mode快捷键</caption>
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">分类</th>
+<th scope="col" class="left">快捷键</th>
+<th scope="col" class="left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="left">org-mode</td>
+<td class="left">C-RET</td>
+<td class="left">加入同级别索引</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">M-RET</td>
+<td class="left">加入同级别的列表</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c C-t</td>
+<td class="left">设置TODO标签</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">M-left/M-right</td>
+<td class="left">修改任务等级，子任务不跟着变化</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">M-S-up/down</td>
+<td class="left">调整此任务节点等级，子任务跟着变化</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c -</td>
+<td class="left">更换列表标记(循环)</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">M-S-RET</td>
+<td class="left">新增一个子项</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">M-up/M-down</td>
+<td class="left">调整此任务节点的顺序</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c b</td>
+<td class="left">只编辑当前级别列表</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="left">outline</td>
+<td class="left">C-c C-p</td>
+<td class="left">上一个标题</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c C-n</td>
+<td class="left">下一下</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c C-f</td>
+<td class="left">同一级的上一个</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c C-b</td>
+<td class="left">同一级的下一个</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c C-u</td>
+<td class="left">回到上一级标题</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c C-j</td>
+<td class="left">跳转标题</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="left">column</td>
+<td class="left">C-c C-x C-c</td>
+<td class="left">打开column视图模式</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">r</td>
+<td class="left">刷新</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">q</td>
+<td class="left">退出</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left"><left> <right> <up> <down></td>
+<td class="left">视图之间跳转</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">v</td>
+<td class="left">查看属性完整值</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c C-x i</td>
+<td class="left">插入column视图在文件中</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c C-x C-u</td>
+<td class="left">更新column视图中的值，需要进入表格中执行</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-u C-c C-x C-u</td>
+<td class="left">更新此文件中所有的column视图内容</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="left">Property</td>
+<td class="left">C-c C-x p</td>
+<td class="left">设置一个属性</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c C-x p COLUMN</td>
+<td class="left">设置column，内容可以为%25ITEM 10%ITEM 5%TODO 30%SCEDULE 30%DEADLINE</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="left">Tags</td>
+<td class="left">C-c C-c C-c</td>
+<td class="left">打开tag选择窗口，然后通过字母索引选择tag</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">SPC</td>
+<td class="left">清除所有tag</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c C-c</td>
+<td class="left">可以直接输入tag的单词直接进行选择</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c C-x C-c</td>
+<td class="left">打开列展示视图</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">q</td>
+<td class="left">退出列视图</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="left">Planning</td>
+<td class="left">C-c .</td>
+<td class="left">设置时间</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">S-left/S-right</td>
+<td class="left">在日历中选择时间</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">M-n/M-p</td>
+<td class="left">设置任务的优先级</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c C-s</td>
+<td class="left">设置任务开始时间, schedlued</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c C-d</td>
+<td class="left">设置任务结束时间，deadline</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c / d</td>
+<td class="left">显示警告天数之内的Deadline任务</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-u C-c / d</td>
+<td class="left">显示所有的deadline任务</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-1 C-c / d</td>
+<td class="left">查看一天之内接近的deadline任务列表</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c / b</td>
+<td class="left">查看指定日期之前的deadline, schedule任务列表</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c / a</td>
+<td class="left">查看指定日期之后的deadline, schedule任务列表</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c .</td>
+<td class="left">插入时间(Timestamps)</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">S-left/right</td>
+<td class="left">光标在时间上时，用于往前一天往后一天调整</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="left">Clocking</td>
+<td class="left">C-c C-x C-i</td>
+<td class="left">开始clock</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c C-x C-o</td>
+<td class="left">退出clock</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c C-x C-r</td>
+<td class="left">插入clock table</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c C-x ;</td>
+<td class="left">Start a count down time</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="left">Agenda</td>
+<td class="left">C-c a</td>
+<td class="left">打开agenda view, 然后根据显示视图进行选择性显示</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c [</td>
+<td class="left">添加当前文件进入agenda-view-file中</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c ]</td>
+<td class="left">删除当前文件从agenda-view-file中</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c C-x <</td>
+<td class="left">强制限制只使用当前文件或当前节点来显示agenda-view</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c C-x ></td>
+<td class="left">取消以上限制</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c a t</td>
+<td class="left">显示TODO列表</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c a T</td>
+<td class="left">可以指定要显示的状态列表，多个状态使用"竖线"隔开显示</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c a m</td>
+<td class="left">匹配 tags and properties</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c a M</td>
+<td class="left">匹配搜索的tag</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c a L</td>
+<td class="left">采用timeline的方式显示此项目，只能在一个单文件上执行此操作</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c a s</td>
+<td class="left">按搜索关键查询</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c a #</td>
+<td class="left">列出项目暂停的任务</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c C-w</td>
+<td class="left">导出文件</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="left">Agenda column</td>
+<td class="left">C-c C-x C-c</td>
+<td class="left">打开column模式在agenda view中</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="left">Capture</td>
+<td class="left">C-c c</td>
+<td class="left">打开capture</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="left">Export</td>
+<td class="left">C-<f12></td>
+<td class="left">一次性生成所有目录的org文件为html文件，发布配置见.emacs.d中的配置目录</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c C-e</td>
+<td class="left">导出</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="left">Tables</td>
+<td class="left">C-c 竖线</td>
+<td class="left">插入表格</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c -</td>
+<td class="left">在下面添加水平线</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c RET</td>
+<td class="left">添加水平线并跳转到下一行</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-m</td>
+<td class="left">在本列下面添加一行</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">M-S-Right</td>
+<td class="left">在本列后面添加一列</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">M-S-Down</td>
+<td class="left">在本行上面添加一行</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">M-S-Left</td>
+<td class="left">删除本列</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">M-S-UP</td>
+<td class="left">删除本行</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">M-left/right</td>
+<td class="left">移动列</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">M-Up/Down</td>
+<td class="left">移动行</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c C-c</td>
+<td class="left">重新定义表格</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c \`</td>
+<td class="left">修改隐藏的表格中的内容</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">TAB</td>
+<td class="left">跳转下一个单元格</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">M-a / S-tab</td>
+<td class="left">跳转到上一个单元格</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c SPAC</td>
+<td class="left">清除当前单元格内容</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="left">Aligns</td>
+<td class="left">M-x cfs-switch-profile</td>
+<td class="left">修改一下当前buffer使用的字体profile，表格对齐需要按中英文字体宽度相同配置</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">M-x cfs-edit-profile</td>
+<td class="left">修改当前profile的配置，可以在修改字体和大小后，在对应的字体大小行上，执行C-c C-c测试</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">M-x cfs-increase-fontsize</td>
+<td class="left">放大字体，按等宽方式放大，已经绑定快捷键C-x C-=</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">M-x cfs-decrease-fontsize</td>
+<td class="left">缩小字体，按等宽方式缩小，已经绑定快捷键C-x M-=</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="left">Archive</td>
+<td class="left">C-c C-x a</td>
+<td class="left">内部归档，将本任务下的所有子任务标识为灰色，默认将是不可打开的状态，可以通过C-TAB进行打开</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-TAB</td>
+<td class="left">打开内部归档后的任务</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c C-x A</td>
+<td class="left">将此任务迁移入一个名为"Archive"的标记条下</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c C-x C-a</td>
+<td class="left">将此任务迁移到与当前文件名相同名称+<sub>archive的文件中</sub></td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c C-x C-s</td>
+<td class="left">同上</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="left">Refile</td>
+<td class="left">C-c C-w</td>
+<td class="left">将此标签任务迁移到其它文件中</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">C-c M-w</td>
+<td class="left">同上，并保留当前文件内容</td>
+</tr>
+
+
+<tr>
+<td class="left">Helm-org</td>
+<td class="left">C-x c i</td>
+<td class="left">显示当前文件中所有的headings，支持搜索和切换</td>
+</tr>
+
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
