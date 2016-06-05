@@ -31,7 +31,7 @@
       在项目根节点上，配置如下属性，即可以通过 *C-c C-x p* 命令添加一条属性，并将光标定位在属性上后，通过 *S-left/right* 切换所需的属性值；
 *** Column view
     Column view是建立于org-mode任务管理之上的快速以表格查看各个任务情况的视图，可以使用 *C-c C-x C-c* 来打开column view，而此种查看方式只是一种查看，并不会被打印，如果需要通过动态管理column view，并支持打印，可以通过 *C-c C-x i* 插入一个动态的column部分在文件中，但此部分不是动态关联的，即修改了任务内容，插入的column view是不会更新的，但可以通过执行 *C-c C-x C-u* 进行更新；注：已经通过配置(add-hook 'before-save-hook 'org-update-all-dblocks)达到在保存文件时，即会更新文件中所有的column view中的数据；
-    当需要针对某一个特定的任务组生成一个column view时，可以在此任务组的任务上，执行 *C-c C-x p* 插入属性，选择id，输入一个id值，然后在插入动态column时，选择刚刚输入的id值即可；如果需要对这个表特殊定义不同的column结构，可以再执行 *C-c C-x p* 时选择 *COLUMN* 来重新定义一个新的column结构内容；保存即可自动更新表格；
+    当需要针对某一个特定的任务组生成一个column view时，可以在此任务组的任务上，执行 *C-c C-x p* 插入属性，选择id，输入一个id值，然后在插入动态column时，选择刚刚输入的id值即可；如果需要对这个表特殊定义不同的column结构，可以再执行 *C-c C-x p* 时选择 *COLUMN* 来重新定义一个新的column结构内容；保存即可自动更新表s格；
 *** Capture
     Capture用于快速记录任务或者idea内容，并支持在后面进行capture的内容refile；
 *** Agenda View
@@ -619,7 +619,7 @@ brew install msmtp
 |             | C-x 5                          | 切换当前buffer到指定的windows中                                                               |
 |-------------+--------------------------------+-----------------------------------------------------------------------------------------------|
 | Buffers     | C-x b                          | 切换buffer                                                                                    |
-|             | C-x C-b                        | 查看打开的buffers                                                                                  |
+|             | C-x C-b                        | 查看打开的buffers                                                                             |
 |             |                                |                                                                                               |
 |-------------+--------------------------------+-----------------------------------------------------------------------------------------------|
 | Edit        | C-c d                          | 复制当前行                                                                                    |
@@ -1118,7 +1118,7 @@ find . -name "*.[chCHS]" | etags -
 | 执行代码 | C-x C-e | 光标放在函数后面，然后执行当前函数 |
 | ielm     |         |                                    |
 ** Taskjuggler
-#+CAPTION: Elisp代码操作
+#+CAPTION: Taskjuggler
      #+ATTR_LATEX: :environment longtable :align l|l|l
 | 分类 | 快捷键  | 描述             |
 |------+---------+------------------|
@@ -1132,6 +1132,20 @@ find . -name "*.[chCHS]" | etags -
 |      |         |                  |
 在插入任务时，taskjuggler会自动取出所有任务中的id，提供选择；
 在插入资源时，通常因为资源是其它文件，因此需要打开这个资源文件，然后执行 *C-c r*，则可以获取到当前的所有资源列表，然后则可以通过 *C-c C-r* 进行插入选择操作；而当修改了资源后，需要再执行一下 *C-c r*，则可以重新获取一下新的资源列表；
+** Anaconda-mode
+   Anaconda-mode是一个针对python开发时的文档提示，代码查找，提示的工具；
+#+CAPTION: Anaconda-mode
+     #+ATTR_LATEX: :environment longtable :align l|l|l
+| 分类          | 快捷键 | 描述           |
+|---------------+--------+----------------|
+| anaconda-mode | C-M-i  | complete提示   |
+|               | M-.    | 找到定义       |
+|               | M-,    | 找到对应的传值 |
+|               | M-r    | 找到引用       |
+|               | M-*    | 返回           |
+|               | M-?    | 查看文档       |
+|               |        |                |
+
 * 包管理器
 *** Package List
 | Package name         | Markdown                                  |
