@@ -12,8 +12,8 @@
 * [日常工作使用Emacs](03-For-an-editor/init-daily-using.md)
 
     * [Markdown写文档](03-For-an-editor/init-markdown-mode.md)
-    * [Orgmode个人时间管理](03-For-an-editor/init-gtd_management.md)
-    * [Projectile工程管理](03-For-an-editor/init-projectile_management.md)
+    * [Orgmode个人时间管理](03-For-an-editor/init-gtd-management.md)
+    * [Projectile工程管理](03-For-an-editor/init-projectile-management.md)
     * [Mu4e邮件管理](03-For-an-editor/init-mu4e.md)
     * [Magit版本管理](03-For-an-editor/init-magit.md)
 * [开发人员使用Emacs](04-For-a-developer/for-a-developer.md)
