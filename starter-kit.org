@@ -131,27 +131,37 @@ Start kit的使用需要一些工程初使配置，而初使配置即在此文�
 
 #+end_src
 
-** Load each of the org files
+** 加载相应配置文件
 
-
-- Starter kit function definitions in [[file:02-For-base-using/init-for-base-using.org][init-for-base-using]]
-  #+begin_src emacs-lisp :tangle yes
-  (starter-kit-load "02-For-base-using/init-for-base-using.org")
-  #+end_src
-
-- Starter kit function definitions in [[file:09-Defuns/init-defuns.org][init-defuns]]
+- 常用工具函数集合
   #+begin_src emacs-lisp :tangle yes
   (starter-kit-load "09-Defuns/init-defuns.org")
   #+end_src
 
 
-- Starter kit function definitions in [[file:03-For-an-editor/init-write-documents.org][init-write-documents]]
+- Emacs基础编辑提升
   #+begin_src emacs-lisp :tangle yes
-  (starter-kit-load "03-For-an-editor/init-write-documents.org")
+  (starter-kit-load "02-For-base-using/init-for-base-using.org")
+  ;; 编辑功能提升
+  (starter-kit-load "02-For-base-using/init-editting-upgrading.org")
+  ;; 搜索功能提升
+  (starter-kit-load "02-For-base-using/init-ace-isearch.org")
+  #+end_src
+
+- 日常工作使用Emacs
+  #+begin_src emacs-lisp :tangle yes
+  (starter-kit-load "02-For-base-using/init-daily-using.org")
+  (starter-kit-load "02-For-base-using/init-for-base-using.org")
+  (starter-kit-load "02-For-base-using/init-org-mode.org")
+  (starter-kit-load "02-For-base-using/init-markdown-mode.org")
+  (starter-kit-load "02-For-base-using/init-gtd-management.org")
+  (starter-kit-load "02-For-base-using/init-projectile-management.org")
+  (starter-kit-load "02-For-base-using/init-mu4e.org")
+  (starter-kit-load "02-For-base-using/init-magit.org")
   #+end_src
 
 
-- Starter kit function definitions in [[file:10-Index/init-index.org][init-index]]
+- 资源索引
   #+begin_src emacs-lisp :tangle yes
   (starter-kit-load "10-Index/init-index.org")
   #+end_src
