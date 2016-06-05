@@ -1,2 +1,89 @@
 #+TITLE: Editting upgrading
 #+OPTIONS: TOC:4 H:4
+
+* Configurations for better using experiences
+** COMMENT Base configuration
+#+begin_src emacs-lisp :tangle yes
+    ;; Nobody likes to have to type out the full yes or no when Emacs asks. Which it does often. Make it one character.
+    (defalias 'yes-or-no-p 'y-or-n-p)
+
+    ;;
+    (setq echo-keystrokes 0.1
+          use-dialog-box nil
+          visible-bell t)
+    (show-paren-mode t)
+
+    ;; Turn on column numbers.
+    (column-number-mode)
+
+    ;; Deal with temporary files. I don't care about them and this makes them go away.
+    (setq backup-directory-alist `((".*" . ,temporary-file-directory)))
+    (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
+
+  ;;----------------------------------------------------------------------------
+  ;; Some basic preferences
+  ;;----------------------------------------------------------------------------
+  (setq-default
+   blink-cursor-interval 0.4
+   bookmark-default-file (expand-file-name ".bookmarks.el" user-emacs-directory)
+   buffers-menu-max-size 30
+   case-fold-search t
+   column-number-mode t
+   delete-selection-mode t
+   ediff-split-window-function 'split-window-horizontally
+   ediff-window-setup-function 'ediff-setup-windows-plain
+   indent-tabs-mode nil
+   make-backup-files nil
+   mouse-yank-at-point t
+   save-interprogram-paste-before-kill t
+   scroll-preserve-screen-position 'always
+   set-mark-command-repeat-pop t
+   tooltip-delay 1.5
+   truncate-lines nil
+   truncate-partial-width-windows nil)
+
+
+  (global-auto-revert-mode)
+  (setq global-auto-revert-non-file-buffers t
+        auto-revert-verbose nil)
+
+  (transient-mark-mode t)
+
+
+
+
+#+end_src
+
+** Moving back to previous places
+移动到上一个位置，用于在长文件中进行鼠标的定位。
+#+begin_src emacs-lisp :tangle yes
+  ;; Handy way of getting back to previous places.
+  (bind-key "C-x p" 'pop-to-mark-command)
+  (setq set-mark-command-repeat-pop t)
+#+end_src
+
+** Window move - switching between windows
+一个Frame中打开多个windows后，可以通过增加如下配置，以达到在多个windows中进行跳转；
+当窗口比较多时，可以直接使用 =(C-x o)= 进行快速跳转；
+#+begin_src emacs-lisp :tangle yes
+  (use-package windmove
+    :defer t
+    :bind
+    (("<f2> <right>" . windmove-right)
+     ("<f2> <left>" . windmove-left)
+     ("<f2> <up>" . windmove-up)
+     ("<f2> <down>" . windmove-down)
+     ))
+
+  ;; for more window movement
+  (use-package switch-window
+    :defer t
+    :bind (("C-x o" . switch-window)))
+#+end_src
+
+** Auto Truncate lines
+自动拆行，当一个行过长时，自动折行。
+#+begin_src emacs-lisp :tangle yes
+
+#+end_src
+

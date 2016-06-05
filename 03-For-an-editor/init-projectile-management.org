@@ -1,0 +1,90 @@
+#+TITLE: Projectile工程管理
+#+LANGUAGE:  zh
+#+AUTHOR: Lu Jianmei
+#+EMAIL: lu.jianmei@trs.com.cn
+#+OPTIONS:   H:3 num:t   toc:3 \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t p:t pri:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+OPTIONS:   author:t creator:t timestamp:t email:t
+#+DESCRIPTION: A notes that include all works and study things in 2015
+#+KEYWORDS:  org-mode Emacs jquery jquery.mobile jquery.ui wcm
+#+INFOJS_OPT: view:nil toc:t ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LATEX_HEADER: \usepackage{xeCJK}
+#+LATEX_HEADER: \setCJKmainfont{SimSun}
+#+LATEX_CLASS: cn-article
+#+STARTUP: logredeadline, logreschedule
+#+ATTR_HTML: :border 2 :rules all :frame all
+
+
+* Projectile - Project management
+** Configuration
+   #+begin_src emacs-lisp :tangle yes
+     (use-package projectile
+       ;; :defer t
+       :diminish projectile-mode
+       :config
+       (progn
+         (setq projectile-keymap-prefix (kbd "C-c p"))
+         (setq projectile-completion-system 'default)
+         (setq projectile-enable-caching t)
+         (setq projectile-indexing-method 'alien)
+         (add-to-list 'projectile-globally-ignored-files "node-modules")
+         ;; setting for projectile
+         (setq projectile-other-file-alist '(("cpp" "h" "hpp" "ipp")
+                                             ("ipp" "h" "hpp" "cpp")
+                                             ("hpp" "h" "ipp" "cpp")
+                                             ("cxx" "hxx" "ixx")
+                                             ("ixx" "cxx" "hxx")
+                                             ("hxx" "ixx" "cxx")
+                                             ("c" "h")
+                                             ("m" "h")
+                                             ("mm" "h")
+                                             ("h" "c" "cpp" "ipp" "hpp" "m" "mm")
+                                             ("cc" "hh")
+                                             ("hh" "cc")
+                                             ("vert" "frag")
+                                             ("frag" "vert")
+                                             (nil "lock" "gpg")
+                                             ("lock" "")
+                                             ("gpg" "")
+                                             ("js" "css" "html")))
+
+         (add-to-list 'projectile-other-file-alist '("css" "js")) ;; switch from css -> js
+         (add-to-list 'projectile-other-file-alist '("js" "css")) ;; switch from js -> css
+
+
+         ;; setting for helm-projectile
+
+         ;;(setq projectile-switch-project-action 'helm-projectile-find-file)
+         (setq projectile-switch-project-action 'helm-projectile)
+
+         )
+
+
+
+       :config
+       (projectile-global-mode))
+
+
+     (use-package helm-projectile
+       :defer t
+       :init
+       (setq helm-projectile-fuzzy-match t)
+       )
+
+
+
+
+   #+end_src
+** Key binding for helm-projectile
+#+begin_src emacs-lisp :tangle yes
+;; -----------------------------------------
+;; helm-project
+;; -----------------------------------------
+(global-set-key (kbd "C-c h") 'helm-projectile)
+  ;; Grep in a projectile
+  (global-set-key (kbd "C-c p s g") 'helm-projectile-grep)
+
+
+#+end_src

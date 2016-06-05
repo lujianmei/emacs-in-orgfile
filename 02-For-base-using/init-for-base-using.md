@@ -12,8 +12,7 @@
 <ul>
 <li><a href="#sec-2-4-1">2.4.1. <span class="todo TODO">TODO</span> Add my customized configurations</a></li>
 <li><a href="#sec-2-4-2">2.4.2. <span class="done DONE">DONE</span> Look and feel configuration</a></li>
-<li><a href="#sec-2-4-3">2.4.3. Using third-package for color theme</a></li>
-<li><a href="#sec-2-4-4">2.4.4. Configurations for better using experiences</a></li>
+<li><a href="#sec-2-4-3">2.4.3. Configurations for better using experiences</a></li>
 </ul>
 </li>
 </ul>
@@ -129,87 +128,7 @@ Base configurations for window and frame
     (defvar running-alternate-emacs nil)
     (defvar running-development-emacs nil)
 
-### Using third-package for color theme<a id="sec-2-4-3" name="sec-2-4-3"></a>
-
-      ;; Got following from Purcell's emacs configuration
-      ;; From https://github.com/purcell/emacs.d
-    
-      ;;(require-package 'color-theme-sanityinc-solarized)
-      ;;(require-package 'color-theme-sanityinc-tomorrow)
-    
-    (use-package color-theme-sanityinc-solarized
-        :defer t
-    )
-    (use-package color-theme-sanityinc-tomorrow
-        :defer t)
-      ;;------------------------------------------------------------------------------
-      ;; Old-style color theming support (via color-theme.el)
-      ;;------------------------------------------------------------------------------
-      (defcustom window-system-color-theme 'color-theme-sanityinc-solarized-dark
-        "Color theme to use in window-system frames.
-      If Emacs' native theme support is available, this setting is
-      ignored: use `custom-enabled-themes' instead."
-        :type 'symbol)
-    
-      (defcustom tty-color-theme 'color-theme-terminal
-        "Color theme to use in TTY frames.
-      If Emacs' native theme support is available, this setting is
-      ignored: use `custom-enabled-themes' instead."
-        :type 'symbol)
-    
-      (unless (boundp 'custom-enabled-themes)
-        (defun color-theme-terminal ()
-          (interactive)
-          (color-theme-sanityinc-solarized-dark))
-    
-        (defun apply-best-color-theme-for-frame-type (frame)
-          (with-selected-frame frame
-            (funcall (if window-system
-                         window-system-color-theme
-                       tty-color-theme))))
-    
-        (defun reapply-color-themes ()
-          (interactive)
-          (mapcar 'apply-best-color-theme-for-frame-type (frame-list)))
-    
-        (set-variable 'color-theme-is-global nil)
-        (add-hook 'after-make-frame-functions 'apply-best-color-theme-for-frame-type)
-        (add-hook 'after-init-hook 'reapply-color-themes)
-        (apply-best-color-theme-for-frame-type (selected-frame)))
-    
-    
-      ;;------------------------------------------------------------------------------
-      ;; New-style theme support, in which per-frame theming is not possible
-      ;;------------------------------------------------------------------------------
-    
-      ;; If you don't customize it, this is the theme you get.
-      (setq-default custom-enabled-themes '(sanityinc-solarized-light))
-    
-      ;; Ensure that themes will be applied even if they have not been customized
-      (defun reapply-themes ()
-        "Forcibly load the themes listed in `custom-enabled-themes'."
-        (dolist (theme custom-enabled-themes)
-          (unless (custom-theme-p theme)
-            (load-theme theme)))
-        (custom-set-variables `(custom-enabled-themes (quote ,custom-enabled-themes))))
-    
-      (add-hook 'after-init-hook 'reapply-themes)
-    
-    
-      ;;------------------------------------------------------------------------------
-      ;; Toggle between light and dark
-      ;;------------------------------------------------------------------------------
-      (defun light ()
-        "Activate a light color theme."
-        (interactive)
-        (color-theme-sanityinc-solarized-light))
-    
-      (defun dark ()
-        "Activate a dark color theme."
-        (interactive)
-        (color-theme-sanityinc-solarized-dark))
-
-### Configurations for better using experiences<a id="sec-2-4-4" name="sec-2-4-4"></a>
+### Configurations for better using experiences<a id="sec-2-4-3" name="sec-2-4-3"></a>
 
 1.  Moving back to previous places
 

@@ -16,9 +16,9 @@
 #+STARTUP: logredeadline, logreschedule
 #+ATTR_HTML: :border 2 :rules all :frame all
 
-** Gernal packages configurations
+* Gernal packages configurations
 当前分类下，列出支持的包的配置信息。
-*** Auto complete using company-mode
+** Auto complete using company-mode
 自动完成功能的配置，可以基于它针对不同的语言进行配置自动提示功能；
 #+begin_src emacs-lisp :tangle yes
     ;; Turn on auto complete.
@@ -31,21 +31,21 @@
 
 #+end_src
 
-*** Manage the dash package
+** Manage the dash package
 此包用于在macbook上调用dash应用的功能，其它操作系统可以不用；
 #+begin_src emacs-lisp :tangle yes
   (use-package dash
     :defer t)
 #+end_src
 
-*** Config the backups
+** Config the backups
 配置自动备份；
 #+BEGIN_SRC emacs-lisp :tangle yes
 ;;(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
 (setq backup-directory-alist '(("." . (expand-file-name "backups" user-emacs-directory))))
 #+END_SRC
 
-*** Save files
+** Save files
 Emacs中的自动保存功能，单独存储在另一个文件夹中。
 #+BEGIN_SRC emacs-lisp :tangle yes
 (setq delete-old-versions -1)
@@ -55,7 +55,7 @@ Emacs中的自动保存功能，单独存储在另一个文件夹中。
 ;;(setq auto-save-file-name-transforms '((".*" (expand-file-name "auto-save-list" user-emacs-directory) t)))
 #+END_SRC
 
-*** Save history
+** Save history
 保存历史记录
 From http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2014/03/C3F.html
 #+BEGIN_SRC emacs-lisp :tangle yes
@@ -71,8 +71,8 @@ From http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2014/03/C3F.htm
         regexp-search-ring))
 #+END_SRC
 
-*** Org mode
-**** Org-mode Base configuration
+** Org mode
+*** Org-mode Base configuration
 For org mode base configuration, please find [[file:../03-For-an-editor/init-org-mode.org][Init-Org-mode]].
 #+begin_src emacs-lisp :tangle yes
 ;; load my own org-mode configuration from init-org-mode.el
@@ -83,7 +83,7 @@ For org mode base configuration, please find [[file:../03-For-an-editor/init-org
 
 #+end_src
 
-**** Org-mode Agenda view configuration
+*** Org-mode Agenda view configuration
 For org mode agenda view configuration, please find  [[file:../03-For-an-editor/init-org-agenda-view.org][Init-Org-Agenda-View]].
 #+begin_src emacs-lisp :tangle yes
 ;; load my own org-mode configuration from init-org-agenda-view.el
@@ -92,7 +92,7 @@ For org mode agenda view configuration, please find  [[file:../03-For-an-editor/
 ;;(load-library "init-org-agenda-view")
 #+end_src
 
-**** Org-mode table shift configuration
+*** Org-mode table shift configuration
 For org mode agenda view configuration, please find  [[file:../03-For-an-editor/init-org-table-shift.org][Init-Org-table-shift]].
 #+begin_src emacs-lisp :tangle yes
 ;; load my own org-mode configuration from init-org-table-shift.el
@@ -101,7 +101,7 @@ For org mode agenda view configuration, please find  [[file:../03-For-an-editor/
 ;;(load-library "init-org-table-shift")
 #+end_src
 
-**** Key bindings configurations
+*** Key bindings configurations
 #+begin_src emacs-lisp :tangle yes
 ;; -----------------------------------------
 ;;key bindings for org mode
@@ -138,7 +138,7 @@ For org mode agenda view configuration, please find  [[file:../03-For-an-editor/
 
 
 #+end_src
-**** Key binding for org-mode
+*** Key binding for org-mode
 
 #+CAPTION: Org-mode快捷键
      #+ATTR_LATEX: :environment longtable :align l|l|l
@@ -259,13 +259,13 @@ For org mode agenda view configuration, please find  [[file:../03-For-an-editor/
 |---------------+----------------------------+-------------------------------------------------------------------------------------------|
 
 
-*** Macros
+** Macros
 
-**** Key bindings configuration for Macros
+*** Key bindings configuration for Macros
 #+begin_src emacs-lisp :tangle yes
 
 #+end_src
-**** Key bindings for Macros
+*** Key bindings for Macros
 #+CAPTION: Org-mode快捷键
      #+ATTR_LATEX: :environment longtable :align l|l|l
 |--------------------+-------------------------+-----------------------------------------------------------------------------------------------|
@@ -277,9 +277,9 @@ For org mode agenda view configuration, please find  [[file:../03-For-an-editor/
 |--------------------+-------------------------+-----------------------------------------------------------------------------------------------|
 |                    |                         |                                                                                               |
 
-*** Markdown mode
+** Markdown mode
 
-**** Configuration
+*** Configuration
 For markdown mode base configuration, please find [[file:../03-For-an-editor/init-markdown-mode.el][Init-markdown-mode]].
 #+begin_src emacs-lisp :tangle yes
 
@@ -289,8 +289,8 @@ For markdown mode base configuration, please find [[file:../03-For-an-editor/ini
 
 
 #+end_src
-*** Tramp
-**** Configuration
+** Tramp
+*** Configuration
 #+begin_src emacs-lisp :tangle yes
 ;; setting for tramp
 (setq tramp-default-method "ssh")
@@ -299,7 +299,7 @@ For markdown mode base configuration, please find [[file:../03-For-an-editor/ini
 (setq password-cache-expiry 36000)
 
 #+end_src
-*** DONE Winner mode - undo and redo window configuration
+** DONE Winner mode - undo and redo window configuration
     - State "DONE"       from ""           [2016-05-29 Sun 07:02]
 
 =winner-mode= lets you use =C-c <left>= and =C-c <right>= to switch between window configurations. This is handy when something has popped up a buffer that you want to look at briefly before returning to whatever you were working on. When you're done, press =C-c <left>=.
@@ -309,7 +309,7 @@ For markdown mode base configuration, please find [[file:../03-For-an-editor/ini
   :defer t)
 #+END_SRC
 
-*** DONE Mode line format
+** DONE Mode line format
     - State "DONE"       from ""           [2016-05-29 Sun 07:02]
 Display a more compact mode line
 
@@ -318,7 +318,7 @@ Display a more compact mode line
     :defer t)
 #+END_SRC
 
-*** DONE Undo tree
+** DONE Undo tree
     - State "DONE"       from ""           [2016-05-29 Sun 07:02]
 Allow us to visually walk through the changes you've made, undo back to a certain point (or redo), and go down different branches.
 Shot key binding: =(C-x u)=
@@ -334,7 +334,7 @@ Shot key binding: =(C-x u)=
 
 #+END_SRC
 
-*** DONE Help - guide key
+** DONE Help - guide key
     - State "DONE"       from ""           [2016-05-29 Sun 07:02]
 This library is very helpful, we can use it to help us remember or find the shot key binding. It will pops up a mini-buffer to show us the shot-key when we typed first part with a shot delay.
 =(guide-key)= 包可以帮助我们查看操作的快捷键，对于一些不太常用的快捷键想不起来的时候，可以输入快捷键的前缀后，暂停一下，Emacs即会弹出一个子窗口，列出当前前缀下可以选择的快捷键，及其函数名称。以方便我们进行查找。
@@ -347,7 +347,7 @@ This library is very helpful, we can use it to help us remember or find the shot
   (setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-c"))
   (guide-key-mode 1)))  ; Enable guide-key-mode
 #+END_SRC
-*** DONE Encoding configruation
+** DONE Encoding configruation
     - State "DONE"       from ""           [2016-05-29 Sun 07:03]
 This configuration from: http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2014/03/C3F.html
 #+BEGIN_SRC emacs-lisp :tangle yes
@@ -356,10 +356,10 @@ This configuration from: http://www.wisdomandwonder.com/wordpress/wp-content/upl
   (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING)))
 #+END_SRC
 
-*** DONE Helm
-    - State "DONE"       from ""           [2016-05-29 Sun 07:03]
+** DONE Helm
+   - State "DONE"       from ""           [2016-05-29 Sun 07:03]
 
-**** Configuration
+*** Configuration
 #+begin_src emacs-lisp :tangle yes
   (use-package helm
     :defer t
@@ -417,7 +417,7 @@ This configuration from: http://www.wisdomandwonder.com/wordpress/wp-content/upl
     (interactive)
     (helm-do-grep-1 (list book-notes-directory)))
 #+end_src
-*** DONE Helm-swoop
+** DONE Helm-swoop
     - State "DONE"       from ""           [2016-05-29 Sun 07:03]
 #+begin_src emacs-lisp :tangle yes
 
@@ -472,7 +472,7 @@ This configuration from: http://www.wisdomandwonder.com/wordpress/wp-content/upl
 
 
 #+end_src
-*** DONE Snippets
+** DONE Snippets
     - State "DONE"       from ""           [2016-05-29 Sun 07:04]
 Snippets工具可以让我们使用定义好的代码片断，或者文本块，从而可以通过快捷键的方式快速录入。从而提高录入速度。
 #+begin_src emacs-lisp :tangle yes
@@ -597,65 +597,7 @@ Snippets工具可以让我们使用定义好的代码片断，或者文本块，
 
 #+end_src
 
-*** DONE Avy
-
-Quickly jump to a position in the current view.
-已经转使用ace-isearch，因此此种配置可以去掉。也可以单独保留，与ace-isearch不冲突。
-#+begin_src emacs-lisp :tangle yes
-  (use-package avy
-    :defer t)
-    ;; I use the jj key-chord for this; see the definitions for key-chord
-  (use-package avy-zap
-    :defer t
-    :bind
-    (("M-z" . avy-zap-up-to-char-dwim)
-     ("M-Z" . avy-zap-to-char-dwim)))
-#+end_src
-*** DONE Ace-isearch mode
-    - State "DONE"       from ""           [2016-05-30 Mon 20:18]
-Ace-isearch为集成了isearch, ace-jump-mode, avy, helm-swoop四个模式为一体的更方便的搜索体验。
-Ace-isearch会根据输入的内容长度，来判断采用哪种模式。
-The "default" behavior can be summrized as:
-    + L = 1 : ace-jump-mode or avy
-    + 1 < L < 6 : isearch
-    + L >= 6 : helm-swoop
-
-在实际使用时，如果我需要定位到当前屏幕的具体位置时，则输入第一个字母，然后稍等一下，即启动ace-jump-mode，屏幕此时会Mark上和我输入的首字母相同的位置，并通过不同和字母显示位置，我们只需要根据它显示的位置输入显示的字母，即可完成精准定位。
-但当我需要输入一个单词进行搜索时，则输入内容在1-6个字母时，采用的是isearch，即字母完全匹配的全文搜索模式。
-当字母大于6个时，即自动启动helm-swoop模式，进行快速选择。
-
-
-#+begin_src emacs-lisp :tangle yes
-  (use-package ace-isearch
-    :config
-    (progn
-      (global-ace-isearch-mode +1) ;; start this for global
-      ;;(setq ace-isearch-funtion-from-isearch 'swoop-from-isearch) ; need to install swoop
-      ;;(define-key swoop-map (kbd "C-s") 'swoop-action-goto-line-next)
-      ;;(define-key swoop-map (kbd "C-r") 'swoop-action-goto-line-prev)
-      (setq ace-isearch-funtion-from-isearch 'helm-swoop-from-isearch)
-      ;; (setq ace-isearch-funtion-from-isearch 'helm-occur-from-isearch) ; alternative way
-
-      ;; blew configuration can be support for Chinese
-      (defadvice ace-jump-char-category (around adv-ace-jump-support-umlauts activate)
-        (unless (= (char-syntax (ad-get-arg 0)) ?w)
-          ad-do-it)
-        (setq ad-return-value 'alpha))
-
-      ;; base configuration 
-      (custom-set-variables
-       '(ace-isearch-input-length 6)
-       '(ace-isearch-jump-delay 0.25)
-       '(ace-isearch-function 'ace-jump-word-mode)
-       ;;'(ace-isearch-function 'avy-goto-char)
-       '(ace-isearch-use-jump 'printing-char))
-      (define-key isearch-mode-map (kbd "C-'") 'ace-isearch-jump-during-isearch)
-      )
-  )
-
-
-#+end_src
-*** DONE Edit-list
+** DONE Edit-list
     - State "DONE"       from ""           [2016-05-29 Sun 07:04]
 M-x edit-list makes it easier to edit an Emacs Lisp list.
 #+ombegin_src emacs-lisp :tangle yes
@@ -663,7 +605,7 @@ M-x edit-list makes it easier to edit an Emacs Lisp list.
     :defer t
     :commands edit-list)
 #+end_src
-*** DONE Zap to isearch
+** DONE Zap to isearch
     - State "DONE"       from ""           [2016-05-29 Sun 07:04]
 From Steve Purcell, who linked to http://www.emacswiki.org/emacs/ZapToISearch
 #+begin_src emacs-lisp :tangle yes
@@ -696,67 +638,67 @@ and the point, not include the isearch word."
 
 (define-key isearch-mode-map [(meta z)] 'zap-to-isearch)
 #+end_src
-*** Projectile - Project management
-**** Configuration
-     #+begin_src emacs-lisp :tangle yes
-       (use-package projectile
-         ;; :defer t
-         :diminish projectile-mode
-         :config
-         (progn
-           (setq projectile-keymap-prefix (kbd "C-c p"))
-           (setq projectile-completion-system 'default)
-           (setq projectile-enable-caching t)
-           (setq projectile-indexing-method 'alien)
-           (add-to-list 'projectile-globally-ignored-files "node-modules")
-           ;; setting for projectile
-           (setq projectile-other-file-alist '(("cpp" "h" "hpp" "ipp")
-                                               ("ipp" "h" "hpp" "cpp")
-                                               ("hpp" "h" "ipp" "cpp")
-                                               ("cxx" "hxx" "ixx")
-                                               ("ixx" "cxx" "hxx")
-                                               ("hxx" "ixx" "cxx")
-                                               ("c" "h")
-                                               ("m" "h")
-                                               ("mm" "h")
-                                               ("h" "c" "cpp" "ipp" "hpp" "m" "mm")
-                                               ("cc" "hh")
-                                               ("hh" "cc")
-                                               ("vert" "frag")
-                                               ("frag" "vert")
-                                               (nil "lock" "gpg")
-                                               ("lock" "")
-                                               ("gpg" "")
-                                               ("js" "css" "html")))
+** Projectile - Project management
+*** Configuration
+    #+begin_src emacs-lisp :tangle yes
+      (use-package projectile
+        ;; :defer t
+        :diminish projectile-mode
+        :config
+        (progn
+          (setq projectile-keymap-prefix (kbd "C-c p"))
+          (setq projectile-completion-system 'default)
+          (setq projectile-enable-caching t)
+          (setq projectile-indexing-method 'alien)
+          (add-to-list 'projectile-globally-ignored-files "node-modules")
+          ;; setting for projectile
+          (setq projectile-other-file-alist '(("cpp" "h" "hpp" "ipp")
+                                              ("ipp" "h" "hpp" "cpp")
+                                              ("hpp" "h" "ipp" "cpp")
+                                              ("cxx" "hxx" "ixx")
+                                              ("ixx" "cxx" "hxx")
+                                              ("hxx" "ixx" "cxx")
+                                              ("c" "h")
+                                              ("m" "h")
+                                              ("mm" "h")
+                                              ("h" "c" "cpp" "ipp" "hpp" "m" "mm")
+                                              ("cc" "hh")
+                                              ("hh" "cc")
+                                              ("vert" "frag")
+                                              ("frag" "vert")
+                                              (nil "lock" "gpg")
+                                              ("lock" "")
+                                              ("gpg" "")
+                                              ("js" "css" "html")))
 
-           (add-to-list 'projectile-other-file-alist '("css" "js")) ;; switch from css -> js
-           (add-to-list 'projectile-other-file-alist '("js" "css")) ;; switch from js -> css
-
-
-           ;; setting for helm-projectile
-
-           ;;(setq projectile-switch-project-action 'helm-projectile-find-file)
-           (setq projectile-switch-project-action 'helm-projectile)
-
-           )
+          (add-to-list 'projectile-other-file-alist '("css" "js")) ;; switch from css -> js
+          (add-to-list 'projectile-other-file-alist '("js" "css")) ;; switch from js -> css
 
 
+          ;; setting for helm-projectile
 
-         :config
-         (projectile-global-mode))
+          ;;(setq projectile-switch-project-action 'helm-projectile-find-file)
+          (setq projectile-switch-project-action 'helm-projectile)
 
-
-       (use-package helm-projectile
-         :defer t
-         :init
-         (setq helm-projectile-fuzzy-match t)
-         )
+          )
 
 
 
+        :config
+        (projectile-global-mode))
 
-     #+end_src
-**** Key binding for helm-projectile
+
+      (use-package helm-projectile
+        :defer t
+        :init
+        (setq helm-projectile-fuzzy-match t)
+        )
+
+
+
+
+    #+end_src
+*** Key binding for helm-projectile
 #+begin_src emacs-lisp :tangle yes
 ;; -----------------------------------------
 ;; helm-project
@@ -767,10 +709,10 @@ and the point, not include the isearch word."
 
 
 #+end_src
-*** Chinese-font-setup
+** Chinese-font-setup
 在Org-mode中，编辑表格并让表格的分隔线对齐是一件不太容易的事情，主要原因是因为Org-mode中编辑时字母与汉字同时存在时，则字母字体长度与汉字字体宽度不同的原因导致，因此这里的主要解决方案是找到一种通用等宽字体，通过字体的配置来达到最终表格对齐正常。
 感谢Chinese-font-setup的包开发者：
-**** Configuration
+*** Configuration
 #+begin_src emacs-lisp :tangle yes
   ;; add font-config for chinese double-width fonts issue
   (use-package chinese-fonts-setup
@@ -780,7 +722,7 @@ and the point, not include the isearch word."
   )
 
 #+end_src
-**** Shot key binding
+*** Shot key binding
 
 #+begin_src emacs-lisp :tangle yes
 ;; Reset Increase Font size and Descrease Font size short key binding after using chinese-font-setup plugin
@@ -790,9 +732,9 @@ and the point, not include the isearch word."
 (global-set-key (kbd "C-x M-=") 'cfs-decrease-fontsize)
 
 #+end_src
-*** WAITING Smartparens                                             :WAITING:
-    - State "WAITING"    from ""           [2016-05-30 Mon 20:36]
-**** Configuration
+** WAITING Smartparens                                              :WAITING:
+   - State "WAITING"    from ""           [2016-05-30 Mon 20:36]
+*** Configuration
 #+begin_src emacs-lisp :tangle yes
   (use-package smartparens
     :config
@@ -811,8 +753,8 @@ and the point, not include the isearch word."
 
 
 #+end_src
-*** Expand-region
-**** Configuration
+** Expand-region
+*** Configuration
 #+begin_src emacs-lisp :tangle yes
   (use-package expand-region
     :config
@@ -824,15 +766,15 @@ and the point, not include the isearch word."
 
     )
 #+end_src
-**** Key bindings for Expand-region
+*** Key bindings for Expand-region
 #+begin_src emacs-lisp :tangle yes
 ;; Expand region (increases selected region by semantic units)
 (global-set-key (kbd "C-'") 'er/expand-region)
 
 #+end_src
-*** Swap-buffer
+** Swap-buffer
 
-**** Configuration
+*** Configuration
 #+begin_src emacs-lisp :tangle yes
   ;; add smart swap buffers in multi-windows
   (use-package swap-buffers
@@ -842,7 +784,7 @@ and the point, not include the isearch word."
 
 
 #+end_src
-*** Email Reader - Mu4e
+** Email Reader - Mu4e
 
 Please find [[file:../lisp/init-mu4e.org][Init-Mu4e]].
 
@@ -854,10 +796,10 @@ Please find [[file:../lisp/init-mu4e.org][Init-Mu4e]].
 
 ;;(load-library "init-mu4e")
 #+end_src
-*** Multiple cursors mode
+** Multiple cursors mode
 Multiple cursor是一个非常强大的多位置同时编辑的编辑模式，文档可参考：
 这里有一个介绍详细的视频：http://emacsrocks.com/e13.html
-**** Configuration
+*** Configuration
 #+begin_src emacs-lisp :tangle yes
   (use-package multiple-cursors
     :defer t
@@ -880,7 +822,7 @@ Multiple cursor是一个非常强大的多位置同时编辑的编辑模式，�
     :defer t
     :config (define-key mc/keymap (kbd "C-. =") 'mc/compare-chars))
 #+end_src
-**** Short-key binding
+*** Short-key binding
 #+begin_src emacs-lisp :tangle yes
 ;; add multi cursors:
 ;;(require 'multiple-cursors)
@@ -894,7 +836,7 @@ Multiple cursor是一个非常强大的多位置同时编辑的编辑模式，�
 
 
 #+end_src
-*** Latex mode
+** Latex mode
 #+begin_src emacs-lisp :tangle no
   ;;; latex --- Summary
   ;;; Config for latex
@@ -938,15 +880,15 @@ Multiple cursor是一个非常强大的多位置同时编辑的编辑模式，�
 
 
 #+end_src
-*** TODO Wgrep
+** TODO Wgrep
 Wgrep是一个可以允许我们在grep模式下进行直接修改的工具，可以允许我们批量添加上Multiple cursors，然后进行批量修改的工具。在快速修改文件时非常方便，类似于sed的批量匹配，批量修改。
 #+begin_src emacs-lisp :tangle no
 ;;; 未配置详细操作，暂时不使用
 (use-package wgrep)
 #+end_src
-*** Tabbar
+** Tabbar
 Tabbar，在Emacs中显示一个文件的切换标签，并且标签文件按projectile的进行分组显示，以方便在同一个项目中进行维护和切换文件。
-**** Configuration
+*** Configuration
 #+begin_src emacs-lisp :tangle yes
 (use-package tabbar)
 
@@ -1073,7 +1015,7 @@ Default is t."
 
 #+end_src
 
-**** Key binding 
+*** Key binding 
 #+begin_src emacs-lisp :tangle yes
 ;; -----------------------------------------
 ;; start tabbar-mode
@@ -1087,8 +1029,8 @@ Default is t."
 
 
 #+end_src
-*** Perspective
-**** Configuration
+** Perspective
+*** Configuration
 #+begin_src emacs-lisp :tangle yes
 
   (use-package perspective
@@ -1118,9 +1060,9 @@ Default is t."
 
 #+end_src
 
-*** Ido
+** Ido
 Ido工具是为在窗口下面的状态栏中选择、显示时更清晰，操作更方便，并支持模糊匹配选择，这里只保留选择文件时启动ido，其它时间切换buffer等，采用helm进行。
-**** Configuration
+*** Configuration
 #+begin_src emacs-lisp :tangle yes
 ;; Use C-f during file selection to switch to regular find-file
 (ido-mode t)
@@ -1131,8 +1073,8 @@ Ido工具是为在窗口下面的状态栏中选择、显示时更清晰，操�
 (setq ido-use-virtual-buffers t)
 
 #+end_src
-*** Multiple Major Mode
-**** Configuration
+** Multiple Major Mode
+*** Configuration
 #+begin_src emacs-lisp :tangle yes
   (use-package mmm-mode
     :config

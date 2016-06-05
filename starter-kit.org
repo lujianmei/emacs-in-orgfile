@@ -142,6 +142,8 @@ Start kit的使用需要一些工程初使配置，而初使配置即在此文�
 - Emacs基础编辑提升
   #+begin_src emacs-lisp :tangle yes
   (starter-kit-load "02-For-base-using/init-for-base-using.org")
+  ;; change a theme
+  (starter-kit-load "02-For-base-using/init-theme-changing.org")
   ;; 编辑功能提升
   (starter-kit-load "02-For-base-using/init-editting-upgrading.org")
   ;; 搜索功能提升
