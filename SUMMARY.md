@@ -4,7 +4,7 @@
 
 * [关于此书](00-About-this-book/about-this-book.md)
 * [关于Starter-kit](starter-kit.md)
-* [Emacs入门学习](01-For-beginners/for_beginners.md)
+* [Emacs入门学习](01-For-beginners/for-beginners.md)
 * [Emacs基础编辑](02-For-base-using/init-for-base-using.md)
     * [界面提升](02-For-base-using/init-theme-changing.md)
     * [编辑提升](02-For-base-using/init-editting-upgrading.md)
