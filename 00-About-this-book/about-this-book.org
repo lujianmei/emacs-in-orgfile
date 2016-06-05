@@ -1,0 +1,31 @@
+#+TITLE: About this book
+#+OPTIONS: TOC:4 H:4
+
+
+* About this book
+  + 最早接触的高级文本编辑器是VI，从学习Linux开始就学习了VI，但用的时间不长，因为后来代码写的时候少了，所以VI慢慢的从熟悉变的越来越陌生，然而我却对高级文本操作一直没有中断过学习的兴趣。
+而听说Emacs也是很久前的事情了，但是真正开始学习Emacs，却是从2014年初，从一开始学习的时候，就从Steve Purcell(https://github.com/purcell)中的配置开始使用和学习，他的配置最容易上手。在使用他的配置时
+Magnar Sveen(https://github.com/magnars)开始学习，他的配置中有更多很酷的东西，也有很多有趣的东西，主要是他的配置中有很多配置了视频演示，毫不夸张的说，看了Magnar的Emacs Rock后，都觉得以前用的编辑器实在是被甩到了不知道多远，已经可以用一个天上，一个地下来形容之间的差距了。
+   + 所以最后将Steve和Magnar的配置进行了一次深度整合，搞了一个集大成的配置，但是因为不是很懂lisp语言的运行原理，所以配置出来的东西虽然使用起来没有什么问题，但启动速度却一直是个头痛的问题。所以后来只能通过配置脚本的方式，使用 =(emacsclient -c -a '')= 的方式来运行，即启用了 =Emacs Server Daemon= 模式，以提升启动的性能。
+   + 直到后来看到了 =Emacs-starter-kit= (https://github.com/technomancy/emacs-starter-kit)，采用org格式来编辑的，并通过org-babel来生成.el文件，从而达到emacs config的管理。才开始准备从头配置一个全新的Emacs，并且将这两年学习和记录的学习笔记、所有相关的键盘快捷键配置统统整理出来，完成一个可以让初学者很快入手的指导学习手册。
+   + 而在使用gitbook来管理此学习指导手册时，却发现同时维护电子书和我每天使用的配置代码，配置代码发生变更后，却还要调整到电子书中，这样需要同时维护两个工程，着实比较麻烦，最终我将电子书和我每天使用的配置代码进行了完全的整合，从而让电子书和我的配置一样可以最快的更新，以给大家提供最新最实时的电子书和配置工程。
+从而让更多的人能学习和使用Emacs这个“神一样的编辑器”。
+我的配置地址为：
+https://github.com/lujianmei/emacs-config-in-a-emacs-study-book.git
+这也是gitbook电子书的开发地址。
+另外gitbook的电子书发布地址为：http://emacs.lujianmei.com/
+
+** How to install
+*** Download
+#+begin_src ssh
+git clone https://github.com/lujianmei/emacs-config-in-a-emacs-study-book.git ~/.emacs.d
+#+end_src
+直接将代码下载到 =~= 目录下，并修改文件夹名称为.emacs.d即可。配置文件中所有的第三方package均会自动下载，并最终完成启动。
+*** Initialization
+首次启动时，需要通过 =org-babel-tangle= 初使化.el文件，因此打开emacs后，调用 =M-x org-babel-tangel=, 或者执行快捷键 =C-c C-v t= 来将org文件生成.el文件。
+.el文件生成完成后，则可以重启启动emacs, 所有的配置文件则会重新进行加载，自动下载包，自动完成安装，完成初使化。
+
+** How to edit this configuration
+在使用过程中需要对某一个配置进行修改，增加，删除，可以直接修改对应的代码所在的org文件，修改完成后保存，然后在org文件上，执行 =C-c C-v t= 即会自动更新对应的.el文件，然后重启emacs即可。当然也可以切换到对应的.el文件中，执行 =C-c C-k= 则可以热加载修改后的配置。
+在工程的根目录下，有一个 =test-startup.sh= 脚本文件，可以在启动之前执行此脚本，则可以自动检查当前应用配置是否正常，如果执行正常，则说明当前配置正确，至少没有影响到emacs的启动，而在执行相应的函数时，再确认函数是否执行正常。
+
