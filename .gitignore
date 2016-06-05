@@ -85,3 +85,5 @@ core.*
 /starter-kit.el
 /0*/*.el
 /1*/*.el
+/emacs-document*
+/.DS_Store
