@@ -9,95 +9,86 @@
 <li><a href="#sec-1-3">1.3. Config the backups</a></li>
 <li><a href="#sec-1-4">1.4. Save files</a></li>
 <li><a href="#sec-1-5">1.5. Save history</a></li>
-<li><a href="#sec-1-6">1.6. Org mode</a>
+<li><a href="#sec-1-6">1.6. Macros</a>
 <ul>
-<li><a href="#sec-1-6-1">1.6.1. Org-mode Base configuration</a></li>
-<li><a href="#sec-1-6-2">1.6.2. Org-mode Agenda view configuration</a></li>
-<li><a href="#sec-1-6-3">1.6.3. Org-mode table shift configuration</a></li>
-<li><a href="#sec-1-6-4">1.6.4. Key bindings configurations</a></li>
-<li><a href="#sec-1-6-5">1.6.5. Key binding for org-mode</a></li>
+<li><a href="#sec-1-6-1">1.6.1. Key bindings configuration for Macros</a></li>
+<li><a href="#sec-1-6-2">1.6.2. Key bindings for Macros</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-7">1.7. Macros</a>
+<li><a href="#sec-1-7">1.7. Markdown mode</a>
 <ul>
-<li><a href="#sec-1-7-1">1.7.1. Key bindings configuration for Macros</a></li>
-<li><a href="#sec-1-7-2">1.7.2. Key bindings for Macros</a></li>
+<li><a href="#sec-1-7-1">1.7.1. Configuration</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-8">1.8. Markdown mode</a>
+<li><a href="#sec-1-8">1.8. Tramp</a>
 <ul>
 <li><a href="#sec-1-8-1">1.8.1. Configuration</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-9">1.9. Tramp</a>
+<li><a href="#sec-1-9">1.9. <span class="done DONE">DONE</span> Winner mode - undo and redo window configuration</a></li>
+<li><a href="#sec-1-10">1.10. <span class="done DONE">DONE</span> Mode line format</a></li>
+<li><a href="#sec-1-11">1.11. <span class="done DONE">DONE</span> Undo tree</a></li>
+<li><a href="#sec-1-12">1.12. <span class="done DONE">DONE</span> Help - guide key</a></li>
+<li><a href="#sec-1-13">1.13. <span class="done DONE">DONE</span> Encoding configruation</a></li>
+<li><a href="#sec-1-14">1.14. <span class="done DONE">DONE</span> Helm</a>
 <ul>
-<li><a href="#sec-1-9-1">1.9.1. Configuration</a></li>
+<li><a href="#sec-1-14-1">1.14.1. Configuration</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-10">1.10. <span class="done DONE">DONE</span> Winner mode - undo and redo window configuration</a></li>
-<li><a href="#sec-1-11">1.11. <span class="done DONE">DONE</span> Mode line format</a></li>
-<li><a href="#sec-1-12">1.12. <span class="done DONE">DONE</span> Undo tree</a></li>
-<li><a href="#sec-1-13">1.13. <span class="done DONE">DONE</span> Help - guide key</a></li>
-<li><a href="#sec-1-14">1.14. <span class="done DONE">DONE</span> Encoding configruation</a></li>
-<li><a href="#sec-1-15">1.15. <span class="done DONE">DONE</span> Helm</a>
+<li><a href="#sec-1-15">1.15. <span class="done DONE">DONE</span> Helm-swoop</a></li>
+<li><a href="#sec-1-16">1.16. <span class="done DONE">DONE</span> Snippets</a></li>
+<li><a href="#sec-1-17">1.17. <span class="done DONE">DONE</span> Edit-list</a></li>
+<li><a href="#sec-1-18">1.18. <span class="done DONE">DONE</span> Zap to isearch</a></li>
+<li><a href="#sec-1-19">1.19. Chinese-font-setup</a>
 <ul>
-<li><a href="#sec-1-15-1">1.15.1. Configuration</a></li>
+<li><a href="#sec-1-19-1">1.19.1. Configuration</a></li>
+<li><a href="#sec-1-19-2">1.19.2. Shot key binding</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-16">1.16. <span class="done DONE">DONE</span> Helm-swoop</a></li>
-<li><a href="#sec-1-17">1.17. <span class="done DONE">DONE</span> Snippets</a></li>
-<li><a href="#sec-1-18">1.18. <span class="done DONE">DONE</span> Edit-list</a></li>
-<li><a href="#sec-1-19">1.19. <span class="done DONE">DONE</span> Zap to isearch</a></li>
-<li><a href="#sec-1-20">1.20. Chinese-font-setup</a>
+<li><a href="#sec-1-20">1.20. <span class="todo WAITING">WAITING</span> Smartparens</a>
 <ul>
 <li><a href="#sec-1-20-1">1.20.1. Configuration</a></li>
-<li><a href="#sec-1-20-2">1.20.2. Shot key binding</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-21">1.21. <span class="todo WAITING">WAITING</span> Smartparens</a>
+<li><a href="#sec-1-21">1.21. Expand-region</a>
 <ul>
 <li><a href="#sec-1-21-1">1.21.1. Configuration</a></li>
+<li><a href="#sec-1-21-2">1.21.2. Key bindings for Expand-region</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-22">1.22. Expand-region</a>
+<li><a href="#sec-1-22">1.22. Swap-buffer</a>
 <ul>
 <li><a href="#sec-1-22-1">1.22.1. Configuration</a></li>
-<li><a href="#sec-1-22-2">1.22.2. Key bindings for Expand-region</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-23">1.23. Swap-buffer</a>
+<li><a href="#sec-1-23">1.23. Email Reader - Mu4e</a></li>
+<li><a href="#sec-1-24">1.24. Multiple cursors mode</a>
 <ul>
-<li><a href="#sec-1-23-1">1.23.1. Configuration</a></li>
+<li><a href="#sec-1-24-1">1.24.1. Configuration</a></li>
+<li><a href="#sec-1-24-2">1.24.2. Short-key binding</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-24">1.24. Email Reader - Mu4e</a></li>
-<li><a href="#sec-1-25">1.25. Multiple cursors mode</a>
+<li><a href="#sec-1-25">1.25. Latex mode</a></li>
+<li><a href="#sec-1-26">1.26. <span class="todo TODO">TODO</span> Wgrep</a></li>
+<li><a href="#sec-1-27">1.27. Tabbar</a>
 <ul>
-<li><a href="#sec-1-25-1">1.25.1. Configuration</a></li>
-<li><a href="#sec-1-25-2">1.25.2. Short-key binding</a></li>
+<li><a href="#sec-1-27-1">1.27.1. Configuration</a></li>
+<li><a href="#sec-1-27-2">1.27.2. Key binding</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-26">1.26. Latex mode</a></li>
-<li><a href="#sec-1-27">1.27. <span class="todo TODO">TODO</span> Wgrep</a></li>
-<li><a href="#sec-1-28">1.28. Tabbar</a>
+<li><a href="#sec-1-28">1.28. Perspective</a>
 <ul>
 <li><a href="#sec-1-28-1">1.28.1. Configuration</a></li>
-<li><a href="#sec-1-28-2">1.28.2. Key binding</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-29">1.29. Perspective</a>
+<li><a href="#sec-1-29">1.29. Ido</a>
 <ul>
 <li><a href="#sec-1-29-1">1.29.1. Configuration</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-30">1.30. Ido</a>
+<li><a href="#sec-1-30">1.30. Multiple Major Mode</a>
 <ul>
 <li><a href="#sec-1-30-1">1.30.1. Configuration</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-31">1.31. Multiple Major Mode</a>
-<ul>
-<li><a href="#sec-1-31-1">1.31.1. Configuration</a></li>
 </ul>
 </li>
 </ul>
@@ -163,799 +154,14 @@ From <http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2014/03/C3F.ht
             search-ring
             regexp-search-ring))
 
-## Org mode<a id="sec-1-6" name="sec-1-6"></a>
+## Macros<a id="sec-1-6" name="sec-1-6"></a>
 
-### Org-mode Base configuration<a id="sec-1-6-1" name="sec-1-6-1"></a>
+### Key bindings configuration for Macros<a id="sec-1-6-1" name="sec-1-6-1"></a>
 
-For org mode base configuration, please find [Init-Org-mode](../03-For-an-editor/init-org-mode.md).
-
-    ;; load my own org-mode configuration from init-org-mode.el
-      (starter-kit-load "03-For-an-editor/init-org-mode.org")
-    ;;(require 'init-org-mode)
-    ;;(load-library "init-org-mode")
-
-### Org-mode Agenda view configuration<a id="sec-1-6-2" name="sec-1-6-2"></a>
-
-For org mode agenda view configuration, please find  [Init-Org-Agenda-View](../03-For-an-editor/init-org-agenda-view.md).
-
-    ;; load my own org-mode configuration from init-org-agenda-view.el
-      (starter-kit-load "03-For-an-editor/init-org-agenda-view.org")
-    ;;(require 'init-org-agenda-view)
-    ;;(load-library "init-org-agenda-view")
-
-### Org-mode table shift configuration<a id="sec-1-6-3" name="sec-1-6-3"></a>
-
-For org mode agenda view configuration, please find  [Init-Org-table-shift](../03-For-an-editor/init-org-table-shift.md).
-
-    ;; load my own org-mode configuration from init-org-table-shift.el
-       (starter-kit-load "03-For-an-editor/init-org-table-shift.org")
-    ;;(require 'init-org-table-shift)
-    ;;(load-library "init-org-table-shift")
-
-### Key bindings configurations<a id="sec-1-6-4" name="sec-1-6-4"></a>
-
-    ;; -----------------------------------------
-    ;;key bindings for org mode
-    ;; -----------------------------------------
-    
-    (global-unset-key (kbd "C-'")) ;; this setting has no use, and conflict with smart
-    
-    
-    ;;(global-set-key (kbd "<f12>") 'org-agenda) ;; configured blew
-    (global-set-key (kbd "<f9> c") 'calendar)
-    (global-set-key (kbd "<f9> v") 'visible-mode)
-    (global-set-key (kbd "C-c c") 'org-capture)
-    
-    ;; add ~/notes/front-end-dev-plan.org into agenda
-    ;; (setq org-agenda-files (list "~/notes/front-end-dev-plan.org"))
-    (global-set-key "\C-c a" 'org-agenda)
-    ;; I use C-c c to start capture mode
-    (global-set-key (kbd "C-c c") 'org-capture)
-    
-    
-    ;; config for export-mutilpul files
-    (global-set-key (kbd "C-<f12>") 'bh/save-then-publish)
-    
-    ;; config for clocking
-    (global-set-key (kbd "<f9> I") 'bh/punch-in)
-    (global-set-key (kbd "<f9> O") 'bh/punch-out)
-    
-    (global-set-key (kbd "<f9> l") 'org-toggle-link-display)
-    (global-set-key (kbd "<f9> SPC") 'bh/clock-in-last-task)
-    
-    (global-set-key (kbd "<f11>") 'org-clock-goto)
-    (global-set-key (kbd "C-<f11>") 'org-clock-in)
-
-### Key binding for org-mode<a id="sec-1-6-5" name="sec-1-6-5"></a>
+### Key bindings for Macros<a id="sec-1-6-2" name="sec-1-6-2"></a>
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 1:</span> Org-mode快捷键</caption>
-
-<colgroup>
-<col  class="left" />
-
-<col  class="left" />
-
-<col  class="left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="left">分类</th>
-<th scope="col" class="left">快捷键</th>
-<th scope="col" class="left">说明</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td class="left">org-mode</td>
-<td class="left">C-RET</td>
-<td class="left">加入同级别索引</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">M-RET</td>
-<td class="left">加入同级别的列表</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c C-t</td>
-<td class="left">设置TODO标签</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">M-left/M-right</td>
-<td class="left">修改任务等级，子任务不跟着变化</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">M-S-up/down</td>
-<td class="left">调整此任务节点等级，子任务跟着变化</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c -</td>
-<td class="left">更换列表标记(循环)</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">M-S-RET</td>
-<td class="left">新增一个子项</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">M-up/M-down</td>
-<td class="left">调整此任务节点的顺序</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c b</td>
-<td class="left">只编辑当前级别列表</td>
-</tr>
-</tbody>
-
-<tbody>
-<tr>
-<td class="left">outline</td>
-<td class="left">C-c C-p</td>
-<td class="left">上一个标题</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c C-n</td>
-<td class="left">下一下</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c C-f</td>
-<td class="left">同一级的上一个</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c C-b</td>
-<td class="left">同一级的下一个</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c C-u</td>
-<td class="left">回到上一级标题</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c C-j</td>
-<td class="left">跳转标题</td>
-</tr>
-</tbody>
-
-<tbody>
-<tr>
-<td class="left">column</td>
-<td class="left">C-c C-x C-c</td>
-<td class="left">打开column视图模式</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">r</td>
-<td class="left">刷新</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">q</td>
-<td class="left">退出</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left"><left> <right> <up> <down></td>
-<td class="left">视图之间跳转</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">v</td>
-<td class="left">查看属性完整值</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c C-x i</td>
-<td class="left">插入column视图在文件中</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c C-x C-u</td>
-<td class="left">更新column视图中的值，需要进入表格中执行</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-u C-c C-x C-u</td>
-<td class="left">更新此文件中所有的column视图内容</td>
-</tr>
-</tbody>
-
-<tbody>
-<tr>
-<td class="left">Property</td>
-<td class="left">C-c C-x p</td>
-<td class="left">设置一个属性</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c C-x p COLUMN</td>
-<td class="left">设置column，内容可以为%25ITEM 10%ITEM 5%TODO 30%SCEDULE 30%DEADLINE</td>
-</tr>
-</tbody>
-
-<tbody>
-<tr>
-<td class="left">Tags</td>
-<td class="left">C-c C-c C-c</td>
-<td class="left">打开tag选择窗口，然后通过字母索引选择tag</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">SPC</td>
-<td class="left">清除所有tag</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c C-c</td>
-<td class="left">可以直接输入tag的单词直接进行选择</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c C-x C-c</td>
-<td class="left">打开列展示视图</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">q</td>
-<td class="left">退出列视图</td>
-</tr>
-</tbody>
-
-<tbody>
-<tr>
-<td class="left">Planning</td>
-<td class="left">C-c .</td>
-<td class="left">设置时间</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">S-left/S-right</td>
-<td class="left">在日历中选择时间</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">M-n/M-p</td>
-<td class="left">设置任务的优先级</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c C-s</td>
-<td class="left">设置任务开始时间, schedlued</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c C-d</td>
-<td class="left">设置任务结束时间，deadline</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c / d</td>
-<td class="left">显示警告天数之内的Deadline任务</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-u C-c / d</td>
-<td class="left">显示所有的deadline任务</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-1 C-c / d</td>
-<td class="left">查看一天之内接近的deadline任务列表</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c / b</td>
-<td class="left">查看指定日期之前的deadline, schedule任务列表</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c / a</td>
-<td class="left">查看指定日期之后的deadline, schedule任务列表</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c .</td>
-<td class="left">插入时间(Timestamps)</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">S-left/right</td>
-<td class="left">光标在时间上时，用于往前一天往后一天调整</td>
-</tr>
-</tbody>
-
-<tbody>
-<tr>
-<td class="left">Clocking</td>
-<td class="left">C-c C-x C-i</td>
-<td class="left">开始clock</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c C-x C-o</td>
-<td class="left">退出clock</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c C-x C-r</td>
-<td class="left">插入clock table</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c C-x ;</td>
-<td class="left">Start a count down time</td>
-</tr>
-</tbody>
-
-<tbody>
-<tr>
-<td class="left">Agenda</td>
-<td class="left">C-c a</td>
-<td class="left">打开agenda view, 然后根据显示视图进行选择性显示</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c [</td>
-<td class="left">添加当前文件进入agenda-view-file中</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c ]</td>
-<td class="left">删除当前文件从agenda-view-file中</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c C-x <</td>
-<td class="left">强制限制只使用当前文件或当前节点来显示agenda-view</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c C-x ></td>
-<td class="left">取消以上限制</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c a t</td>
-<td class="left">显示TODO列表</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c a T</td>
-<td class="left">可以指定要显示的状态列表，多个状态使用"竖线"隔开显示</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c a m</td>
-<td class="left">匹配 tags and properties</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c a M</td>
-<td class="left">匹配搜索的tag</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c a L</td>
-<td class="left">采用timeline的方式显示此项目，只能在一个单文件上执行此操作</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c a s</td>
-<td class="left">按搜索关键查询</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c a #</td>
-<td class="left">列出项目暂停的任务</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c C-w</td>
-<td class="left">导出文件</td>
-</tr>
-</tbody>
-
-<tbody>
-<tr>
-<td class="left">Agenda column</td>
-<td class="left">C-c C-x C-c</td>
-<td class="left">打开column模式在agenda view中</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">&#xa0;</td>
-<td class="left">&#xa0;</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">&#xa0;</td>
-<td class="left">&#xa0;</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">&#xa0;</td>
-<td class="left">&#xa0;</td>
-</tr>
-</tbody>
-
-<tbody>
-<tr>
-<td class="left">Capture</td>
-<td class="left">C-c c</td>
-<td class="left">打开capture</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">&#xa0;</td>
-<td class="left">&#xa0;</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">&#xa0;</td>
-<td class="left">&#xa0;</td>
-</tr>
-</tbody>
-
-<tbody>
-<tr>
-<td class="left">Export</td>
-<td class="left">C-<f12></td>
-<td class="left">一次性生成所有目录的org文件为html文件，发布配置见.emacs.d中的配置目录</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c C-e</td>
-<td class="left">导出</td>
-</tr>
-</tbody>
-
-<tbody>
-<tr>
-<td class="left">Tables</td>
-<td class="left">C-c 竖线</td>
-<td class="left">插入表格</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c -</td>
-<td class="left">在下面添加水平线</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c RET</td>
-<td class="left">添加水平线并跳转到下一行</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-m</td>
-<td class="left">在本列下面添加一行</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">M-S-Right</td>
-<td class="left">在本列后面添加一列</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">M-S-Down</td>
-<td class="left">在本行上面添加一行</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">M-S-Left</td>
-<td class="left">删除本列</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">M-S-UP</td>
-<td class="left">删除本行</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">M-left/right</td>
-<td class="left">移动列</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">M-Up/Down</td>
-<td class="left">移动行</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c C-c</td>
-<td class="left">重新定义表格</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c \`</td>
-<td class="left">修改隐藏的表格中的内容</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">TAB</td>
-<td class="left">跳转下一个单元格</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">M-a / S-tab</td>
-<td class="left">跳转到上一个单元格</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c SPAC</td>
-<td class="left">清除当前单元格内容</td>
-</tr>
-</tbody>
-
-<tbody>
-<tr>
-<td class="left">Aligns</td>
-<td class="left">M-x cfs-switch-profile</td>
-<td class="left">修改一下当前buffer使用的字体profile，表格对齐需要按中英文字体宽度相同配置</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">M-x cfs-edit-profile</td>
-<td class="left">修改当前profile的配置，可以在修改字体和大小后，在对应的字体大小行上，执行C-c C-c测试</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">M-x cfs-increase-fontsize</td>
-<td class="left">放大字体，按等宽方式放大，已经绑定快捷键C-x C-=</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">M-x cfs-decrease-fontsize</td>
-<td class="left">缩小字体，按等宽方式缩小，已经绑定快捷键C-x M-=</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">&#xa0;</td>
-<td class="left">&#xa0;</td>
-</tr>
-</tbody>
-
-<tbody>
-<tr>
-<td class="left">Archive</td>
-<td class="left">C-c C-x a</td>
-<td class="left">内部归档，将本任务下的所有子任务标识为灰色，默认将是不可打开的状态，可以通过C-TAB进行打开</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-TAB</td>
-<td class="left">打开内部归档后的任务</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c C-x A</td>
-<td class="left">将此任务迁移入一个名为"Archive"的标记条下</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c C-x C-a</td>
-<td class="left">将此任务迁移到与当前文件名相同名称+\_archive的文件中</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c C-x C-s</td>
-<td class="left">同上</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">&#xa0;</td>
-<td class="left">&#xa0;</td>
-</tr>
-</tbody>
-
-<tbody>
-<tr>
-<td class="left">Refile</td>
-<td class="left">C-c C-w</td>
-<td class="left">将此标签任务迁移到其它文件中</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">C-c M-w</td>
-<td class="left">同上，并保留当前文件内容</td>
-</tr>
-
-
-<tr>
-<td class="left">Helm-org</td>
-<td class="left">C-x c i</td>
-<td class="left">显示当前文件中所有的headings，支持搜索和切换</td>
-</tr>
-
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">&#xa0;</td>
-<td class="left">&#xa0;</td>
-</tr>
-</tbody>
-</table>
-
-## Macros<a id="sec-1-7" name="sec-1-7"></a>
-
-### Key bindings configuration for Macros<a id="sec-1-7-1" name="sec-1-7-1"></a>
-
-### Key bindings for Macros<a id="sec-1-7-2" name="sec-1-7-2"></a>
-
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-<caption class="t-above"><span class="table-number">Table 2:</span> Org-mode快捷键</caption>
 
 <colgroup>
 <col  class="left" />
@@ -1009,9 +215,9 @@ For org mode agenda view configuration, please find  [Init-Org-table-shift](../0
 </tbody>
 </table>
 
-## Markdown mode<a id="sec-1-8" name="sec-1-8"></a>
+## Markdown mode<a id="sec-1-7" name="sec-1-7"></a>
 
-### Configuration<a id="sec-1-8-1" name="sec-1-8-1"></a>
+### Configuration<a id="sec-1-7-1" name="sec-1-7-1"></a>
 
 For markdown mode base configuration, please find [Init-markdown-mode](../03-For-an-editor/init-markdown-mode.el).
 
@@ -1019,9 +225,9 @@ For markdown mode base configuration, please find [Init-markdown-mode](../03-For
     ;;(require 'init-markdown-mode)
       (starter-kit-load "03-For-an-editor/init-markdown-mode.org")
 
-## Tramp<a id="sec-1-9" name="sec-1-9"></a>
+## Tramp<a id="sec-1-8" name="sec-1-8"></a>
 
-### Configuration<a id="sec-1-9-1" name="sec-1-9-1"></a>
+### Configuration<a id="sec-1-8-1" name="sec-1-8-1"></a>
 
     ;; setting for tramp
     (setq tramp-default-method "ssh")
@@ -1029,7 +235,7 @@ For markdown mode base configuration, please find [Init-markdown-mode](../03-For
     ;; config for caching password for 36000s
     (setq password-cache-expiry 36000)
 
-## DONE Winner mode - undo and redo window configuration<a id="sec-1-10" name="sec-1-10"></a>
+## DONE Winner mode - undo and redo window configuration<a id="sec-1-9" name="sec-1-9"></a>
 
 -   State "DONE"       from ""           <span class="timestamp-wrapper"><span class="timestamp">[2016-05-29 Sun 07:02]</span></span>
 
@@ -1038,7 +244,7 @@ For markdown mode base configuration, please find [Init-markdown-mode](../03-For
     (use-package winner
       :defer t)
 
-## DONE Mode line format<a id="sec-1-11" name="sec-1-11"></a>
+## DONE Mode line format<a id="sec-1-10" name="sec-1-10"></a>
 
 -   State "DONE"       from ""           <span class="timestamp-wrapper"><span class="timestamp">[2016-05-29 Sun 07:02]</span></span>
 
@@ -1047,7 +253,7 @@ Display a more compact mode line
     (use-package smart-mode-line
       :defer t)
 
-## DONE Undo tree<a id="sec-1-12" name="sec-1-12"></a>
+## DONE Undo tree<a id="sec-1-11" name="sec-1-11"></a>
 
 -   State "DONE"       from ""           <span class="timestamp-wrapper"><span class="timestamp">[2016-05-29 Sun 07:02]</span></span>
 
@@ -1063,7 +269,7 @@ Shot key binding: `(C-x u)`
         (setq undo-tree-visualizer-timestamps t)
         (setq undo-tree-visualizer-diff t)))
 
-## DONE Help - guide key<a id="sec-1-13" name="sec-1-13"></a>
+## DONE Help - guide key<a id="sec-1-12" name="sec-1-12"></a>
 
 -   State "DONE"       from ""           <span class="timestamp-wrapper"><span class="timestamp">[2016-05-29 Sun 07:02]</span></span>
 
@@ -1078,7 +284,7 @@ This library is very helpful, we can use it to help us remember or find the shot
       (setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-c"))
       (guide-key-mode 1)))  ; Enable guide-key-mode
 
-## DONE Encoding configruation<a id="sec-1-14" name="sec-1-14"></a>
+## DONE Encoding configruation<a id="sec-1-13" name="sec-1-13"></a>
 
 -   State "DONE"       from ""           <span class="timestamp-wrapper"><span class="timestamp">[2016-05-29 Sun 07:03]</span></span>
 
@@ -1088,11 +294,11 @@ This configuration from: <http://www.wisdomandwonder.com/wordpress/wp-content/up
     (when (display-graphic-p)
       (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING)))
 
-## DONE Helm<a id="sec-1-15" name="sec-1-15"></a>
+## DONE Helm<a id="sec-1-14" name="sec-1-14"></a>
 
 -   State "DONE"       from ""           <span class="timestamp-wrapper"><span class="timestamp">[2016-05-29 Sun 07:03]</span></span>
 
-### Configuration<a id="sec-1-15-1" name="sec-1-15-1"></a>
+### Configuration<a id="sec-1-14-1" name="sec-1-14-1"></a>
 
     (use-package helm
       :defer t
@@ -1150,7 +356,7 @@ This configuration from: <http://www.wisdomandwonder.com/wordpress/wp-content/up
       (interactive)
       (helm-do-grep-1 (list book-notes-directory)))
 
-## DONE Helm-swoop<a id="sec-1-16" name="sec-1-16"></a>
+## DONE Helm-swoop<a id="sec-1-15" name="sec-1-15"></a>
 
 -   State "DONE"       from ""           <span class="timestamp-wrapper"><span class="timestamp">[2016-05-29 Sun 07:03]</span></span>
 
@@ -1202,7 +408,7 @@ This configuration from: <http://www.wisdomandwonder.com/wordpress/wp-content/up
     ;; Face name is `helm-swoop-line-number-face`
     (setq helm-swoop-use-line-number-face t)
 
-## DONE Snippets<a id="sec-1-17" name="sec-1-17"></a>
+## DONE Snippets<a id="sec-1-16" name="sec-1-16"></a>
 
 -   State "DONE"       from ""           <span class="timestamp-wrapper"><span class="timestamp">[2016-05-29 Sun 07:04]</span></span>
 
@@ -1326,7 +532,7 @@ Snippets工具可以让我们使用定义好的代码片断，或者文本块，
                        (not (window-minibuffer-p)))
                   (message "Undoing expansions"))))))
 
-## DONE Edit-list<a id="sec-1-18" name="sec-1-18"></a>
+## DONE Edit-list<a id="sec-1-17" name="sec-1-17"></a>
 
 -   State "DONE"       from ""           <span class="timestamp-wrapper"><span class="timestamp">[2016-05-29 Sun 07:04]</span></span>
 
@@ -1339,7 +545,7 @@ M-x edit-list makes it easier to edit an Emacs Lisp list.
     :commands edit-list)
 \\#+end\_src
 
-## DONE Zap to isearch<a id="sec-1-19" name="sec-1-19"></a>
+## DONE Zap to isearch<a id="sec-1-18" name="sec-1-18"></a>
 
 -   State "DONE"       from ""           <span class="timestamp-wrapper"><span class="timestamp">[2016-05-29 Sun 07:04]</span></span>
 
@@ -1374,12 +580,12 @@ From Steve Purcell, who linked to <http://www.emacswiki.org/emacs/ZapToISearch>
     
     (define-key isearch-mode-map [(meta z)] 'zap-to-isearch)
 
-## Chinese-font-setup<a id="sec-1-20" name="sec-1-20"></a>
+## Chinese-font-setup<a id="sec-1-19" name="sec-1-19"></a>
 
 在Org-mode中，编辑表格并让表格的分隔线对齐是一件不太容易的事情，主要原因是因为Org-mode中编辑时字母与汉字同时存在时，则字母字体长度与汉字字体宽度不同的原因导致，因此这里的主要解决方案是找到一种通用等宽字体，通过字体的配置来达到最终表格对齐正常。
 感谢Chinese-font-setup的包开发者：
 
-### Configuration<a id="sec-1-20-1" name="sec-1-20-1"></a>
+### Configuration<a id="sec-1-19-1" name="sec-1-19-1"></a>
 
     ;; add font-config for chinese double-width fonts issue
     (use-package chinese-fonts-setup
@@ -1388,7 +594,7 @@ From Steve Purcell, who linked to <http://www.emacswiki.org/emacs/ZapToISearch>
             '("program" "org-mode" "read-book"))
     )
 
-### Shot key binding<a id="sec-1-20-2" name="sec-1-20-2"></a>
+### Shot key binding<a id="sec-1-19-2" name="sec-1-19-2"></a>
 
     ;; Reset Increase Font size and Descrease Font size short key binding after using chinese-font-setup plugin
     ;; Reference: https://github.com/tumashu/chinese-fonts-setup
@@ -1396,11 +602,11 @@ From Steve Purcell, who linked to <http://www.emacswiki.org/emacs/ZapToISearch>
     (global-set-key (kbd "C-x C-=") 'cfs-increase-fontsize)
     (global-set-key (kbd "C-x M-=") 'cfs-decrease-fontsize)
 
-## WAITING Smartparens     :WAITING:<a id="sec-1-21" name="sec-1-21"></a>
+## WAITING Smartparens     :WAITING:<a id="sec-1-20" name="sec-1-20"></a>
 
 -   State "WAITING"    from ""           <span class="timestamp-wrapper"><span class="timestamp">[2016-05-30 Mon 20:36]</span></span>
 
-### Configuration<a id="sec-1-21-1" name="sec-1-21-1"></a>
+### Configuration<a id="sec-1-20-1" name="sec-1-20-1"></a>
 
     (use-package smartparens
       :config
@@ -1417,9 +623,9 @@ From Steve Purcell, who linked to <http://www.emacswiki.org/emacs/ZapToISearch>
     
     )
 
-## Expand-region<a id="sec-1-22" name="sec-1-22"></a>
+## Expand-region<a id="sec-1-21" name="sec-1-21"></a>
 
-### Configuration<a id="sec-1-22-1" name="sec-1-22-1"></a>
+### Configuration<a id="sec-1-21-1" name="sec-1-21-1"></a>
 
     (use-package expand-region
       :config
@@ -1431,14 +637,14 @@ From Steve Purcell, who linked to <http://www.emacswiki.org/emacs/ZapToISearch>
     
       )
 
-### Key bindings for Expand-region<a id="sec-1-22-2" name="sec-1-22-2"></a>
+### Key bindings for Expand-region<a id="sec-1-21-2" name="sec-1-21-2"></a>
 
     ;; Expand region (increases selected region by semantic units)
     (global-set-key (kbd "C-'") 'er/expand-region)
 
-## Swap-buffer<a id="sec-1-23" name="sec-1-23"></a>
+## Swap-buffer<a id="sec-1-22" name="sec-1-22"></a>
 
-### Configuration<a id="sec-1-23-1" name="sec-1-23-1"></a>
+### Configuration<a id="sec-1-22-1" name="sec-1-22-1"></a>
 
     ;; add smart swap buffers in multi-windows
     (use-package swap-buffers
@@ -1446,7 +652,7 @@ From Steve Purcell, who linked to <http://www.emacswiki.org/emacs/ZapToISearch>
       (global-set-key (kbd "C-x 5") 'swap-buffers)
     )
 
-## Email Reader - Mu4e<a id="sec-1-24" name="sec-1-24"></a>
+## Email Reader - Mu4e<a id="sec-1-23" name="sec-1-23"></a>
 
 Please find [Init-Mu4e](../lisp/init-mu4e.md).
 
@@ -1457,12 +663,12 @@ Please find [Init-Mu4e](../lisp/init-mu4e.md).
     
     ;;(load-library "init-mu4e")
 
-## Multiple cursors mode<a id="sec-1-25" name="sec-1-25"></a>
+## Multiple cursors mode<a id="sec-1-24" name="sec-1-24"></a>
 
 Multiple cursor是一个非常强大的多位置同时编辑的编辑模式，文档可参考：
 这里有一个介绍详细的视频：<http://emacsrocks.com/e13.html>
 
-### Configuration<a id="sec-1-25-1" name="sec-1-25-1"></a>
+### Configuration<a id="sec-1-24-1" name="sec-1-24-1"></a>
 
     (use-package multiple-cursors
       :defer t
@@ -1485,7 +691,7 @@ Multiple cursor是一个非常强大的多位置同时编辑的编辑模式，�
       :defer t
       :config (define-key mc/keymap (kbd "C-. =") 'mc/compare-chars))
 
-### Short-key binding<a id="sec-1-25-2" name="sec-1-25-2"></a>
+### Short-key binding<a id="sec-1-24-2" name="sec-1-24-2"></a>
 
     ;; add multi cursors:
     ;;(require 'multiple-cursors)
@@ -1497,7 +703,7 @@ Multiple cursor是一个非常强大的多位置同时编辑的编辑模式，�
     (global-set-key (kbd "C-S-c C-e") 'mc/edit-ends-of-lines)
     (global-set-key (kbd "C-S-c C-a") 'mc/edit-beginnings-of-lines)
 
-## Latex mode<a id="sec-1-26" name="sec-1-26"></a>
+## Latex mode<a id="sec-1-25" name="sec-1-25"></a>
 
     ;;; latex --- Summary
     ;;; Config for latex
@@ -1539,18 +745,18 @@ Multiple cursor是一个非常强大的多位置同时编辑的编辑模式，�
     
     ;;(add-hook 'LaTeX-mode-hook #'latex-extra-mode)
 
-## TODO Wgrep<a id="sec-1-27" name="sec-1-27"></a>
+## TODO Wgrep<a id="sec-1-26" name="sec-1-26"></a>
 
 Wgrep是一个可以允许我们在grep模式下进行直接修改的工具，可以允许我们批量添加上Multiple cursors，然后进行批量修改的工具。在快速修改文件时非常方便，类似于sed的批量匹配，批量修改。
 
     ;;; 未配置详细操作，暂时不使用
     (use-package wgrep)
 
-## Tabbar<a id="sec-1-28" name="sec-1-28"></a>
+## Tabbar<a id="sec-1-27" name="sec-1-27"></a>
 
 Tabbar，在Emacs中显示一个文件的切换标签，并且标签文件按projectile的进行分组显示，以方便在同一个项目中进行维护和切换文件。
 
-### Configuration<a id="sec-1-28-1" name="sec-1-28-1"></a>
+### Configuration<a id="sec-1-27-1" name="sec-1-27-1"></a>
 
     (use-package tabbar)
     
@@ -1675,7 +881,7 @@ Tabbar，在Emacs中显示一个文件的切换标签，并且标签文件按pro
     (tabbar-ruler-group-by-projectile-project)
     (tabbar-mode)
 
-### Key binding<a id="sec-1-28-2" name="sec-1-28-2"></a>
+### Key binding<a id="sec-1-27-2" name="sec-1-27-2"></a>
 
     ;; -----------------------------------------
     ;; start tabbar-mode
@@ -1687,9 +893,9 @@ Tabbar，在Emacs中显示一个文件的切换标签，并且标签文件按pro
     ;;(global-set-key (kbd "C-c <C-up>") 'tabbar-forward-group)
     ;;(global-set-key (kbd "C-c <C-down>") 'tabbar-backward-group)
 
-## Perspective<a id="sec-1-29" name="sec-1-29"></a>
+## Perspective<a id="sec-1-28" name="sec-1-28"></a>
 
-### Configuration<a id="sec-1-29-1" name="sec-1-29-1"></a>
+### Configuration<a id="sec-1-28-1" name="sec-1-28-1"></a>
 
     (use-package perspective
       :config
@@ -1714,11 +920,11 @@ Tabbar，在Emacs中显示一个文件的切换标签，并且标签文件按pro
         )
     )
 
-## Ido<a id="sec-1-30" name="sec-1-30"></a>
+## Ido<a id="sec-1-29" name="sec-1-29"></a>
 
 Ido工具是为在窗口下面的状态栏中选择、显示时更清晰，操作更方便，并支持模糊匹配选择，这里只保留选择文件时启动ido，其它时间切换buffer等，采用helm进行。
 
-### Configuration<a id="sec-1-30-1" name="sec-1-30-1"></a>
+### Configuration<a id="sec-1-29-1" name="sec-1-29-1"></a>
 
     ;; Use C-f during file selection to switch to regular find-file
     (ido-mode t)
@@ -1728,9 +934,9 @@ Ido工具是为在窗口下面的状态栏中选择、显示时更清晰，操�
     (setq ido-auto-merge-work-directories-length 0)
     (setq ido-use-virtual-buffers t)
 
-## Multiple Major Mode<a id="sec-1-31" name="sec-1-31"></a>
+## Multiple Major Mode<a id="sec-1-30" name="sec-1-30"></a>
 
-### Configuration<a id="sec-1-31-1" name="sec-1-31-1"></a>
+### Configuration<a id="sec-1-30-1" name="sec-1-30-1"></a>
 
     (use-package mmm-mode
       :config
