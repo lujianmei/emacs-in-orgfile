@@ -136,22 +136,22 @@ Start kit的使用需要一些工程初使配置，而初使配置即在此文�
 
 - Starter kit function definitions in [[file:02-For-base-using/init-for-base-using.org][init-for-base-using]]
   #+begin_src emacs-lisp :tangle yes
-  (starter-kit-load "/02-For-base-using/init-for-base-using.org")
+  (starter-kit-load "02-For-base-using/init-for-base-using.org")
   #+end_src
 
 - Starter kit function definitions in [[file:09-Defuns/init-defuns.org][init-defuns]]
   #+begin_src emacs-lisp :tangle yes
-  (starter-kit-load "/09-Defuns/init-defuns.org")
+  (starter-kit-load "09-Defuns/init-defuns.org")
   #+end_src
 
 
 - Starter kit function definitions in [[file:03-For-an-editor/init-write-documents.org][init-write-documents]]
   #+begin_src emacs-lisp :tangle yes
-  (starter-kit-load "/03-For-an-editor/init-write-documents.org")
+  (starter-kit-load "03-For-an-editor/init-write-documents.org")
   #+end_src
 
 
 - Starter kit function definitions in [[file:10-Index/init-index.org][init-index]]
   #+begin_src emacs-lisp :tangle yes
-  (starter-kit-load "/10-Index/init-index.org")
+  (starter-kit-load "10-Index/init-index.org")
   #+end_src
