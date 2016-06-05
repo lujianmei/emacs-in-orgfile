@@ -10,7 +10,7 @@
     * [写文档](03-For-an-editor/init-write-documents.md)
     * [个人时间管理](03-For-an-editor/init-gtd_management.md)
     * [工程管理](03-For-an-editor/init-project_management.md)
-    * [邮件管理](03-For-an-editor/init-email-client.md)
+    * [邮件管理](03-For-an-editor/init-mu4e.md)
 * [开发人员使用Emacs](04-For-a-developer/for-a-developer.md)
     * [Java开发](04-For-a-developer/for-java-developer.md)
     * [Lisp开发](04-For-a-developer/for-lisp-developer.md)
