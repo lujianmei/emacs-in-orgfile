@@ -71,7 +71,6 @@ From http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2014/03/C3F.htm
         regexp-search-ring))
 #+END_SRC
 
-
 ** Macros
 
 *** Key bindings configuration for Macros
@@ -90,18 +89,6 @@ From http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2014/03/C3F.htm
 |--------------------+-------------------------+-----------------------------------------------------------------------------------------------|
 |                    |                         |                                                                                               |
 
-** Markdown mode
-
-*** Configuration
-For markdown mode base configuration, please find [[file:../03-For-an-editor/init-markdown-mode.el][Init-markdown-mode]].
-#+begin_src emacs-lisp :tangle yes
-
-;; load my own markdown mode configuration from init-markdown-mode.el
-;;(require 'init-markdown-mode)
-  (starter-kit-load "03-For-an-editor/init-markdown-mode.org")
-
-
-#+end_src
 ** Tramp
 *** Configuration
 #+begin_src emacs-lisp :tangle yes
@@ -452,29 +439,6 @@ and the point, not include the isearch word."
 (define-key isearch-mode-map [(meta z)] 'zap-to-isearch)
 #+end_src
 
-** Chinese-font-setup
-在Org-mode中，编辑表格并让表格的分隔线对齐是一件不太容易的事情，主要原因是因为Org-mode中编辑时字母与汉字同时存在时，则字母字体长度与汉字字体宽度不同的原因导致，因此这里的主要解决方案是找到一种通用等宽字体，通过字体的配置来达到最终表格对齐正常。
-感谢Chinese-font-setup的包开发者：
-*** Configuration
-#+begin_src emacs-lisp :tangle yes
-  ;; add font-config for chinese double-width fonts issue
-  (use-package chinese-fonts-setup
-    :config
-    (setq cfs-profiles
-          '("program" "org-mode" "read-book"))
-  )
-
-#+end_src
-*** Shot key binding
-
-#+begin_src emacs-lisp :tangle yes
-;; Reset Increase Font size and Descrease Font size short key binding after using chinese-font-setup plugin
-;; Reference: https://github.com/tumashu/chinese-fonts-setup
-(global-unset-key (kbd "C-x C-=")) ;; remove original font-resize
-(global-set-key (kbd "C-x C-=") 'cfs-increase-fontsize)
-(global-set-key (kbd "C-x M-=") 'cfs-decrease-fontsize)
-
-#+end_src
 ** WAITING Smartparens                                              :WAITING:
    - State "WAITING"    from ""           [2016-05-30 Mon 20:36]
 *** Configuration
@@ -527,18 +491,6 @@ and the point, not include the isearch word."
 
 
 #+end_src
-** Email Reader - Mu4e
-
-Please find [[file:../lisp/init-mu4e.org][Init-Mu4e]].
-
-#+begin_src emacs-lisp :tangle yes
-;; load my mu4e configuration from init-mu4e.el
-;;(require 'init-mu4e)
-  (starter-kit-load "03-For-an-editor/init-mu4e.org")
-
-
-;;(load-library "init-mu4e")
-#+end_src
 ** Multiple cursors mode
 Multiple cursor是一个非常强大的多位置同时编辑的编辑模式，文档可参考：
 这里有一个介绍详细的视频：http://emacsrocks.com/e13.html
@@ -576,50 +528,6 @@ Multiple cursor是一个非常强大的多位置同时编辑的编辑模式，�
 
 (global-set-key (kbd "C-S-c C-e") 'mc/edit-ends-of-lines)
 (global-set-key (kbd "C-S-c C-a") 'mc/edit-beginnings-of-lines)
-
-
-#+end_src
-** Latex mode
-#+begin_src emacs-lisp :tangle no
-  ;;; latex --- Summary
-  ;;; Config for latex
-  (use-package auctex
-    :defer t)
-
-  (use-package cdlatex
-    :defer t
-    :config
-    (add-hook 'LaTex-mode-hook 'turn-on-org-cdlatex) ;; with AUCTex LaTex mode-line
-    (add-hook 'LaTex-mode-hook 'turn-on-org-cdlatex) ;; with Emacs latex mode
-  )
-  ;; (add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)   ; with AUCTeX LaTeX mode
-  ;; (add-hook 'latex-mode-hook 'turn-on-cdlatex)   ; with Emacs latex mode
-
-  ;; latex-preview-pane is a minor mode for Emacs that enables you to preview your LaTeX files directly in Emacs.
-
-
-  (use-package latex-preview-pane
-    :defer t
-    :config
-    (latex-preview-pane-enable))
-  ;;(latex-preview-pane-enable)
-
-  ;; magical syntax highlighting for LaTeX-mode buffers
-  ;;(require-package 'magic-latex-buffer)
-  (use-package magic-latex-buffer
-    :defer t
-    :config
-    (add-hook 'latex-mode-hook 'magic-latex-buffer))
-  ;;(add-hook 'latex-mode-hook 'magic-latex-buffer)
-
-  ;;  Adds several useful functionalities to LaTeX-mode. http://github.com/Bruce-Connor/latex-extra
-
-  (use-package latex-extra
-    :defer t
-    :config
-    (add-hook 'latex-mode-hook 'latex-extra-mode))
-
-  ;;(add-hook 'LaTeX-mode-hook #'latex-extra-mode)
 
 
 #+end_src

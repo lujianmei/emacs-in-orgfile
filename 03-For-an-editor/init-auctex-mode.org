@@ -1,0 +1,62 @@
+#+TITLE: 用Latex写文档
+#+LANGUAGE:  zh
+#+AUTHOR: Lu Jianmei
+#+EMAIL: lu.jianmei@trs.com.cn
+#+OPTIONS:   H:3 num:t   toc:3 \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t p:t pri:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+OPTIONS:   author:t creator:t timestamp:t email:t
+#+DESCRIPTION: A notes that include all works and study things in 2015
+#+KEYWORDS:  org-mode Emacs jquery jquery.mobile jquery.ui wcm
+#+INFOJS_OPT: view:nil toc:t ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LATEX_HEADER: \usepackage{xeCJK}
+#+LATEX_HEADER: \setCJKmainfont{SimSun}
+#+LATEX_CLASS: cn-article
+#+STARTUP: logredeadline, logreschedule
+#+ATTR_HTML: :border 2 :rules all :frame all
+
+* Latex mode
+#+begin_src emacs-lisp :tangle no
+  ;;; latex --- Summary
+  ;;; Config for latex
+  (use-package auctex
+    :defer t)
+
+  (use-package cdlatex
+    :defer t
+    :config
+    (add-hook 'LaTex-mode-hook 'turn-on-org-cdlatex) ;; with AUCTex LaTex mode-line
+    (add-hook 'LaTex-mode-hook 'turn-on-org-cdlatex) ;; with Emacs latex mode
+  )
+  ;; (add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)   ; with AUCTeX LaTeX mode
+  ;; (add-hook 'latex-mode-hook 'turn-on-cdlatex)   ; with Emacs latex mode
+
+  ;; latex-preview-pane is a minor mode for Emacs that enables you to preview your LaTeX files directly in Emacs.
+
+
+  (use-package latex-preview-pane
+    :defer t
+    :config
+    (latex-preview-pane-enable))
+  ;;(latex-preview-pane-enable)
+
+  ;; magical syntax highlighting for LaTeX-mode buffers
+  ;;(require-package 'magic-latex-buffer)
+  (use-package magic-latex-buffer
+    :defer t
+    :config
+    (add-hook 'latex-mode-hook 'magic-latex-buffer))
+  ;;(add-hook 'latex-mode-hook 'magic-latex-buffer)
+
+  ;;  Adds several useful functionalities to LaTeX-mode. http://github.com/Bruce-Connor/latex-extra
+
+  (use-package latex-extra
+    :defer t
+    :config
+    (add-hook 'latex-mode-hook 'latex-extra-mode))
+
+  ;;(add-hook 'LaTeX-mode-hook #'latex-extra-mode)
+
+
+#+end_src

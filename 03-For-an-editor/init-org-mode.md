@@ -71,10 +71,16 @@
 </ul>
 </li>
 <li><a href="#sec-2">2. Orgmode table Configuration</a></li>
-<li><a href="#sec-3">3. Key bindings for Orgmode</a>
+<li><a href="#sec-3">3. Chinese-font-setup</a>
 <ul>
-<li><a href="#sec-3-1">3.1. Key bindings configurations</a></li>
-<li><a href="#sec-3-2">3.2. Key binding for org-mode</a></li>
+<li><a href="#sec-3-1">3.1. Configuration</a></li>
+<li><a href="#sec-3-2">3.2. Shot key binding</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Key bindings for Orgmode</a>
+<ul>
+<li><a href="#sec-4-1">4.1. Key bindings configurations</a></li>
+<li><a href="#sec-4-2">4.2. Key binding for org-mode</a></li>
 </ul>
 </li>
 </ul>
@@ -1191,9 +1197,31 @@ Column view是建立于org-mode任务管理之上的快速以表格查看各个�
     (provide 'init-org-table-shift)
     ;; init-org-table-shift.el end here
 
-# Key bindings for Orgmode<a id="sec-3" name="sec-3"></a>
+# Chinese-font-setup<a id="sec-3" name="sec-3"></a>
 
-## Key bindings configurations<a id="sec-3-1" name="sec-3-1"></a>
+在Org-mode中，编辑表格并让表格的分隔线对齐是一件不太容易的事情，主要原因是因为Org-mode中编辑时字母与汉字同时存在时，则字母字体长度与汉字字体宽度不同的原因导致，因此这里的主要解决方案是找到一种通用等宽字体，通过字体的配置来达到最终表格对齐正常。
+感谢Chinese-font-setup的包开发者：
+
+## Configuration<a id="sec-3-1" name="sec-3-1"></a>
+
+    ;; add font-config for chinese double-width fonts issue
+    (use-package chinese-fonts-setup
+      :config
+      (setq cfs-profiles
+            '("program" "org-mode" "read-book"))
+    )
+
+## Shot key binding<a id="sec-3-2" name="sec-3-2"></a>
+
+    ;; Reset Increase Font size and Descrease Font size short key binding after using chinese-font-setup plugin
+    ;; Reference: https://github.com/tumashu/chinese-fonts-setup
+    (global-unset-key (kbd "C-x C-=")) ;; remove original font-resize
+    (global-set-key (kbd "C-x C-=") 'cfs-increase-fontsize)
+    (global-set-key (kbd "C-x M-=") 'cfs-decrease-fontsize)
+
+# Key bindings for Orgmode<a id="sec-4" name="sec-4"></a>
+
+## Key bindings configurations<a id="sec-4-1" name="sec-4-1"></a>
 
     ;; -----------------------------------------
     ;;key bindings for org mode
@@ -1227,7 +1255,7 @@ Column view是建立于org-mode任务管理之上的快速以表格查看各个�
     (global-set-key (kbd "<f11>") 'org-clock-goto)
     (global-set-key (kbd "C-<f11>") 'org-clock-in)
 
-## Key binding for org-mode<a id="sec-3-2" name="sec-3-2"></a>
+## Key binding for org-mode<a id="sec-4-2" name="sec-4-2"></a>
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 1:</span> Org-mode快捷键</caption>

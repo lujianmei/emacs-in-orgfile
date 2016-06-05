@@ -166,3 +166,7 @@ Start kit的使用需要一些工程初使配置，而初使配置即在此文�
   #+begin_src emacs-lisp :tangle yes
   (starter-kit-load "10-Index/init-index.org")
   #+end_src
+** 配置默认样式
+#+begin_src emacs-lisp :tangle yes
+(dark)
+#+end_src

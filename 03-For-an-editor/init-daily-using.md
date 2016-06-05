@@ -15,80 +15,67 @@
 <li><a href="#sec-1-6-2">1.6.2. Key bindings for Macros</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-7">1.7. Markdown mode</a>
+<li><a href="#sec-1-7">1.7. Tramp</a>
 <ul>
 <li><a href="#sec-1-7-1">1.7.1. Configuration</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-8">1.8. Tramp</a>
+<li><a href="#sec-1-8">1.8. <span class="done DONE">DONE</span> Winner mode - undo and redo window configuration</a></li>
+<li><a href="#sec-1-9">1.9. <span class="done DONE">DONE</span> Mode line format</a></li>
+<li><a href="#sec-1-10">1.10. <span class="done DONE">DONE</span> Undo tree</a></li>
+<li><a href="#sec-1-11">1.11. <span class="done DONE">DONE</span> Help - guide key</a></li>
+<li><a href="#sec-1-12">1.12. <span class="done DONE">DONE</span> Encoding configruation</a></li>
+<li><a href="#sec-1-13">1.13. <span class="done DONE">DONE</span> Helm</a>
 <ul>
-<li><a href="#sec-1-8-1">1.8.1. Configuration</a></li>
+<li><a href="#sec-1-13-1">1.13.1. Configuration</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-9">1.9. <span class="done DONE">DONE</span> Winner mode - undo and redo window configuration</a></li>
-<li><a href="#sec-1-10">1.10. <span class="done DONE">DONE</span> Mode line format</a></li>
-<li><a href="#sec-1-11">1.11. <span class="done DONE">DONE</span> Undo tree</a></li>
-<li><a href="#sec-1-12">1.12. <span class="done DONE">DONE</span> Help - guide key</a></li>
-<li><a href="#sec-1-13">1.13. <span class="done DONE">DONE</span> Encoding configruation</a></li>
-<li><a href="#sec-1-14">1.14. <span class="done DONE">DONE</span> Helm</a>
+<li><a href="#sec-1-14">1.14. <span class="done DONE">DONE</span> Helm-swoop</a></li>
+<li><a href="#sec-1-15">1.15. <span class="done DONE">DONE</span> Snippets</a></li>
+<li><a href="#sec-1-16">1.16. <span class="done DONE">DONE</span> Edit-list</a></li>
+<li><a href="#sec-1-17">1.17. <span class="done DONE">DONE</span> Zap to isearch</a></li>
+<li><a href="#sec-1-18">1.18. <span class="todo WAITING">WAITING</span> Smartparens</a>
 <ul>
-<li><a href="#sec-1-14-1">1.14.1. Configuration</a></li>
+<li><a href="#sec-1-18-1">1.18.1. Configuration</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-15">1.15. <span class="done DONE">DONE</span> Helm-swoop</a></li>
-<li><a href="#sec-1-16">1.16. <span class="done DONE">DONE</span> Snippets</a></li>
-<li><a href="#sec-1-17">1.17. <span class="done DONE">DONE</span> Edit-list</a></li>
-<li><a href="#sec-1-18">1.18. <span class="done DONE">DONE</span> Zap to isearch</a></li>
-<li><a href="#sec-1-19">1.19. Chinese-font-setup</a>
+<li><a href="#sec-1-19">1.19. Expand-region</a>
 <ul>
 <li><a href="#sec-1-19-1">1.19.1. Configuration</a></li>
-<li><a href="#sec-1-19-2">1.19.2. Shot key binding</a></li>
+<li><a href="#sec-1-19-2">1.19.2. Key bindings for Expand-region</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-20">1.20. <span class="todo WAITING">WAITING</span> Smartparens</a>
+<li><a href="#sec-1-20">1.20. Swap-buffer</a>
 <ul>
 <li><a href="#sec-1-20-1">1.20.1. Configuration</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-21">1.21. Expand-region</a>
+<li><a href="#sec-1-21">1.21. Multiple cursors mode</a>
 <ul>
 <li><a href="#sec-1-21-1">1.21.1. Configuration</a></li>
-<li><a href="#sec-1-21-2">1.21.2. Key bindings for Expand-region</a></li>
+<li><a href="#sec-1-21-2">1.21.2. Short-key binding</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-22">1.22. Swap-buffer</a>
+<li><a href="#sec-1-22">1.22. <span class="todo TODO">TODO</span> Wgrep</a></li>
+<li><a href="#sec-1-23">1.23. Tabbar</a>
 <ul>
-<li><a href="#sec-1-22-1">1.22.1. Configuration</a></li>
+<li><a href="#sec-1-23-1">1.23.1. Configuration</a></li>
+<li><a href="#sec-1-23-2">1.23.2. Key binding</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-23">1.23. Email Reader - Mu4e</a></li>
-<li><a href="#sec-1-24">1.24. Multiple cursors mode</a>
+<li><a href="#sec-1-24">1.24. Perspective</a>
 <ul>
 <li><a href="#sec-1-24-1">1.24.1. Configuration</a></li>
-<li><a href="#sec-1-24-2">1.24.2. Short-key binding</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-25">1.25. Latex mode</a></li>
-<li><a href="#sec-1-26">1.26. <span class="todo TODO">TODO</span> Wgrep</a></li>
-<li><a href="#sec-1-27">1.27. Tabbar</a>
+<li><a href="#sec-1-25">1.25. Ido</a>
 <ul>
-<li><a href="#sec-1-27-1">1.27.1. Configuration</a></li>
-<li><a href="#sec-1-27-2">1.27.2. Key binding</a></li>
+<li><a href="#sec-1-25-1">1.25.1. Configuration</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-28">1.28. Perspective</a>
+<li><a href="#sec-1-26">1.26. Multiple Major Mode</a>
 <ul>
-<li><a href="#sec-1-28-1">1.28.1. Configuration</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-29">1.29. Ido</a>
-<ul>
-<li><a href="#sec-1-29-1">1.29.1. Configuration</a></li>
-</ul>
-</li>
-<li><a href="#sec-1-30">1.30. Multiple Major Mode</a>
-<ul>
-<li><a href="#sec-1-30-1">1.30.1. Configuration</a></li>
+<li><a href="#sec-1-26-1">1.26.1. Configuration</a></li>
 </ul>
 </li>
 </ul>
@@ -215,19 +202,9 @@ From <http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2014/03/C3F.ht
 </tbody>
 </table>
 
-## Markdown mode<a id="sec-1-7" name="sec-1-7"></a>
+## Tramp<a id="sec-1-7" name="sec-1-7"></a>
 
 ### Configuration<a id="sec-1-7-1" name="sec-1-7-1"></a>
-
-For markdown mode base configuration, please find [Init-markdown-mode](../03-For-an-editor/init-markdown-mode.el).
-
-    ;; load my own markdown mode configuration from init-markdown-mode.el
-    ;;(require 'init-markdown-mode)
-      (starter-kit-load "03-For-an-editor/init-markdown-mode.org")
-
-## Tramp<a id="sec-1-8" name="sec-1-8"></a>
-
-### Configuration<a id="sec-1-8-1" name="sec-1-8-1"></a>
 
     ;; setting for tramp
     (setq tramp-default-method "ssh")
@@ -235,7 +212,7 @@ For markdown mode base configuration, please find [Init-markdown-mode](../03-For
     ;; config for caching password for 36000s
     (setq password-cache-expiry 36000)
 
-## DONE Winner mode - undo and redo window configuration<a id="sec-1-9" name="sec-1-9"></a>
+## DONE Winner mode - undo and redo window configuration<a id="sec-1-8" name="sec-1-8"></a>
 
 -   State "DONE"       from ""           <span class="timestamp-wrapper"><span class="timestamp">[2016-05-29 Sun 07:02]</span></span>
 
@@ -244,7 +221,7 @@ For markdown mode base configuration, please find [Init-markdown-mode](../03-For
     (use-package winner
       :defer t)
 
-## DONE Mode line format<a id="sec-1-10" name="sec-1-10"></a>
+## DONE Mode line format<a id="sec-1-9" name="sec-1-9"></a>
 
 -   State "DONE"       from ""           <span class="timestamp-wrapper"><span class="timestamp">[2016-05-29 Sun 07:02]</span></span>
 
@@ -253,7 +230,7 @@ Display a more compact mode line
     (use-package smart-mode-line
       :defer t)
 
-## DONE Undo tree<a id="sec-1-11" name="sec-1-11"></a>
+## DONE Undo tree<a id="sec-1-10" name="sec-1-10"></a>
 
 -   State "DONE"       from ""           <span class="timestamp-wrapper"><span class="timestamp">[2016-05-29 Sun 07:02]</span></span>
 
@@ -269,7 +246,7 @@ Shot key binding: `(C-x u)`
         (setq undo-tree-visualizer-timestamps t)
         (setq undo-tree-visualizer-diff t)))
 
-## DONE Help - guide key<a id="sec-1-12" name="sec-1-12"></a>
+## DONE Help - guide key<a id="sec-1-11" name="sec-1-11"></a>
 
 -   State "DONE"       from ""           <span class="timestamp-wrapper"><span class="timestamp">[2016-05-29 Sun 07:02]</span></span>
 
@@ -284,7 +261,7 @@ This library is very helpful, we can use it to help us remember or find the shot
       (setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-c"))
       (guide-key-mode 1)))  ; Enable guide-key-mode
 
-## DONE Encoding configruation<a id="sec-1-13" name="sec-1-13"></a>
+## DONE Encoding configruation<a id="sec-1-12" name="sec-1-12"></a>
 
 -   State "DONE"       from ""           <span class="timestamp-wrapper"><span class="timestamp">[2016-05-29 Sun 07:03]</span></span>
 
@@ -294,11 +271,11 @@ This configuration from: <http://www.wisdomandwonder.com/wordpress/wp-content/up
     (when (display-graphic-p)
       (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING)))
 
-## DONE Helm<a id="sec-1-14" name="sec-1-14"></a>
+## DONE Helm<a id="sec-1-13" name="sec-1-13"></a>
 
 -   State "DONE"       from ""           <span class="timestamp-wrapper"><span class="timestamp">[2016-05-29 Sun 07:03]</span></span>
 
-### Configuration<a id="sec-1-14-1" name="sec-1-14-1"></a>
+### Configuration<a id="sec-1-13-1" name="sec-1-13-1"></a>
 
     (use-package helm
       :defer t
@@ -356,7 +333,7 @@ This configuration from: <http://www.wisdomandwonder.com/wordpress/wp-content/up
       (interactive)
       (helm-do-grep-1 (list book-notes-directory)))
 
-## DONE Helm-swoop<a id="sec-1-15" name="sec-1-15"></a>
+## DONE Helm-swoop<a id="sec-1-14" name="sec-1-14"></a>
 
 -   State "DONE"       from ""           <span class="timestamp-wrapper"><span class="timestamp">[2016-05-29 Sun 07:03]</span></span>
 
@@ -408,7 +385,7 @@ This configuration from: <http://www.wisdomandwonder.com/wordpress/wp-content/up
     ;; Face name is `helm-swoop-line-number-face`
     (setq helm-swoop-use-line-number-face t)
 
-## DONE Snippets<a id="sec-1-16" name="sec-1-16"></a>
+## DONE Snippets<a id="sec-1-15" name="sec-1-15"></a>
 
 -   State "DONE"       from ""           <span class="timestamp-wrapper"><span class="timestamp">[2016-05-29 Sun 07:04]</span></span>
 
@@ -532,7 +509,7 @@ Snippets工具可以让我们使用定义好的代码片断，或者文本块，
                        (not (window-minibuffer-p)))
                   (message "Undoing expansions"))))))
 
-## DONE Edit-list<a id="sec-1-17" name="sec-1-17"></a>
+## DONE Edit-list<a id="sec-1-16" name="sec-1-16"></a>
 
 -   State "DONE"       from ""           <span class="timestamp-wrapper"><span class="timestamp">[2016-05-29 Sun 07:04]</span></span>
 
@@ -545,7 +522,7 @@ M-x edit-list makes it easier to edit an Emacs Lisp list.
     :commands edit-list)
 \\#+end\_src
 
-## DONE Zap to isearch<a id="sec-1-18" name="sec-1-18"></a>
+## DONE Zap to isearch<a id="sec-1-17" name="sec-1-17"></a>
 
 -   State "DONE"       from ""           <span class="timestamp-wrapper"><span class="timestamp">[2016-05-29 Sun 07:04]</span></span>
 
@@ -580,33 +557,11 @@ From Steve Purcell, who linked to <http://www.emacswiki.org/emacs/ZapToISearch>
     
     (define-key isearch-mode-map [(meta z)] 'zap-to-isearch)
 
-## Chinese-font-setup<a id="sec-1-19" name="sec-1-19"></a>
-
-在Org-mode中，编辑表格并让表格的分隔线对齐是一件不太容易的事情，主要原因是因为Org-mode中编辑时字母与汉字同时存在时，则字母字体长度与汉字字体宽度不同的原因导致，因此这里的主要解决方案是找到一种通用等宽字体，通过字体的配置来达到最终表格对齐正常。
-感谢Chinese-font-setup的包开发者：
-
-### Configuration<a id="sec-1-19-1" name="sec-1-19-1"></a>
-
-    ;; add font-config for chinese double-width fonts issue
-    (use-package chinese-fonts-setup
-      :config
-      (setq cfs-profiles
-            '("program" "org-mode" "read-book"))
-    )
-
-### Shot key binding<a id="sec-1-19-2" name="sec-1-19-2"></a>
-
-    ;; Reset Increase Font size and Descrease Font size short key binding after using chinese-font-setup plugin
-    ;; Reference: https://github.com/tumashu/chinese-fonts-setup
-    (global-unset-key (kbd "C-x C-=")) ;; remove original font-resize
-    (global-set-key (kbd "C-x C-=") 'cfs-increase-fontsize)
-    (global-set-key (kbd "C-x M-=") 'cfs-decrease-fontsize)
-
-## WAITING Smartparens     :WAITING:<a id="sec-1-20" name="sec-1-20"></a>
+## WAITING Smartparens     :WAITING:<a id="sec-1-18" name="sec-1-18"></a>
 
 -   State "WAITING"    from ""           <span class="timestamp-wrapper"><span class="timestamp">[2016-05-30 Mon 20:36]</span></span>
 
-### Configuration<a id="sec-1-20-1" name="sec-1-20-1"></a>
+### Configuration<a id="sec-1-18-1" name="sec-1-18-1"></a>
 
     (use-package smartparens
       :config
@@ -623,9 +578,9 @@ From Steve Purcell, who linked to <http://www.emacswiki.org/emacs/ZapToISearch>
     
     )
 
-## Expand-region<a id="sec-1-21" name="sec-1-21"></a>
+## Expand-region<a id="sec-1-19" name="sec-1-19"></a>
 
-### Configuration<a id="sec-1-21-1" name="sec-1-21-1"></a>
+### Configuration<a id="sec-1-19-1" name="sec-1-19-1"></a>
 
     (use-package expand-region
       :config
@@ -637,14 +592,14 @@ From Steve Purcell, who linked to <http://www.emacswiki.org/emacs/ZapToISearch>
     
       )
 
-### Key bindings for Expand-region<a id="sec-1-21-2" name="sec-1-21-2"></a>
+### Key bindings for Expand-region<a id="sec-1-19-2" name="sec-1-19-2"></a>
 
     ;; Expand region (increases selected region by semantic units)
     (global-set-key (kbd "C-'") 'er/expand-region)
 
-## Swap-buffer<a id="sec-1-22" name="sec-1-22"></a>
+## Swap-buffer<a id="sec-1-20" name="sec-1-20"></a>
 
-### Configuration<a id="sec-1-22-1" name="sec-1-22-1"></a>
+### Configuration<a id="sec-1-20-1" name="sec-1-20-1"></a>
 
     ;; add smart swap buffers in multi-windows
     (use-package swap-buffers
@@ -652,23 +607,12 @@ From Steve Purcell, who linked to <http://www.emacswiki.org/emacs/ZapToISearch>
       (global-set-key (kbd "C-x 5") 'swap-buffers)
     )
 
-## Email Reader - Mu4e<a id="sec-1-23" name="sec-1-23"></a>
-
-Please find [Init-Mu4e](../lisp/init-mu4e.md).
-
-    ;; load my mu4e configuration from init-mu4e.el
-    ;;(require 'init-mu4e)
-      (starter-kit-load "03-For-an-editor/init-mu4e.org")
-    
-    
-    ;;(load-library "init-mu4e")
-
-## Multiple cursors mode<a id="sec-1-24" name="sec-1-24"></a>
+## Multiple cursors mode<a id="sec-1-21" name="sec-1-21"></a>
 
 Multiple cursor是一个非常强大的多位置同时编辑的编辑模式，文档可参考：
 这里有一个介绍详细的视频：<http://emacsrocks.com/e13.html>
 
-### Configuration<a id="sec-1-24-1" name="sec-1-24-1"></a>
+### Configuration<a id="sec-1-21-1" name="sec-1-21-1"></a>
 
     (use-package multiple-cursors
       :defer t
@@ -691,7 +635,7 @@ Multiple cursor是一个非常强大的多位置同时编辑的编辑模式，�
       :defer t
       :config (define-key mc/keymap (kbd "C-. =") 'mc/compare-chars))
 
-### Short-key binding<a id="sec-1-24-2" name="sec-1-24-2"></a>
+### Short-key binding<a id="sec-1-21-2" name="sec-1-21-2"></a>
 
     ;; add multi cursors:
     ;;(require 'multiple-cursors)
@@ -703,60 +647,18 @@ Multiple cursor是一个非常强大的多位置同时编辑的编辑模式，�
     (global-set-key (kbd "C-S-c C-e") 'mc/edit-ends-of-lines)
     (global-set-key (kbd "C-S-c C-a") 'mc/edit-beginnings-of-lines)
 
-## Latex mode<a id="sec-1-25" name="sec-1-25"></a>
-
-    ;;; latex --- Summary
-    ;;; Config for latex
-    (use-package auctex
-      :defer t)
-    
-    (use-package cdlatex
-      :defer t
-      :config
-      (add-hook 'LaTex-mode-hook 'turn-on-org-cdlatex) ;; with AUCTex LaTex mode-line
-      (add-hook 'LaTex-mode-hook 'turn-on-org-cdlatex) ;; with Emacs latex mode
-    )
-    ;; (add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)   ; with AUCTeX LaTeX mode
-    ;; (add-hook 'latex-mode-hook 'turn-on-cdlatex)   ; with Emacs latex mode
-    
-    ;; latex-preview-pane is a minor mode for Emacs that enables you to preview your LaTeX files directly in Emacs.
-    
-    
-    (use-package latex-preview-pane
-      :defer t
-      :config
-      (latex-preview-pane-enable))
-    ;;(latex-preview-pane-enable)
-    
-    ;; magical syntax highlighting for LaTeX-mode buffers
-    ;;(require-package 'magic-latex-buffer)
-    (use-package magic-latex-buffer
-      :defer t
-      :config
-      (add-hook 'latex-mode-hook 'magic-latex-buffer))
-    ;;(add-hook 'latex-mode-hook 'magic-latex-buffer)
-    
-    ;;  Adds several useful functionalities to LaTeX-mode. http://github.com/Bruce-Connor/latex-extra
-    
-    (use-package latex-extra
-      :defer t
-      :config
-      (add-hook 'latex-mode-hook 'latex-extra-mode))
-    
-    ;;(add-hook 'LaTeX-mode-hook #'latex-extra-mode)
-
-## TODO Wgrep<a id="sec-1-26" name="sec-1-26"></a>
+## TODO Wgrep<a id="sec-1-22" name="sec-1-22"></a>
 
 Wgrep是一个可以允许我们在grep模式下进行直接修改的工具，可以允许我们批量添加上Multiple cursors，然后进行批量修改的工具。在快速修改文件时非常方便，类似于sed的批量匹配，批量修改。
 
     ;;; 未配置详细操作，暂时不使用
     (use-package wgrep)
 
-## Tabbar<a id="sec-1-27" name="sec-1-27"></a>
+## Tabbar<a id="sec-1-23" name="sec-1-23"></a>
 
 Tabbar，在Emacs中显示一个文件的切换标签，并且标签文件按projectile的进行分组显示，以方便在同一个项目中进行维护和切换文件。
 
-### Configuration<a id="sec-1-27-1" name="sec-1-27-1"></a>
+### Configuration<a id="sec-1-23-1" name="sec-1-23-1"></a>
 
     (use-package tabbar)
     
@@ -881,7 +783,7 @@ Tabbar，在Emacs中显示一个文件的切换标签，并且标签文件按pro
     (tabbar-ruler-group-by-projectile-project)
     (tabbar-mode)
 
-### Key binding<a id="sec-1-27-2" name="sec-1-27-2"></a>
+### Key binding<a id="sec-1-23-2" name="sec-1-23-2"></a>
 
     ;; -----------------------------------------
     ;; start tabbar-mode
@@ -893,9 +795,9 @@ Tabbar，在Emacs中显示一个文件的切换标签，并且标签文件按pro
     ;;(global-set-key (kbd "C-c <C-up>") 'tabbar-forward-group)
     ;;(global-set-key (kbd "C-c <C-down>") 'tabbar-backward-group)
 
-## Perspective<a id="sec-1-28" name="sec-1-28"></a>
+## Perspective<a id="sec-1-24" name="sec-1-24"></a>
 
-### Configuration<a id="sec-1-28-1" name="sec-1-28-1"></a>
+### Configuration<a id="sec-1-24-1" name="sec-1-24-1"></a>
 
     (use-package perspective
       :config
@@ -920,11 +822,11 @@ Tabbar，在Emacs中显示一个文件的切换标签，并且标签文件按pro
         )
     )
 
-## Ido<a id="sec-1-29" name="sec-1-29"></a>
+## Ido<a id="sec-1-25" name="sec-1-25"></a>
 
 Ido工具是为在窗口下面的状态栏中选择、显示时更清晰，操作更方便，并支持模糊匹配选择，这里只保留选择文件时启动ido，其它时间切换buffer等，采用helm进行。
 
-### Configuration<a id="sec-1-29-1" name="sec-1-29-1"></a>
+### Configuration<a id="sec-1-25-1" name="sec-1-25-1"></a>
 
     ;; Use C-f during file selection to switch to regular find-file
     (ido-mode t)
@@ -934,9 +836,9 @@ Ido工具是为在窗口下面的状态栏中选择、显示时更清晰，操�
     (setq ido-auto-merge-work-directories-length 0)
     (setq ido-use-virtual-buffers t)
 
-## Multiple Major Mode<a id="sec-1-30" name="sec-1-30"></a>
+## Multiple Major Mode<a id="sec-1-26" name="sec-1-26"></a>
 
-### Configuration<a id="sec-1-30-1" name="sec-1-30-1"></a>
+### Configuration<a id="sec-1-26-1" name="sec-1-26-1"></a>
 
     (use-package mmm-mode
       :config

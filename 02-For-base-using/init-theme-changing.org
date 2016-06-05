@@ -11,10 +11,9 @@
     ;;(require-package 'color-theme-sanityinc-tomorrow)
 
   (use-package color-theme-sanityinc-solarized
-      :defer t
   )
   (use-package color-theme-sanityinc-tomorrow
-      :defer t)
+  )
     ;;------------------------------------------------------------------------------
     ;; Old-style color theming support (via color-theme.el)
     ;;------------------------------------------------------------------------------

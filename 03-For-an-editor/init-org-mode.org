@@ -890,6 +890,29 @@ marginparsep=7pt, marginparwidth=.6in}
 ;; init-org-table-shift.el end here
 
 #+end_src
+* Chinese-font-setup
+在Org-mode中，编辑表格并让表格的分隔线对齐是一件不太容易的事情，主要原因是因为Org-mode中编辑时字母与汉字同时存在时，则字母字体长度与汉字字体宽度不同的原因导致，因此这里的主要解决方案是找到一种通用等宽字体，通过字体的配置来达到最终表格对齐正常。
+感谢Chinese-font-setup的包开发者：
+** Configuration
+#+begin_src emacs-lisp :tangle yes
+  ;; add font-config for chinese double-width fonts issue
+  (use-package chinese-fonts-setup
+    :config
+    (setq cfs-profiles
+          '("program" "org-mode" "read-book"))
+  )
+
+#+end_src
+** Shot key binding
+
+#+begin_src emacs-lisp :tangle yes
+;; Reset Increase Font size and Descrease Font size short key binding after using chinese-font-setup plugin
+;; Reference: https://github.com/tumashu/chinese-fonts-setup
+(global-unset-key (kbd "C-x C-=")) ;; remove original font-resize
+(global-set-key (kbd "C-x C-=") 'cfs-increase-fontsize)
+(global-set-key (kbd "C-x M-=") 'cfs-decrease-fontsize)
+
+#+end_src
 * Key bindings for Orgmode
 ** Key bindings configurations
 #+begin_src emacs-lisp :tangle yes

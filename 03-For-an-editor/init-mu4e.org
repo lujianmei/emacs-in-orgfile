@@ -3,12 +3,12 @@
 
 
 * Email Reader - Mu4e with Offlineimap and  and msmtp
-*** Offlineimap
-**** 安装
+** Offlineimap
+*** 安装
 #+begin_src sh
 sudo pacman -Ss offlineimap
 #+end_src
-**** 配置
+*** 配置
      Linux 配置
 #+begin_src sh
 [general]
@@ -167,11 +167,11 @@ keepalive = 60
 holdconnectionopen = yes
 
 #+end_src
-**** 配置安全密码
-*** Mu4e
-    mu4e基于mu开发，直接通过maildir格式文件进行读取邮件内容；因此可以通过offlineimap进行邮件下载，然后通过mu4e进行邮件读取及发送邮件即可；
-    官方网站：[http://www.djcbsoftware.nl/code/mu]
-**** 安装
+*** 配置安全密码
+** Mu4e
+   mu4e基于mu开发，直接通过maildir格式文件进行读取邮件内容；因此可以通过offlineimap进行邮件下载，然后通过mu4e进行邮件读取及发送邮件即可；
+   官方网站：[http://www.djcbsoftware.nl/code/mu]
+*** 安装
 #+begin_src sh
 yaourt -S mu
 #+end_src
@@ -186,7 +186,7 @@ brew install curl --with-openssl && brew link curl —forc
 brew install html2text w3m
 
 #+end_src
-**** 配置mu4e的emacs配置文件
+*** 配置mu4e的emacs配置文件
       配置直接通过emacs中的init-mu4e.el文件进行配置；
 #+begin_src emacs-lisp :tangle yes
   ;;================================================================
@@ -296,13 +296,13 @@ brew install html2text w3m
 
 #+end_src
 
-**** 配置mu4e的配置文件
+*** 配置mu4e的配置文件
       完成mu4e的配置后，需要创建~/.authinfo文件，存储所需要的服务器用户名密码等信息；
 #+begin_src sh
 machine smtp.qiye.163.com login username password yourpassword
 #+end_src
 
-*** msmtp
+** msmtp
     msmtp工具用于发送邮件，mutt的基本配置内容可以参照https://github.com/lujianmei/.mutt 上的配置进行处理；
 #+begin_src sh
 brew install msmtp
