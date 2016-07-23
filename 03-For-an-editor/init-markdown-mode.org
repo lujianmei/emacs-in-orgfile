@@ -32,8 +32,7 @@
   ---------------------------------------------------
     A set of useful LESS mixins
     More info at: http://lesselements.com
-  ---------------------------------------------------*/
-/**
+  -------------------------------------------------
  * https://github.com/rhiokim/markdown-css
  * solarized-light style
  * made by rhio.kim
@@ -878,3 +877,61 @@
 
 
 #+end_src
+** Key bindings
+#+CAPTION: Org-mode快捷键
+     #+ATTR_LATEX: :environment longtable :align l|l|l
+
+| 分类   | 快捷键      | 说明                                                     |
+|--------+-------------+----------------------------------------------------------|
+| 标题   | C-c C-t 1-6 | 插入1到6级标题                                           |
+|        | C-c C-t !   | 插入Sextex 1 heading                                     |
+|        | C-c C-t @   | 插入Sextex 2 heading                                     |
+|        | C-c C-k     | 删除当前heading                                          |
+|        | C-y         | 拷贝当前heading                                          |
+|        | C-c C-t h   | 按上下文插入标题                                         |
+|        | M-left      | 降级当前标题级别                                         |
+|        | M-right     | 升级当前标题级别                                         |
+|        | C-M-left    | 降级当前及其子标题级别                                   |
+|        | C-M-right   | 升级当前及其子标题级别                                   |
+|--------+-------------+----------------------------------------------------------|
+| 移动   | C-c C-n     | Move to next visible heading                             |
+|        | C-c C-p     | Move to previous visible heading                         |
+|        | C-c C-f     | Move to next visible heading at same level               |
+|        | C-c C-b     | Move to previous visible heading at same level           |
+|        | C-c C-u     | Move up to a lower-level heading                         |
+|        | C-M-a       | Move to beginning of current section                     |
+|        | C-M-e       | Move to end of current section                           |
+|        | C-M-h       | Mark a region around current section                     |
+|--------+-------------+----------------------------------------------------------|
+| 图片   | C-c C-i i   | 插入图片                                                 |
+|        | C-c C-i I   | 插入引用样式图片                                         |
+|--------+-------------+----------------------------------------------------------|
+| 样式   | C-c C-s e   | 标注选中的文字为斜体 (emphasis)                          |
+|        | C-c C-s s   | 标注选中的文字为粗体 (strong)                            |
+|        | C-c C-s p   | Make word or region preformed (code block)               |
+|        | C-c C-s C-p | Make region preformed                                    |
+|        | C-c C-s c   | 标选中部分为单行(inline)                                 |
+|        | C-c C-s b   | 标注选中部分为块引用 (blockquote)                        |
+|        | C-c C-s C-b | 标注选中部分为块引用 (blockquote)                        |
+|        |             |                                                          |
+|--------+-------------+----------------------------------------------------------|
+| 列表   | m-RET       | 插入一个list                                             |
+|        | m-UP        | 上移动当前list                                           |
+|        | m-DOWN      | 下移动当前列表                                           |
+|        | m-LEFT      | 降级当前列表                                             |
+|        | m-RIGHT     | 升级当前列表                                             |
+|--------+-------------+----------------------------------------------------------|
+| 分隔符 | C-c -       | Insert horizontal rule as defined by markdown-hr-strings |
+|        | C-u C-c -   | Insert last string in markdown-hr-strings                |
+|--------+-------------+----------------------------------------------------------|
+| 工具   | C-c C-c c   | 检查文档中错误的引用                                     |
+|        | C-c C-c n   | 重新对文档中列表进行重新排序                             |
+|        | C-c C-c ]   | 补全所有标题和不完整的分隔符                             |
+|        | C-c C-]     | 补全当前                                                 |
+|--------+-------------+----------------------------------------------------------|
+| 链接   | C-c C-a l   | Insert an inline link of the form [text](url).           |
+|        | C-c C-a L   | Insert a reference link of the form [text][label]        |
+|        | C-c C-a u   | Insert bare URL of the form <URL>                        |
+|        | C-c C-a f   | Insert footnote marker and definition below              |
+|        | C-c C-a w   | Insert a wiki link of the form [[WikiLink]]                  |
+|        | C-c C-o     | 打开当前链接                                             |

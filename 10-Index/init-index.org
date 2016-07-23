@@ -279,6 +279,10 @@ This part is for global key binding configuration
 
 #+end_src
 
+*** Key binding
+插入一个页分隔：
+C-q C-l
+
 ** Key binding for changing emacs configuration
 
 #+begin_src emacs-lisp :tangle yes

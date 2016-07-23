@@ -3,6 +3,11 @@
 
 
 * Using third-package for color theme
+
+** Change the theme
+
+*** Using Solarized theme
+配置使用Solarized样式
 #+begin_src emacs-lisp :tangle yes
     ;; Got following from Purcell's emacs configuration
     ;; From https://github.com/purcell/emacs.d
@@ -81,4 +86,19 @@
       (interactive)
       (color-theme-sanityinc-solarized-dark))
 
+#+end_src
+
+** Change ControlL as a line
+#+begin_src emacs-lisp :tangle yes
+  (use-package page-break-lines
+  ;  (set-fontset-font "fontset-default"
+  ;                (cons page-break-lines-char page-break-lines-char)
+  ;                  (face-attribute 'default :family))
+  )
+    (turn-on-page-break-lines-mode)
+#+end_src
+
+** Change the mode-line theme
+#+begin_src emacs-lisp :tangle yes
+  (use-package smart-mode-line)
 #+end_src

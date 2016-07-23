@@ -20,11 +20,14 @@
 * 说明
 Emacs基础配置，包含了对Emacs基础功能的配置内容，及基础配置的调整后的操作介绍说明。
 * 配置
+
 ** Debug configuration
+
 #+begin_src emacs-lisp :tangle yes
 ;; mark the start time
 (defconst emacs-start-time (current-time))
 #+end_src
+
 ** DONE Personal information
    - State "DONE"       from ""           [2016-06-05 Sun 00:44]
 
