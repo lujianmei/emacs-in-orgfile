@@ -16,37 +16,12 @@
 #+STARTUP: logredeadline, logreschedule
 #+ATTR_HTML: :border 2 :rules all :frame all
 
-* Gernal packages configurations
-当前分类下，列出支持的包的配置信息。
-** Auto complete using company-mode
-自动完成功能的配置，可以基于它针对不同的语言进行配置自动提示功能；
-#+begin_src emacs-lisp :tangle yes
-    ;; Turn on auto complete.
-  ;;  (require 'auto-complete-config)       
-    ;;(ac-config-default)
+* 基础工具包的配置
+当前分类下，列出支持的包的配置信息。针对emacs的基础编辑功能的增强，需要一些针对基本编辑功能的快速提升的配置项，本节则介绍了常用基础编辑功能提升上常用的一些工具包及其作用的说明，和配置方法。
+需要说明的是，这里同样是一个抛砖引玉的过程，有兴趣的同学可以到各个包的官方网站或者Github源码配置上去详细了解其实现及更详细的配置方法，以最佳的适配每个用户的个性化修改需求。
 
-  (use-package company
-    :defer t
-    :config (add-hook 'prog-mode-hook 'company-mode))
-
-#+end_src
-
-** Manage the dash package
-此包用于在macbook上调用dash应用的功能，其它操作系统可以不用；
-#+begin_src emacs-lisp :tangle yes
-  (use-package dash
-    :defer t)
-#+end_src
-
-** Config the backups
-配置自动备份；
-#+BEGIN_SRC emacs-lisp :tangle yes
-;;(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
-(setq backup-directory-alist '(("." . (expand-file-name "backups" user-emacs-directory))))
-#+END_SRC
-
-** Save files
-Emacs中的自动保存功能，单独存储在另一个文件夹中。
+** 自动保存功能配置
+   1. Emacs中的自动保存功能，单独存储在另一个文件夹中。
 #+BEGIN_SRC emacs-lisp :tangle yes
 (setq delete-old-versions -1)
 (setq version-control t)
@@ -55,9 +30,14 @@ Emacs中的自动保存功能，单独存储在另一个文件夹中。
 ;;(setq auto-save-file-name-transforms '((".*" (expand-file-name "auto-save-list" user-emacs-directory) t)))
 #+END_SRC
 
-** Save history
-保存历史记录
-From http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2014/03/C3F.html
+   2. 在常用编辑过程中，需要对Emacs配置自动备份功能，下面即为为自动保存配置一个自动保存的临时文件存储目录，配置自动备份；
+#+BEGIN_SRC emacs-lisp :tangle yes
+;;(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
+(setq backup-directory-alist '(("." . (expand-file-name "backups" user-emacs-directory))))
+#+END_SRC
+
+   3. 保存命令历史记录
+      Emacs中的操作也由一个一个命令执行过程，savehist命令则是对emacs日常操作中的执行历史记录的存储功能，存储下在使用过程中的历史记录。
 #+BEGIN_SRC emacs-lisp :tangle yes
 ;;(setq savehist-file "~/.emacs.d/savehist")
 (setq savehist-file (expand-file-name "savehist" user-emacs-directory))
@@ -71,14 +51,11 @@ From http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2014/03/C3F.htm
         regexp-search-ring))
 #+END_SRC
 
-** Macros
 
-*** Key bindings configuration for Macros
-#+begin_src emacs-lisp :tangle yes
+** 学会使用键盘宏
 
-#+end_src
-*** Key bindings for Macros
-#+CAPTION: Org-mode快捷键
+*** 键盘宏的快捷键绑定
+    #+CAPTION: Org-mode快捷键
      #+ATTR_LATEX: :environment longtable :align l|l|l
 |--------------------+-------------------------+-----------------------------------------------------------------------------------------------|
 | 宏                 | C-x (                   | 开始录制宏                                                                                    |
@@ -89,8 +66,9 @@ From http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2014/03/C3F.htm
 |--------------------+-------------------------+-----------------------------------------------------------------------------------------------|
 |                    |                         |                                                                                               |
 
-** Tramp
-*** Configuration
+** 编辑远程文件工具Tramp
+   Tramp工具可以让我们直接在本地通过Emacs编辑远程服务器上的文件，并直接保存到远程服务器中，针对远程服务器中的配置文件的编辑特别方便，并且Tramp会记录操作历史，可以配置它的远程使用的密码有效期，从而让远程编辑变的更方便的更快捷。
+*** 配置方法
 #+begin_src emacs-lisp :tangle yes
 ;; setting for tramp
 (setq tramp-default-method "ssh")

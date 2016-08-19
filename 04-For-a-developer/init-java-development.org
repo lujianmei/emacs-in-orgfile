@@ -1,0 +1,53 @@
+#+TITLE: 用Emacs写文档
+#+LANGUAGE:  zh
+#+AUTHOR: Lu Jianmei
+#+EMAIL: lu.jianmei@trs.com.cn
+#+OPTIONS:   H:3 num:t   toc:3 \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t p:t pri:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+OPTIONS:   author:t creator:t timestamp:t email:t
+#+DESCRIPTION: A notes that include all works and study things in 2015
+#+KEYWORDS:  org-mode Emacs jquery jquery.mobile jquery.ui wcm
+#+INFOJS_OPT: view:nil toc:t ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LATEX_HEADER: \usepackage{xeCJK}
+#+LATEX_HEADER: \setCJKmainfont{SimSun}
+#+LATEX_CLASS: cn-article
+#+STARTUP: logredeadline, logreschedule
+#+ATTR_HTML: :border 2 :rules all :frame all
+
+
+* Java语言开发配置
+** 采用Company-mode包，来增加自动提示的功能
+在编辑中的自动完成，这里是针对英文单词的自动完成功能的提升，自动完成功能的配置，可以基于它针对不同的语言进行配置自动提示功能；
+#+begin_src emacs-lisp :tangle yes
+    ;; Turn on auto complete.
+  ;;  (require 'auto-complete-config)       
+    ;;(ac-config-default)
+
+  (use-package company
+    :defer t
+    :config (add-hook 'prog-mode-hook 'company-mode))
+
+#+end_src
+
+** 在Mac上调用dash的功能
+此包用于在macbook上调用dash应用的功能，其它操作系统可以不用；
+#+begin_src emacs-lisp :tangle yes
+  (use-package dash
+    :defer t)
+#+end_src
+
+** 通过java-imports包来自动加载import语句
+在java文件中，当加入一个class时，此工具会自动搜索并引入import语句；
+#+begin_src emacs-lisp :tangle yes
+    (use-package java-imports
+      :defer t
+      :bind (:map java-mode-map
+                  ("M-I" . java-imports-add-import-dwim))
+      :config
+      (setq java-imports-find-block-function 'java-imports-find-place-sorted-block)
+      
+      )
+  (add-hook 'java-mode-hook 'java-imports-scan-file)
+#+end_src

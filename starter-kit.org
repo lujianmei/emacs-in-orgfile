@@ -161,6 +161,12 @@ Start kit的使用需要一些工程初使配置，而初使配置即在此文�
   (starter-kit-load "03-For-an-editor/init-magit.org")
   #+end_src
 
+- 应用开发编辑提升
+  #+begin_src emacs-lisp :tangle yes
+  (starter-kit-load "04-For-a-developer/init-java-development.org") 
+
+  #+end_src
+
 
 - 资源索引
   #+begin_src emacs-lisp :tangle yes
@@ -168,6 +174,6 @@ Start kit的使用需要一些工程初使配置，而初使配置即在此文�
   #+end_src
 ** 配置默认样式
 #+begin_src emacs-lisp :tangle yes
-(dark)
+;;(dark)
 (mu4e)
 #+end_src
