@@ -188,6 +188,8 @@ brew install html2text w3m
 #+end_src
 *** 配置mu4e的emacs配置文件
       配置直接通过emacs中的init-mu4e.el文件进行配置；
+
+
 #+begin_src emacs-lisp :tangle yes
   ;;================================================================
   ;; Config for email client mu4e
@@ -196,8 +198,6 @@ brew install html2text w3m
   (require 'mu4e)
   (require 'smtpmail)
   (require 'starttls)
-
-
 
   ;; Reading email config
   ;;(setq mu4e-maildir "~/.mutt/mails/lu.jianmei")
@@ -289,7 +289,8 @@ brew install html2text w3m
   ;; you might want to set the following too
 
   ;; use helm-mu for search email and contacts etc.
-  (use-package helm-mu)
+  ;;(use-package helm-mu)
+
 
   (provide 'init-mu4e)
   ;; init-mu4e.el end here

@@ -32,34 +32,31 @@ The "default" behavior can be summrized as:
 
 #+begin_src emacs-lisp :tangle yes
   (use-package ace-isearch
-    :defer t
-    :init
-    (use-package helm-swoop)
-      :config
-      (progn
-        (global-ace-isearch-mode +1) ;; start this for global
-        ;;(setq ace-isearch-funtion-from-isearch 'swoop-from-isearch) ; need to install swoop
-        ;;(define-key swoop-map (kbd "C-s") 'swoop-action-goto-line-next)
-        ;;(define-key swoop-map (kbd "C-r") 'swoop-action-goto-line-prev)
-        (setq ace-isearch-funtion-from-isearch 'helm-swoop-from-isearch)
-        ;; (setq ace-isearch-funtion-from-isearch 'helm-occur-from-isearch) ; alternative way
+    :config
+    (progn
+      (global-ace-isearch-mode +1) ;; start this for global
+      ;;(setq ace-isearch-funtion-from-isearch 'swoop-from-isearch) ; need to install swoop
+      ;;(define-key swoop-map (kbd "C-s") 'swoop-action-goto-line-next)
+      ;;(define-key swoop-map (kbd "C-r") 'swoop-action-goto-line-prev)
+      (setq ace-isearch-funtion-from-isearch 'helm-swoop-from-isearch)
+      ;; (setq ace-isearch-funtion-from-isearch 'helm-occur-from-isearch) ; alternative way
 
-        ;; blew configuration can be support for Chinese
-        (defadvice ace-jump-char-category (around adv-ace-jump-support-umlauts activate)
-          (unless (= (char-syntax (ad-get-arg 0)) ?w)
-            ad-do-it)
-          (setq ad-return-value 'alpha))
+      ;; blew configuration can be support for Chinese
+      (defadvice ace-jump-char-category (around adv-ace-jump-support-umlauts activate)
+        (unless (= (char-syntax (ad-get-arg 0)) ?w)
+          ad-do-it)
+        (setq ad-return-value 'alpha))
 
-        ;; base configuration 
-        (custom-set-variables
-         '(ace-isearch-input-length 6)
-         '(ace-isearch-jump-delay 0.25)
-         '(ace-isearch-function 'ace-jump-word-mode)
-         ;;'(ace-isearch-function 'avy-goto-char)
-         '(ace-isearch-use-jump 'printing-char))
-        (define-key isearch-mode-map (kbd "C-'") 'ace-isearch-jump-during-isearch)
-        )
-    )
+      ;; base configuration 
+      (custom-set-variables
+       '(ace-isearch-input-length 6)
+       '(ace-isearch-jump-delay 0.25)
+       '(ace-isearch-function 'ace-jump-word-mode)
+       ;;'(ace-isearch-function 'avy-goto-char)
+       '(ace-isearch-use-jump 'printing-char))
+      (define-key isearch-mode-map (kbd "C-'") 'ace-isearch-jump-during-isearch)
+      )
+  )
 
 
 #+end_src

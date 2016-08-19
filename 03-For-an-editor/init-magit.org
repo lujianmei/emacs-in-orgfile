@@ -27,7 +27,7 @@
       (call-interactively 'magit-log-edit))
 
     (use-package magit
-      :load-path "~/.emacs.d/magit"
+      ;;:load-path "~/.emacs.d/magit"
       :config
       (progn
         (when (equal system-type 'windows-nt)

@@ -109,14 +109,6 @@ From http://www.wisdomandwonder.com/wordpress/wp-content/uploads/2014/03/C3F.htm
   :defer t)
 #+END_SRC
 
-** DONE Mode line format
-    - State "DONE"       from ""           [2016-05-29 Sun 07:02]
-Display a more compact mode line
-
-#+BEGIN_SRC emacs-lisp :tangle yes
-  (use-package smart-mode-line
-    :defer t)
-#+END_SRC
 
 ** DONE Undo tree
     - State "DONE"       from ""           [2016-05-29 Sun 07:02]
@@ -285,7 +277,7 @@ Snippets工具可以让我们使用定义好的代码片断，或者文本块，
       (yas-global-mode)
       (add-hook 'hippie-expand-try-functions-list 'yas-hippie-try-expand)
       (setq yas-key-syntaxes '("w_" "w_." "^ "))
-      ;;(setq yas-installed-snippets-dir "~/emacs.d-new/yasnippet-snippets")
+      (setq yas-installed-snippets-dir "~/emacs.d/yasnippet-snippets")
       (setq yas-installed-snippets-dir (expand-file-name "yasnippet-snippets" user-emacs-directory))
       (setq yas-expand-only-for-last-commands nil)
       (yas-global-mode 1)
