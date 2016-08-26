@@ -94,13 +94,16 @@
   ;  (set-fontset-font "fontset-default"
   ;                (cons page-break-lines-char page-break-lines-char)
   ;                  (face-attribute 'default :family))
-   :config
-    (turn-on-page-break-lines-mode)
   )
-
+    (turn-on-page-break-lines-mode)
 #+end_src
 
 ** Change the mode-line theme
 #+begin_src emacs-lisp :tangle yes
   (use-package smart-mode-line)
 #+end_src
+#+begin_src emacs-lisp :tangle yes
+(color-theme-sanityinc-solarized-light)
+
+#+end_src
+
