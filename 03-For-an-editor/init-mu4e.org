@@ -2,14 +2,21 @@
 #+OPTIONS: TOC:4 H:4
 
 
-* Email Reader - Mu4e with Offlineimap and  and msmtp
-** Offlineimap
+* 采用Emacs阅读邮件配置
+Emacs用来管理邮件，有很多种工具，GNU的自带的邮件工具，Wanderlust等很多类似的工具用来管理邮件；但这些工具都有些普遍的问题就是当网络或者邮件多时会导致Emacs卡死，因此最后用了选择下来，还是Mu4e使用起来更加顺手；
+Mu4e是基于Mu开发的一个文本搜索工具，因此它处理邮件的搜索过滤速度很快，而它不负责做邮件的收发，因此收发需要另外的工具来配合使用。
+收邮件采用offlineimap工具，而发送邮件则采用了msmtp来，这样的话，会导致配置过程比较复杂，但配置完成后，再采用mu4e的搭配管理，会让邮件收发，搜索，查询，加载速度都很快。
+具体的配置如下步骤。
+
+** 第一步，配置Offlineimap
 *** 安装
+这里是在Archlinux上通过pacman进行在线安装，其它平台可以参照或者到官网上进行下载安装。
 #+begin_src sh
 sudo pacman -Ss offlineimap
 #+end_src
 *** 配置
-     Linux 配置
+     Offlineimap安装完成后，需要进行一些配置，来配置收邮件的一些安全脚本，邮件分类及下载邮件到对应的分类配置。配置文件可以直接做参考即可，然后按照用户各自的邮件分类进行自行调整即可。另外，为了安全起见，配置文件中的邮箱帐户密码不应该配置为明文，当然明文也是可以的，只是安全起见需要将密码进行加密，生成一个加密文件，然后让offlineimap在运行时自己解密自己登录。
+     而在linux上推荐可以使用gnugpg，而Mac环境下，则可以使用另外的密码工具。如下给出了linux及Mac上的两种配置。
 #+begin_src sh
 [general]
 ui = TTYUI
@@ -227,23 +234,22 @@ brew install html2text w3m
         ;;message-signature
         mu4e-compose-signature
         (concat
-         " -- "
+
+"All My Best Regards!"
          " \n "
-         "陆健美 "
+"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
          " \n "
-         "青岛办项目部 "
+"陆健美            项目经理                                                      "
          " \n "
-         "股票代码：300229 "
+                
+"网站群技术运维团队    海尔官网（中国）                                        "
          " \n "
-         "北京拓尔思信息技术股份有限公司 "
+"手机: 18661813293"
          " \n "
-         "Tel：0532-68601852 "
+"邮箱：lu.jianmei@trs.com.cn"
          " \n "
-         "Mobile：18661813293 E-mail：lu.jianmei@trs.com.cn "
+"海尔官网:www.haier.com                      "
          " \n "
-         "Add：青岛市市南区山东路2号华仁国际大厦12F,G室 266200 "
-         " \n "
-         "官方网站：www.trs.com.cn "
          "\n")
 
         mu4e-view-show-images t
@@ -259,6 +265,7 @@ brew install html2text w3m
   (when (fboundp 'imagemagick-register-types)
     (imagemagick-register-types))
 
+(setq mu4e-headers-results-limit 1000)
 
   ;; ;; Send email config
   ;; (setq message-send-mail-function 'smtpmail-send-it

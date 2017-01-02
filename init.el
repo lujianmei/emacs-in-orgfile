@@ -6,6 +6,13 @@
 ;;
 
 ;; load Org-mode from source when the ORG_HOME environment variable is set
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (when (getenv "ORG_HOME")
   (let ((org-lisp-dir (expand-file-name "lisp" (getenv "ORG_HOME"))))
     (when (file-directory-p org-lisp-dir)
@@ -36,10 +43,10 @@
  '(ace-isearch-input-length 6)
  '(ace-isearch-jump-delay 0.25)
  '(ace-isearch-use-jump (quote printing-char))
- '(custom-enabled-themes (quote (sanityinc-solarized-dark)))
+ '(custom-enabled-themes (quote (sanityinc-solarized-light)))
  '(custom-safe-themes
    (quote
-    ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
+    ("4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
  '(org-export-table-data-tags (quote ("<tr class=\"CUSTOM_ID>" . "</t>"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
