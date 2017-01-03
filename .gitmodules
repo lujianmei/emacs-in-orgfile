@@ -1,0 +1,6 @@
+[submodule "chinese-fonts-setup"]
+	path = chinese-fonts-setup
+	url = git@github.com:lujianmei/chinese-fonts-setup.git
+[submodule "org-html-themes"]
+	path = org-html-themes
+	url = git@github:lujianmei/org-html-themes.git
