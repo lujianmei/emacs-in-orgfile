@@ -76,7 +76,7 @@ Org Capture是Org-mode中用来快速创建任务的功能，具体的应用场�
 ;;================================================================
 ;; config for org-mode
 ;; add some capture config
-(setq org-directory "~/workspace/github/work-notes/captures")
+(setq org-directory "~/workspace/github/my-blog/work-notes/captures")
 ;;(setq org-default-notes-file (concat org-directory "/notes.org"))
 ;;(define-key global-map (kbd "M-<f6>") 'org-capture)
 
@@ -523,8 +523,8 @@ TODO用来管理org mode中的任务状态，如下配置中，将任务状态�
 
       ;; (work notes for)
       (quote (("work-notes"
-               :base-directory "~/workspace/github/work-notes/"
-               :publishing-directory "~/workspace/github/publish-works"
+               :base-directory "~/workspace/github/my-blog/work-notes/"
+               :publishing-directory "~/workspace/github/my-blog/publish-works"
                :recursive t
                :table-of-contents t
                :base-extension "org"
@@ -535,8 +535,8 @@ TODO用来管理org mode中的任务状态，如下配置中，将任务状态�
                :author-info y
                :creator-info y)
               ("work-notes-extra"
-               :base-directory "~/workspace/github/work-notes/"
-               :publishing-directory "~/workspace/github/publish-works"
+               :base-directory "~/workspace/github/my-blog/work-notes/"
+               :publishing-directory "~/workspace/github/my-blog/publish-works"
                :base-extension "css\\|pdf\\|png\\|jpg\\|gif"
                :publishing-function org-publish-attachment
                :recursive t

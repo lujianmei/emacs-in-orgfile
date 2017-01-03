@@ -51,3 +51,16 @@
       )
   (add-hook 'java-mode-hook 'java-imports-scan-file)
 #+end_src
+
+
+
+* 安装R
+#+begin_src emacs-lisp :tangle yes
+    ;; Turn on auto complete.
+  ;;  (require 'auto-complete-config)       
+    ;;(ac-config-default)
+
+  (use-package ess
+    :defer t)
+
+#+end_src
