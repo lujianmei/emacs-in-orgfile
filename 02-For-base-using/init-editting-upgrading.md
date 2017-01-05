@@ -71,4 +71,5 @@
         (:map flyspell-mode-map ("C-;" . helm-flyspell-correct))
          )
     (add-hook 'org-mode-hook 'flyspell-mode)
+    (add-hook 'markdown-mode-hook 'flyspell-mode)
     (add-hook 'flyspell-mode-hook 'helm-flyspell-correct)
