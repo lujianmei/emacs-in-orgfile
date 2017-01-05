@@ -824,13 +824,6 @@ marginparsep=7pt, marginparwidth=.6in}
 (add-hook 'message-mode-hook 'turn-on-orgtbl)
 
 #+end_src
-** End of file
-#+begin_src emacs-lisp :tangle yes
-
-(provide 'init-org-mode)
-;; init-org-mode.el end here
-
-#+end_src
 
 * Orgmode table Configuration
 
@@ -1538,3 +1531,14 @@ your own key as shown under ACTIVATION.
  org-replace-disputed-keys.
 
 
+* Org文件批量管理
+
+
+
+* End of file
+#+begin_src emacs-lisp :tangle yes
+
+(provide 'init-org-mode)
+;; init-org-mode.el end here
+
+#+end_src

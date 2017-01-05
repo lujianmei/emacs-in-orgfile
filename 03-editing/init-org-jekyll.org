@@ -1,0 +1,77 @@
+#+TITLE: 用Org与Jekyll写博客 
+#+OPTIONS: TOC:4 H:4
+
+* 用Org写博客，导出为Jekyll
+
+#+begin_src emacs-lisp :tangle no
+  ;; 添加org-jekyll包
+  (use-package org-jelyll
+    :defer t  )
+
+(setq org-publish-jr "~/cjr/jr/publish/")
+(setq org-publish-jr-blog "~/cjr/jr/")
+
+(setq org-jekyll-lang-subdirs '(("en" . "publish-blog/blog/")))
+
+(add-to-list 'org-publish-project-alist
+             `("jr-org"
+               :base-directory "~/cjr/jr/"
+               :recursive t
+               :base-extension "org"
+               :publishing-directory ,org-publish-jr
+               :exclude "^blog\\|^bitacora\\|jr.org"
+               :site-root "http://juanreyero.com"
+               :jekyll-sanitize-permalinks t
+               :publishing-function org-html-publish-to-html
+               :section-numbers nil
+               :headline-levels 4
+               :table-of-contents t
+               :auto-index nil
+               :auto-preamble nil
+               :body-only nil
+               :auto-postamble nil))
+
+(add-to-list 'org-publish-project-alist
+             `("jr-img"
+               :base-directory "~/cjr/jr/"
+               :recursive t
+               :exclude "^publish"
+               :base-extension "jpg\\|gif\\|png"
+               :publishing-directory ,org-publish-jr
+               :publishing-function org-html-publish-attachment))
+
+(add-to-list 'org-publish-project-alist
+             '("jr" :components ("jr-org"
+                                 "jr-img")))
+
+(add-to-list 'org-publish-project-alist
+             `("jr-blog"
+               :base-directory "~/cjr/jr/"
+               :recursive t
+               :base-extension "org"
+               :publishing-directory ,org-publish-jr
+               :blog-publishing-directory ,org-publish-jr-blog
+               :site-root "http://juanreyero.com"
+               :jekyll-sanitize-permalinks t
+               :publishing-function org-html-publish-to-html
+               :section-numbers nil
+               :headline-levels 4
+               :table-of-contents nil
+               :auto-index nil
+               :auto-preamble nil
+               :body-only t
+               :auto-postamble nil))
+
+
+#+end_src
+
+
+* 文件尾标记
+#+begin_src emacs-lisp :tangle yes
+
+(provide 'init-org-jekyll)
+;; init-org-jekyll.el end here
+
+#+end_src
+
+

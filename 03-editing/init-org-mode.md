@@ -67,7 +67,6 @@
 <li><a href="#sec-1-11-1">1.11.1. Configuration</a></li>
 </ul>
 </li>
-<li><a href="#sec-1-12">1.12. End of file</a></li>
 </ul>
 </li>
 <li><a href="#sec-2">2. Orgmode table Configuration</a></li>
@@ -84,6 +83,7 @@
 <li><a href="#sec-4-3">4.3. Orgmode keybindings from orginal ormode.org</a></li>
 </ul>
 </li>
+<li><a href="#sec-5">5. End of file</a></li>
 </ul>
 </div>
 </div>
@@ -1137,11 +1137,6 @@ Column view是建立于org-mode任务管理之上的快速以表格查看各个�
     
     ;;
     (add-hook 'message-mode-hook 'turn-on-orgtbl)
-
-## End of file<a id="sec-1-12" name="sec-1-12"></a>
-
-    (provide 'init-org-mode)
-    ;; init-org-mode.el end here
 
 # Orgmode table Configuration<a id="sec-2" name="sec-2"></a>
 
@@ -2468,3 +2463,8 @@ update all dynamic blocks                         C-u C-c C-x C-u
 `==============================================================================`
 Notes
 `==============================================================================`
+
+# End of file<a id="sec-5" name="sec-5"></a>
+
+    (provide 'init-org-mode)
+    ;; init-org-mode.el end here
