@@ -47,7 +47,10 @@
  '(custom-safe-themes
    (quote
     ("4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
- '(org-export-table-data-tags (quote ("<tr class=\"CUSTOM_ID>" . "</t>"))))
+ '(org-export-table-data-tags (quote ("<tr class=\"CUSTOM_ID>" . "</t>")))
+ '(package-selected-packages
+   (quote
+    (helm-flyspell yasnippet use-package undo-tree tabbar switch-window swap-buffers smartparens smart-mode-line-powerline-theme phi-search-mc perspective page-break-lines org-ac mmm-mode mc-extras markdown-mode magit-gh-pulls java-imports helm-projectile helm-mu helm-descbinds guide-key git-messenger expand-region ess dracula-theme company color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized chinese-fonts-setup avy-zap auto-compile ace-mc ace-isearch))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

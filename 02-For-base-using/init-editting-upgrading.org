@@ -86,3 +86,23 @@
 
 #+end_src
 
+** Spell checking
+   自动拼写检查，在写英文文章时会比较好用，而这里采用Aspell来做为检查服务，因此需要先安装Aspell.
+
+*** Install Aspell
+    在Mac电脑上，可以用 ~brew install aspell~ 来完成安装，在Linux系统上可以直接通过命令进行安装即可。安装完成后，确认在终端可以通过输入 ~aspell~ 命令来确认已经安装成功。
+
+*** Helm-flyspell
+    这里使用 ~helm-flyspell~ 包来利用helm来完成拼写检查。
+
+#+begin_src emacs-lisp :tangle yes
+  (use-package helm-flyspell
+    :defer nil
+    :bind
+    (:map flyspell-mode-map ("C-;" . helm-flyspell-correct))
+     )
+(add-hook 'org-mode-hook 'flyspell-mode)
+(add-hook 'flyspell-mode-hook 'helm-flyspell-correct)
+
+
+#+end_src
