@@ -972,11 +972,7 @@ Column view是建立于org-mode任务管理之上的快速以表格查看各个�
     \\tolerance=1000
     [NO-DEFAULT-PACKAGES]
     [NO-PACKAGES]
-    ("\\section{%s}" . "\\section*{%s}")
-    ("\\subsection{%s}" . "\\subsection*{%s}")
-    ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-    ("\\paragraph{%s}" . "\\paragraph*{%s}")
-    ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
     
     ;; 使用Listings宏包格式化源代码(只是把代码框用listing环境框起来，还需要额外的设置)
     (setq org-latex-listings t)
