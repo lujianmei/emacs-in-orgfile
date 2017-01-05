@@ -21,7 +21,7 @@
     * [Java开发](04-a-developer/init-java-development.md)
     * [Lisp开发](04-a-developer/init-lisp-development.md)
     * [Web开发](04-a-developer/web-development.md)
-* [项目管理人员使用Emacs](05-projectment/projectment.md)
+* [项目管理人员使用Emacs](05-project-management/project-management.md)
 * [Elisp学习优化](06-elisp/elisp.md)
 * [高级使用](07-advanced/advanced.md)
 * [Elisp学习资源](08-resources/resources.md)
