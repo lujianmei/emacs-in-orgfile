@@ -971,7 +971,7 @@ Column view是建立于org-mode任务管理之上的快速以表格查看各个�
     \\pagestyle{fancy}
     \\tolerance=1000
     [NO-DEFAULT-PACKAGES]
-    [NO-PACKAGES]"
+    [NO-PACKAGES]
     ("\\section{%s}" . "\\section*{%s}")
     ("\\subsection{%s}" . "\\subsection*{%s}")
     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
