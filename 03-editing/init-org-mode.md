@@ -1063,12 +1063,7 @@ Column view是建立于org-mode任务管理之上的快速以表格查看各个�
     \\usepackage{verbatim}
     \\usepackage{listings}
     \\institute{{{{beamerinstitute}}}}
-    \\subject{{{{beamersubject}}}}"
-                   ("\\section{%s}" . "\\section*{%s}")
-                   ("\\begin{frame}[fragile]\\frametitle{%s}"
-                    "\\end{frame}"
-                    "\\begin{frame}[fragile]\\frametitle{%s}"
-                    "\\end{frame}")))
+    \\subject{{{{beamersubject}}}}
     
     
     
@@ -1080,11 +1075,7 @@ Column view是建立于org-mode任务管理之上的快速以表格查看各个�
                  [NO-DEFAULT-PACKAGES]
                  [PACKAGES]
                  [EXTRA]"
-                   ("\\section{%s}" . "\\section*{%s}")
-                   ("\\subsection{%s}" . "\\subsection*{%s}")
-                   ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-                   ("\\paragraph{%s}" . "\\paragraph*{%s}")
-                   ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
     
     (setq org-latex-default-class "cn-article")
     
