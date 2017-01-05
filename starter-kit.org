@@ -135,42 +135,42 @@ Start kit的使用需要一些工程初使配置，而初使配置即在此文�
 
 - 常用工具函数集合
   #+begin_src emacs-lisp :tangle yes
-  (starter-kit-load "09-Defuns/init-defuns.org")
+  (starter-kit-load "09-defuns/init-defuns.org")
   #+end_src
 
 
 - Emacs基础编辑提升
   #+begin_src emacs-lisp :tangle yes
-  (starter-kit-load "02-For-base-using/init-for-base-using.org")
+  (starter-kit-load "02-base-using/init-base-using.org")
   ;; change a theme
-  (starter-kit-load "02-For-base-using/init-theme-changing.org")
+  (starter-kit-load "02-base-using/init-theme-changing.org")
   ;; 编辑功能提升
-  (starter-kit-load "02-For-base-using/init-editting-upgrading.org")
+  (starter-kit-load "02-base-using/init-editing-upgrade.org")
   ;; 搜索功能提升
-  (starter-kit-load "02-For-base-using/init-ace-isearch.org")
+  (starter-kit-load "02-base-using/init-ace-isearch.org")
   #+end_src
 
 - 日常工作使用Emacs
   #+begin_src emacs-lisp :tangle yes
-  (starter-kit-load "03-For-an-editor/init-daily-using.org") 
-  (starter-kit-load "03-For-an-editor/init-org-mode.org")
-  (starter-kit-load "03-For-an-editor/init-markdown-mode.org")
-  (starter-kit-load "03-For-an-editor/init-gtd-management.org")
-  (starter-kit-load "03-For-an-editor/init-projectile-management.org")
-  (starter-kit-load "03-For-an-editor/init-mu4e.org")
-  (starter-kit-load "03-For-an-editor/init-magit.org")
+  (starter-kit-load "03-editing/init-daily-using.org") 
+  (starter-kit-load "03-editing/init-org-mode.org")
+  (starter-kit-load "03-editing/init-markdown-mode.org")
+  (starter-kit-load "03-editing/init-gtd-management.org")
+  (starter-kit-load "03-editing/init-projectile-management.org")
+  (starter-kit-load "03-editing/init-mu4e.org")
+  (starter-kit-load "03-editing/init-magit.org")
   #+end_src
 
 - 应用开发编辑提升
   #+begin_src emacs-lisp :tangle yes
-  (starter-kit-load "04-For-a-developer/init-java-development.org") 
+  (starter-kit-load "04-development/init-java-development.org") 
 
   #+end_src
 
 
 - 资源索引
   #+begin_src emacs-lisp :tangle yes
-  (starter-kit-load "10-Index/init-index.org")
+  (starter-kit-load "10-index/init-index.org")
   #+end_src
 ** 配置默认样式
 #+begin_src emacs-lisp :tangle yes
