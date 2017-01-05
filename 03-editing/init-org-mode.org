@@ -658,7 +658,7 @@ marginparsep=7pt, marginparwidth=.6in}
 \\pagestyle{fancy}
 \\tolerance=1000
 [NO-DEFAULT-PACKAGES]
-[NO-PACKAGES]
+[NO-PACKAGES]"
 ("\\section{%s}" . "\\section*{%s}")
 ("\\subsection{%s}" . "\\subsection*{%s}")
 ("\\subsubsection{%s}" . "\\subsubsection*{%s}")

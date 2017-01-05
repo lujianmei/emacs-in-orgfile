@@ -1035,52 +1035,6 @@ Column view是建立于org-mode任务管理之上的快速以表格查看各个�
 
 ### Configuration<a id="sec-1-11-1" name="sec-1-11-1"></a>
 
-    ;;================================================================
-    ;; Config for File Export To PDF but use beamer
-    ;;================================================================ 
-    ;; 导出Beamer的设置
-    ;; allow for export=>beamer by placing #+LaTeX_CLASS: beamer in org files
-    ;;-----------------------------------------------------------------------------
-    (add-to-list 'org-latex-classes
-                 ;; beamer class, for presentations
-                 '("beamer"
-                   "\\documentclass[11pt,professionalfonts]{beamer}
-    \\mode
-    \\usetheme{{{{Warsaw}}}}
-    %\\usecolortheme{{{{beamercolortheme}}}}
-    
-    \\beamertemplateballitem
-    \\setbeameroption{show notes}
-    \\usepackage{graphicx}
-    \\usepackage{tikz}
-    \\usepackage{xcolor}
-    \\usepackage{xeCJK}
-    \\usepackage{amsmath}
-    \\usepackage{lmodern}
-    \\usepackage{fontspec,xunicode,xltxtra}
-    \\usepackage{polyglossia}
-    
-    \\usepackage{verbatim}
-    \\usepackage{listings}
-    \\institute{{{{beamerinstitute}}}}
-    \\subject{{{{beamersubject}}}}
-    
-    
-    
-    ;; set org-article
-    
-    (add-to-list 'org-latex-classes
-                 '("org-article"
-                   "\\documentclass{org-article}
-                 [NO-DEFAULT-PACKAGES]
-                 [PACKAGES]
-                 [EXTRA]"
-
-    
-    (setq org-latex-default-class "cn-article")
-    
-    ;;
-    (add-hook 'message-mode-hook 'turn-on-orgtbl)
 
 # Orgmode table Configuration<a id="sec-2" name="sec-2"></a>
 
