@@ -18,7 +18,7 @@ Start kit的使用需要一些工程初使配置，而初使配置即在此文�
           (normal-top-level-add-subdirs-to-load-path))))
 
     ;; defuns, utilities for whole configuration
-    (setq autoload-file (concat starter-kit-dir "09-Defuns/starter-kit-defuns.el"))
+    (setq autoload-file (concat starter-kit-dir "09-defuns/init-defuns.el"))
     (setq package-user-dir (concat starter-kit-dir "elpa"))
     (setq custom-file (concat starter-kit-dir "custom.el"))
   #+end_src
@@ -159,6 +159,8 @@ Start kit的使用需要一些工程初使配置，而初使配置即在此文�
   (starter-kit-load "03-editing/init-projectile-management.org")
   (starter-kit-load "03-editing/init-mu4e.org")
   (starter-kit-load "03-editing/init-magit.org")
+  ;; 添加org导出jekyll支持
+  (starter-kit-load "03-editing/init-org-jekyll.org")
   #+end_src
 
 - 应用开发编辑提升

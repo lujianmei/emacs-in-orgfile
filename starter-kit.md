@@ -6,7 +6,8 @@
 <ul>
 <li><a href="#sec-1-1">1.1. Starter-kit base</a></li>
 <li><a href="#sec-1-2">1.2. <span class="done DONE">DONE</span> Add package source and package management tools</a></li>
-<li><a href="#sec-1-3">1.3. Load each of the org files</a></li>
+<li><a href="#sec-1-3">1.3. 加载相应配置文件</a></li>
+<li><a href="#sec-1-4">1.4. 配置默认样式</a></li>
 </ul>
 </li>
 </ul>
@@ -32,7 +33,7 @@ Start kit的使用需要一些工程初使配置，而初使配置即在此文�
               (normal-top-level-add-subdirs-to-load-path))))
         
         ;; defuns, utilities for whole configuration
-        (setq autoload-file (concat starter-kit-dir "09-Defuns/starter-kit-defuns.el"))
+        (setq autoload-file (concat starter-kit-dir "09-defuns/init-defuns.el"))
         (setq package-user-dir (concat starter-kit-dir "elpa"))
         (setq custom-file (concat starter-kit-dir "custom.el"))
 
@@ -134,20 +135,43 @@ Start kit的使用需要一些工程初使配置，而初使配置即在此文�
     
     (starter-kit-install-if-needed 'use-package)
 
-## Load each of the org files<a id="sec-1-3" name="sec-1-3"></a>
+## 加载相应配置文件<a id="sec-1-3" name="sec-1-3"></a>
 
--   Starter kit function definitions in [init-for-base-using](02-For-base-using/init-for-base-using.md)
+-   常用工具函数集合
     
-        (starter-kit-load "02-For-base-using/init-for-base-using.org")
+        (starter-kit-load "09-defuns/init-defuns.org")
 
--   Starter kit function definitions in [init-defuns](09-Defuns/init-defuns.md)
+-   Emacs基础编辑提升
     
-        (starter-kit-load "09-Defuns/init-defuns.org")
+        (starter-kit-load "02-base-using/init-base-using.org")
+        ;; change a theme
+        (starter-kit-load "02-base-using/init-theme-changing.org")
+        ;; 编辑功能提升
+        (starter-kit-load "02-base-using/init-editing-upgrade.org")
+        ;; 搜索功能提升
+        (starter-kit-load "02-base-using/init-ace-isearch.org")
 
--   Starter kit function definitions in [init-write-documents](03-For-an-editor/init-write-documents.md)
+-   日常工作使用Emacs
     
-        (starter-kit-load "03-For-an-editor/init-write-documents.org")
+        (starter-kit-load "03-editing/init-daily-using.org") 
+        (starter-kit-load "03-editing/init-org-mode.org")
+        (starter-kit-load "03-editing/init-markdown-mode.org")
+        (starter-kit-load "03-editing/init-gtd-management.org")
+        (starter-kit-load "03-editing/init-projectile-management.org")
+        (starter-kit-load "03-editing/init-mu4e.org")
+        (starter-kit-load "03-editing/init-magit.org")
+        ;; 添加org导出jekyll支持
+        (starter-kit-load "03-editing/init-org-jekyll.org")
 
--   Starter kit function definitions in [init-index](10-Index/init-index.md)
+-   应用开发编辑提升
     
-        (starter-kit-load "10-Index/init-index.org")
+        (starter-kit-load "04-development/init-java-development.org")
+
+-   资源索引
+    
+        (starter-kit-load "10-index/init-index.org")
+
+## 配置默认样式<a id="sec-1-4" name="sec-1-4"></a>
+
+    ;;(dark)
+    (mu4e)
