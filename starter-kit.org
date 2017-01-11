@@ -166,6 +166,8 @@ Start kit的使用需要一些工程初使配置，而初使配置即在此文�
 - 应用开发编辑提升
   #+begin_src emacs-lisp :tangle yes
   (starter-kit-load "04-development/init-java-development.org") 
+  (starter-kit-load "04-development/init-tramp.org") 
+  (starter-kit-load "04-development/init-python-development.org") 
 
   #+end_src
 

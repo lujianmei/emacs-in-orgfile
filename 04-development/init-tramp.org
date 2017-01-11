@@ -1,0 +1,24 @@
+#+TITLE: Init Tramp Configuration
+#+OPTIONS: TOC:4 H:4
+
+* Tramp访问远程文件配置
+  Tramp是Emacs内置的访问远程文件的工具，支持多种访问协议，默认Emacs都支付，但对于经常访问服务器文件的来说，需要有一个工具管理大量服务器，因此需要能有能力自动读取配置文件，并取到其中的相应参数；
+
+
+#+begin_src emacs-lisp :tangle yes  
+
+(use-package tramp-term)
+
+(tramp-set-completion-function "ssh"
+ '((tramp-parse-sconfig "/etc/ssh_config")
+   (tramp-parse-sconfig "~/.ssh/config")))
+
+#+end_src
+
+* End of file
+#+begin_src emacs-lisp :tangle yes
+
+(provide 'init-tramp)
+;; init-tramp.el end here
+
+#+end_src

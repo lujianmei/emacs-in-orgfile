@@ -572,7 +572,7 @@ TODO用来管理org mode中的任务状态，如下配置中，将任务状态�
 ** Config for File Export PDF Format
 
 *** Configuration
-#+begin_src emacs-lisp :tangle yes
+#+begin_src emacs-lisp :tangle no
 ;;================================================================
 ;; Config for File Export To PDF 
 ;;================================================================ 
@@ -724,7 +724,7 @@ marginparsep=7pt, marginparwidth=.6in}
 *** 
 ** Config for File Export PDF but use beamer Format
 *** Configuration
-#+begin_src emacs-lisp :tangle yes
+#+begin_src emacs-lisp :tangle no
 ;;================================================================
 ;; Config for File Export To PDF but use beamer
 ;;================================================================ 

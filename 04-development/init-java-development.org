@@ -1,4 +1,4 @@
-#+TITLE: 用Emacs写文档
+#+TITLE: 用Emacs做Java开发
 #+LANGUAGE:  zh
 #+AUTHOR: Lu Jianmei
 #+EMAIL: lu.jianmei@trs.com.cn

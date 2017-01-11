@@ -4,45 +4,67 @@
 * 用Org写博客，导出为Jekyll
 
 #+begin_src emacs-lisp :tangle yes
+
   ;; 添加org-jekyll包
-  (use-package org-jekyll
-    :defer t  )
+  (use-package org2jekyll
+    :defer 3
+    :config
+(custom-set-variables '(org2jekyll-blog-author "lujianmei")
+                      '(org2jekyll-source-directory (expand-file-name "~/workspace/github/my-blog/work-notes/notes/"))
+                      '(org2jekyll-jekyll-directory (expand-file-name "~/workspace/github/my-blog/"))
+                      '(org2jekyll-jekyll-drafts-dir "")
+                      '(org2jekyll-jekyll-posts-dir "_posts/")
+                      '(org-publish-project-alist
+                        `(("default"
+                           :base-directory ,(org2jekyll-input-directory)
+                           :base-extension "org"
+                           :publishing-directory ,(org2jekyll-output-directory)
+                           :publishing-function org-html-publish-to-html
+                           :headline-levels 4
+                           :section-numbers t
+                           :with-toc nil
+                           ;; :html-head "<link rel=\"stylesheet\" href=\"./css/style.css\" type=\"text/css\"/>"
+                           :html-preamble t
+                           :recursive t
+                           :make-index nil
+                           :html-extension "html"
+                           :body-only t)
+                          ("post"
+                           :base-directory ,(org2jekyll-input-directory)
+                           :base-extension "org"
+                           :publishing-directory ,(org2jekyll-output-directory org2jekyll-jekyll-posts-dir)
+                           :publishing-function org-html-publish-to-html
+                           :headline-levels 4
+                           :section-numbers t
+                           :with-toc nil
+                           ;; :html-head "<link rel=\"stylesheet\" href=\"./css/style.css\" type=\"text/css\"/>"
+                           :html-preamble t
+                           :recursive t
+                           :make-index nil
+                           :html-extension "md"
+                           :body-only t)
+                          ("images"
+                           :base-directory ,(org2jekyll-input-directory "img")
+                           :base-extension "jpg\\|gif\\|png"
+                           :publishing-directory ,(org2jekyll-output-directory "img")
+                           :publishing-function org-publish-attachment
+                           :recursive t)
+                          ("js"
+                           :base-directory ,(org2jekyll-input-directory "js")
+                           :base-extension "js"
+                           :publishing-directory ,(org2jekyll-output-directory "js")
+                           :publishing-function org-publish-attachment
+                           :recursive t)
+                          ("css"
+                           :base-directory ,(org2jekyll-input-directory "css")
+                           :base-extension "css\\|el"
+                           :publishing-directory ,(org2jekyll-output-directory "css")
+                           :publishing-function org-publish-attachment
+                           :recursive t)
+                          ("web" :components ("images" "js" "css"))
+                          ))))
 
-(setq org-publish-jr "~/workspace/github/my-blog/work-notes/notes/")
-(setq org-publish-jr-blog "~/workspace/github/my-blog/_posts/")
 
-(setq org-jekyll-lang-subdirs '(("en" . "publish-blog/blog/")))
-
-(add-to-list 'org-publish-project-alist
-             `("jr-org"
-               :base-directory "~/workspace/github/my-blog/work-notes/notes/"
-               :recursive t
-               :base-extension "org"
-               :publishing-directory ,org-publish-jr
-               :exclude "^blog\\|^bitacora\\|jr.org"
-               :site-root "http://www.lujianmei.com"
-               :jekyll-sanitize-permalinks t
-               :publishing-function org-html-publish-to-html
-               :section-numbers nil
-               :headline-levels 4
-               :table-of-contents t
-               :auto-index nil
-               :auto-preamble nil
-               :body-only nil
-               :auto-postamble nil))
-
-(add-to-list 'org-publish-project-alist
-             `("jr-img"
-               :base-directory "~/workspace/github/my-blog/work-notes/notes/"
-               :recursive t
-               :exclude "^publish"
-               :base-extension "jpg\\|gif\\|png"
-               :publishing-directory ,org-publish-jr
-               :publishing-function org-html-publish-attachment))
-
-(add-to-list 'org-publish-project-alist
-             '("jr" :components ("jr-org"
-                                 "jr-img")))
 
 
 #+end_src
