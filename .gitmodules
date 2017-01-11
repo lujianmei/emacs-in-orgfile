@@ -5,5 +5,5 @@
 	path = org-html-themes
 	url = git@github.com:lujianmei/org-html-themes.git
 [submodule "yasnippet-snippets"]
-	path = yasnippet-snippets
+	path = snippets
 	url = git@github.com:lujianmei/yasnippet-snippets.git
