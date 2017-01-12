@@ -23,14 +23,20 @@
 
 ** Python Emacs配置
 #+begin_src emacs-lisp :tangle yes
+
       ;; Turn on python-mode
     (use-package python-mode
       :defer t)
-  (use-package elpy
-    :defer t
-    :config
-    ;(add-hook python-mode-hook 'elpy-mode)
-    (elpy-enable))
+  (use-package py-autopep8
+    :defer t)
 
+  (use-package elpy
+    :defer t)
+
+  (elpy-enable)
+
+  ;; enable autopep8 formatting on save
+  (require 'py-autopep8)
+  (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 #+end_src
 

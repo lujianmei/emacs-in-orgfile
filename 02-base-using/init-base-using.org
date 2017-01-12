@@ -128,7 +128,8 @@ Base configurations for window and frame
 
 (defvar running-alternate-emacs nil)
 (defvar running-development-emacs nil)
-
+;; 自动添加括号
+(electric-pair-mode t)
 
 #+end_src
 
