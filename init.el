@@ -50,7 +50,7 @@
  '(org-export-table-data-tags (quote ("<tr class=\"CUSTOM_ID>" . "</t>")))
  '(package-selected-packages
    (quote
-    (flycheck py-autopep8 ein elpy python-mode tramp-term org2jekyll org-jekyll org-jelyll helm-flyspell yasnippet use-package undo-tree tabbar switch-window swap-buffers smartparens smart-mode-line-powerline-theme phi-search-mc perspective page-break-lines org-ac mmm-mode mc-extras markdown-mode magit-gh-pulls java-imports helm-projectile helm-mu helm-descbinds guide-key git-messenger expand-region ess dracula-theme company color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized chinese-fonts-setup avy-zap auto-compile ace-mc ace-isearch))))
+    (jdee flycheck py-autopep8 ein elpy python-mode tramp-term org2jekyll org-jekyll org-jelyll helm-flyspell yasnippet use-package undo-tree tabbar switch-window swap-buffers smartparens smart-mode-line-powerline-theme phi-search-mc perspective page-break-lines org-ac mmm-mode mc-extras markdown-mode magit-gh-pulls java-imports helm-projectile helm-mu helm-descbinds guide-key git-messenger expand-region ess dracula-theme company color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized chinese-fonts-setup avy-zap auto-compile ace-mc ace-isearch))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

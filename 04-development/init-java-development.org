@@ -18,9 +18,20 @@
 
 
 * Java语言开发配置
+
+** 采用JDE搭建java开发环境
+从开源包https://github.com/jdee-emacs/jdee中，下载jdee开发集成工具。
+#+begin_src emacs-lisp :tangle yes
+
+  (use-package jdee
+    :defer t
+    :config
+    (setq jdee-server-dir "~/.emacs.d/jdee-server/target/jdee-bundle-1.1-SNAPSHOT.jar-jar-with-dependencies.jar"))
+
+#+end_src
 ** 采用Company-mode包，来增加自动提示的功能
 在编辑中的自动完成，这里是针对英文单词的自动完成功能的提升，自动完成功能的配置，可以基于它针对不同的语言进行配置自动提示功能；
-#+begin_src emacs-lisp :tangle yes
+#+begin_src emacs-lisp :tangle no
     ;; Turn on auto complete.
   ;;  (require 'auto-complete-config)       
     ;;(ac-config-default)
@@ -40,7 +51,7 @@
 
 ** 通过java-imports包来自动加载import语句
 在java文件中，当加入一个class时，此工具会自动搜索并引入import语句；
-#+begin_src emacs-lisp :tangle yes
+#+begin_src emacs-lisp :tangle no
     (use-package java-imports
       :defer t
       :bind (:map java-mode-map
