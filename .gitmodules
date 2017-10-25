@@ -1,12 +1,12 @@
 [submodule "chinese-fonts-setup"]
 	path = chinese-fonts-setup
-	url = git@github.com:lujianmei/chinese-fonts-setup.git
+	url = https://github.com/lujianmei/chinese-fonts-setup.git
 [submodule "org-html-themes"]
 	path = org-html-themes
-	url = git@github.com:lujianmei/org-html-themes.git
+	url = https://github.com/lujianmei/org-html-themes.git
 [submodule "yasnippet-snippets"]
 	path = snippets
-	url = git@github.com:lujianmei/yasnippet-snippets.git
+	url = https://github.com/lujianmei/yasnippet-snippets.git
 [submodule "jdee-server"]
 	path = jdee-server
 	url = https://github.com/jdee-emacs/jdee-server.git
