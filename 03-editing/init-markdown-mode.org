@@ -933,5 +933,5 @@
 |        | C-c C-a L   | Insert a reference link of the form [text][label]        |
 |        | C-c C-a u   | Insert bare URL of the form <URL>                        |
 |        | C-c C-a f   | Insert footnote marker and definition below              |
-|        | C-c C-a w   | Insert a wiki link of the form [[WikiLink]]                  |
+|        | C-c C-a w   | Insert a wiki link of the form wikilink                      |
 |        | C-c C-o     | 打开当前链接                                             |
