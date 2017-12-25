@@ -572,7 +572,7 @@ Org clocking模式，在任务上启动clocking，则开始对特定任务启动
     在archlinux的aur中找到plantuml进行安装；
 -   使用，在需要生成的图的位置代码用如何代码框起来
 
-     #+begin_src plantuml :cmdline -charset UTF-8 :file some_filename.png :cmdline -r -s 0.8
+     #+begin_src plantuml :cmdline -charset utf-8 :java -Djava.awt.headless=true :file some_filename.png :cmdline -r -s 0.8
     <context of ditaa source goes here>
      #+end_src
 

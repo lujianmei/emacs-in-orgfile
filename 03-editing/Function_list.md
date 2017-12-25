@@ -251,7 +251,7 @@ Capture用于快速记录任务或者idea内容，并支持在后面进行captur
     在archlinux的aur中找到plantuml进行安装；
 -   使用，在需要生成的图的位置代码用如何代码框起来
 
-     #+begin_src plantuml :cmdline -charset UTF-8 :file some_filename.png :cmdline -r -s 0.8
+     #+begin_src plantuml :cmdline -charset utf-8 :java -Djava.awt.headless=true :file some_filename.png :cmdline -r -s 0.8
     <context of ditaa source goes here>
      #+end_src
 
